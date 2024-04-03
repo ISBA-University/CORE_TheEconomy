@@ -1,0 +1,197 @@
+/* CSS-Code für die Animation */
+@keyframes yourAnimation {
+  0% {
+    /* Ausgangszustand der Animation */
+    /* Hier den gewünschten Ausgangszustand definieren */
+  }
+  100% {
+    /* Endzustand der Animation */
+    /* Hier den gewünschten Endzustand definieren */
+  }
+}
+
+/* CSS-Regeln für das Element, das animiert werden soll */
+.myanim {
+  /* Hier die gewünschten Stile für das animierte Element definieren */
+  animation-name: yourAnimation;
+  animation-duration: 4s; /* Dauer der Animation in Sekunden */
+  animation-timing-function: ease-in-out; /* Art der Timing-Funktion */
+  animation-delay: 2s; /* Verzögerung vor dem Start der Animation in Sekunden */
+  animation-iteration-count: 1; /* Anzahl der Animationsschleifen (hier: einmal) */
+}
+
+
+
+/* Layout Titelseite  */
+.title-slide {
+  background-color: #232461;
+  border-top: 50px solid #232461;
+}
+
+.title-slide .remark-slide-number {
+  display: none;
+}
+
+.mycontacts {
+  text-align: left;
+  padding-top: 25px;
+  margin-left: 15px;
+  line-height: 40%;
+}
+
+.title-slide h1  {
+  font-size: 40px;
+  text-shadow: none;
+  text-align: left;
+  margin-left: 15px;
+  padding-top: 80px;
+}
+
+.title-slide h2  {
+  margin-top: -25px;
+  padding-bottom: -20px;
+  font-size: 35px;
+  text-align: left;
+  margin-left: 15px;
+}
+.title-slide h3  {
+  text-align: left;
+  font-size: 26px;
+  margin-left: 15px;
+  margin-bottom: -30px;
+}
+
+/* Querbalken Titelseite*/
+hr, .title-slide h2::after, .mline h1::after {
+  content: '';
+  display: block;
+  border: none;
+  background-color: #d84116;
+  color: #d84116;
+  height: 3px;
+}
+hr, .mline h1::after {
+  margin: 1em 15px 0 15px;
+}
+
+/* falls nötig inverse title-slide */
+.title-slide .inverse .remark-slide-content {
+  background-color: #232461;
+}
+
+
+/* inserts colored bar on top of the slide  */
+.remark-slide-content {
+  background-color: #FAFAFA;
+  border-top: 50px solid #232461;
+ /* border-bottom: 20px solid #d84116;  /*Balken unten in isba-rot*/ */
+  font-weight: 300;
+  line-height: 1.5;
+  padding: 1em 2em 1em 2em
+}
+
+
+
+/* Removes colored bar from top of the slide resulting in a clear slide */
+.clear{
+  border-top: 0px solid #FAFAFA;
+}
+/* Positionierung Überschrift - abgestimmt auf h1-size in xaringanthemer */
+h1 {
+  font-weight: normal;
+  margin-top: -65px;
+  margin-left: -00px;
+}
+
+
+my.footer {
+    background-image: <i class='fa fa-copyright' style='color:#232461'></i>;
+}
+
+
+
+/* Farben*/
+
+.ISBAblue {
+  color: #232461;
+}
+
+
+/* Blau: #0F225A */
+
+.ISBAred {
+  color: #d84116;
+}
+
+/* Noah sagt #E84C0A */
+
+
+.grey {
+  color: #696969;
+}
+
+/*Farbabstimmung untergeordnete Überschriften */
+
+.remark-slide-content h2 {
+  font-size: 22px;
+  color: #232461;
+}
+
+.remark-slide-content h3 {
+  font-size: 18px;
+  color: #232461;
+}
+
+/*Text Blockquote*/
+.blockquote {
+  border-left: solid 5px #d84116;
+  padding-left: 1em;
+}
+
+
+/*Textformatierung*/
+
+.xxxlarge {
+  font-size: 28px;
+}
+
+.small {
+  font-size: 16px;
+}
+
+.tiny {
+  font-size: 10px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+
+.quelle {
+  font-size: 10px;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+}
+
+
+.quellePan {
+  font-size: 10px;
+  position: absolute;
+  margin-bottom: 5px;
+  right: 0;
+}
+
+.quellePanURL {
+  font-size: 10px;
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+}
+
+
+.bold-last-item > ul > li:last-of-type,
+.bold-last-item > ol > li:last-of-type {
+  font-weight: bold;
+}

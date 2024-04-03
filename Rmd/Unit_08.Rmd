@@ -1,0 +1,829 @@
+---
+title: "VO Volkswirtschaftslehre"
+subtitle: "Intake 2022 B"
+author: "Prof. Dr. Jörg Schoder"
+institute: "ISBA" 
+date: "`r Sys.Date()`"
+bibliography: ../lit/my_bib.json
+reference-section-title: Quellenverzeichnis
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    css: 
+        - default
+        - ../css/schoder_theme.css
+        - xaringan-themer.css
+    includes:
+      after_body: ../css/insert-logo.html
+    lib_dir: ../libs
+    nature:
+      slideNumberFormat: "%current%/%total%"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+    seal: false
+    
+---
+class: title-slide
+
+```{r xaringan-themer, include=FALSE}
+library(xaringanthemer)
+style_xaringan(text_color = "#232461",inverse_text_color = "#FFFFFF",inverse_background_color = "#232461", title_slide_background_color = "#232461",header_background_color = "#232461",header_color = "#FFFFFF",header_h1_font_size = "32px",
+  header_h2_font_size = "26px",link_color="#d84116",
+  header_h3_font_size = "20px",text_slide_number_color = "#232461",text_slide_number_font_size = "0.5em")
+```
+
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_progress_bar(color = "#d84116", location = "bottom")
+xaringanExtra::use_xaringan_extra(c("tile_view","scribble","panelset","tachyons"))
+xaringanExtra::style_panelset_tabs(font_family = "inherit")
+#xaringanExtra::use_search(show_icon = TRUE)
+#weitere: "share_again","animate_css", "webcam","freezeframe","clipboard","fit_screen","extra-styles" 
+xaringanExtra::use_editable(expires = 1)
+xaringanExtra::use_freezeframe(trigger = "hover")
+```
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(latex2exp)
+library(fontawesome)
+```
+
+
+# Volkswirtschaftslehre
+
+## Intake 2022B
+
+### CORE - The Economy: Unit 8 (Martkformen und Analysen im Wettbewerbsmarkt)
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+### Sommersemester 2023 
+<br>
+### Prof. Dr. Jörg Schoder
+.mycontacts[
+`r fa('github')` @ISBA-University
+`r fa('linkedin')` @jfschoder
+]
+
+
+---
+layout: true
+
+<div class="my-footer"></div>       
+
+<div style="position: absolute;left:400px;bottom:10px;color:ISBAblue;font-size:9px">`r r2symbols::sym('copyright')``r rmarkdown::metadata$author`</div>
+       
+
+---
+name: aktuell
+class: left
+
+# Inflation in mikroökonomischer Perspektive 
+
+```{r,echo=FALSE}
+knitr::include_url('https://www.npr.org/2023/05/11/1175487806/corporate-profit-price-spiral-wage-debate',height="550px")
+```
+
+???
+
+* Anhören:
+  * Min 0 bis ca. 2:30 Inflation und traditionelle Erklärungen
+  * 3:30 bis 7:35 Vorstellung I. Weber und Markup-Pricing und Wettbewerbseffekte von Bottlenecks
+  * 14:25 bis 17:25 Markup-Pricing und Akzeptanz von Preiserhöhungen durch Kunden
+  * 18:20 bis 21:32  Rolle von Erwartungen
+  * 21:50 bis 25:59 Profit-Price-Spiral und Geld- vs. Fiskalpolitik (Zinserhöhungen vs. Windfall-Profit-Tax)
+  
+* Aufgrund der Bedeutung von Erwartungen funktioniert die unsichtbare Hand nicht zwangsläufig. Koordination durch Politik kann die Situation verbessern
+  
+---
+name: Lernziele
+class: inverse, left, middle
+# Was lernen wir?
+
+.small[In Unit 7 haben wir gesehen, dass Unternehmen versuchen, sich von Wettbewerbern zu unterscheiden, um von ihren Kunden einen über den Grenzkosten liegenden Preis verlangen zu können. Dies können sie vor allem durch Innovationen und Markenbildung aber auch durch Netzwerkeffekte erreichen. Langfristig besteht aber die Gefahr, dass erfolgreiche Strategien nachgeahmt werden. Die neoklassische Theorie nimmt eine solche langfristige Perspektive ein.]
+
+## Inhaltliche Leitfragen
+
+.blockquote[.small[
+1. Was geschieht, wenn Anbieter und Nachfrager keine Marktmacht haben (**Preisnehmer** sind)?
+2. Welche Wohlfahrtsgewinne sind in Wettbewerbsmärkten möglich und wie sind sie verteilt?
+3. Worin sind sich Unternehmen mit Preissetzungsmacht und Preisnehmer ähnlich? Worin unterscheiden sie sich?
+4. Welche Implikationen für die Politik ergeben sich in nicht wettbewerblichen Märkten?
+]
+]
+
+## Ökonomische Methoden und Konzepte 
+
+.blockquote[.small[
+1. Wettbewerbsmarkt
+2. Komparative Statik
+3. Elastizität und Inzidenz (bspw. Steuern)
+]
+]
+
+???
+
+The purpose of our economic analysis is not to model the manager’s thought process, but to understand the outcome, and its relationship to the firm’s cost and consumer demand
+
+
+---
+name: Marktstrukturen
+class: left
+
+# Marktstrukturen
+
+.panelset[
+.panel[.panel-name[Zahl der Akteure]
+<div align="center">
+  <table border="2" cellspacing="20" cellpadding="20">
+    <!-- <caption>Klassifikation wirtschaftlicher Güter</caption> -->
+    <thead>
+      <tr>
+        <th></th>
+        <th>Ein Nachfrager</th>
+        <th>Wenige Nachfrager</th>
+        <th>Viele Nachfrager</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Ein Anbieter</th>
+        <td>Bilaterales Monopol</td>
+        <td></td>
+        <td>Monopol</td>
+      </tr>
+      <tr>
+        <th>Wenige Anbieter</th>
+        <td></td>
+        <td>Bilaterales Oligopol</td>
+        <td>Oligopol</td>
+      </tr>
+      <tr>
+        <th>Viele Anbieter</th>
+        <td>Monopson</td>
+        <td>Oligopson</td>
+        <td>Vollständige Konkurrenz</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+]
+.panel[.panel-name[Akteure und Produkteigenschaften]
+<div align="center">
+  <table border="2" cellspacing="20" cellpadding="20">
+    <!-- <caption>Klassifikation wirtschaftlicher Güter</caption> -->
+    <thead>
+      <tr>
+        <th rowspan="2"></th>
+        <th colspan="3">homogene Güter</th>
+      </tr>
+      <tr>
+        <th>ja</th>
+        <th></th>
+        <th>nein</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Ein Anbieter</th>
+        <td>Monopol</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>Wenige Anbieter</th>    
+        <td></td>
+        <td>Oligopol</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>Viele Anbieter</th>
+        <td>Vollständige Konkurrenz</td>
+        <td></td>
+        <td>Monopolistische Konkurrenz</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+]
+]
+
+
+---
+name: Praxis-Oligopol
+class: left
+
+# Beispiel: Tankstellen
+
+<iframe class="everviz-iframe" src="https://app.everviz.com/embed/RkkgqEypw/" title="Chart: Copy of Untitled chart" style="border: 0; width: 100%; height: 500px"></iframe>
+
+
+.quelle[Quelle: [IW Köln](https://www.iwkoeln.de/presse/interaktive-grafiken/jan-buechel-christian-rusche-kreise-mit-tankstellen-oligopolen-in-deutschland.html).]
+
+???
+
+Studie [IW Köln](https://www.iwkoeln.de/presse/interaktive-grafiken/jan-buechel-christian-rusche-kreise-mit-tankstellen-oligopolen-in-deutschland.html)
+
+
+---
+name: NE
+class: left
+
+# Nachfrage: Grenznutzen und Zahlungsbereitschaft
+
+.panelset[
+.panel[.panel-name[Individuell]
+```{tikz,echo=FALSE}
+{\sffamily
+	\begin{tikzpicture}[scale=.16,thick]
+			\usetikzlibrary{calc}   %allows coordinate calculations.	
+			%RC-Diagram	
+			\draw[-stealth] (0,0) -- (17,0) node[below, text centered] {$x_1$};	
+			\draw[-stealth] (0,0) -- (0,10) node[left,text centered] {$x_2$};
+
+		%Ausgangssituation
+			\draw[red,line width=.1em] (0,8) -- (12,0) node[font=\tiny,below right] {$\frac{m}{p_1}$};
+			\draw[blue] (1.6,9.2)  to [out=275,in=170] (9.3,3.6) node {};
+			\draw[fill] (3.8,5.5) circle [radius=.15] node[below] {};
+			\draw[dotted] (3.8,5.5) -- (3.8,0);
+			\draw[red,line width=.1em] (0,8) -- (8,0) node[font=\tiny,below right] {$\frac{m}{\hat{p}_1}$};
+			\draw[blue] (1,9.1)  to [out=275,in=168] (9,2.3) node {};
+			\draw[fill] (2.9,5.1) circle [radius=.15] node[below] {};
+			\draw[dotted] (2.9,5.1) -- (2.9,0);
+			
+			% Weitere Preiserhöhung	
+			\draw[red,line width=.1em] (0,8) -- (4,0) node[font=\tiny,below right] {$\frac{m}{\tilde{p}_1}$};
+			\draw[blue] (.5,8.7)  to [out=272,in=173] (8.5,.65) node {};
+			\draw[fill] (1.5,4.9) circle [radius=.15] node[below] {};
+			\draw[dotted] (1.5,4.9) -- (1.5,0);
+
+			\path[draw,green,rounded corners=1mm]  (.8,4.8) -- (1.5,4.9) -- (2.9,5.1) -- (3.8,5.5) -- (5.5,6.3);
+			\draw (5.7,6.3) node[font=\tiny,right,black,align=left] {Preis-Konsum-Kurve};
+	
+			% Verbindungslinien dotted			
+			\draw[dotted] (1.5,0) -- (1.5,-12) ;
+			\draw[dotted] (2.9,0) -- (2.9,-12) ;
+			\draw[dotted] (3.8,0) -- (3.8,-12);	
+			
+			%Unteres Diagramm
+			\draw[-stealth] (0,-12) -- (17,-12) node[font=\tiny,below, text width=1.5cm,text height =6pt, text centered] {$x_1$};
+			\draw[-stealth] (0,-12) -- (0,-2) node[font=\tiny,above left,text height =6pt,text centered] {\textbf{Preis} $p_1$};
+			
+			\draw[dotted] (0,-3) node[font=\tiny,left] {$\tilde{p}_1$} -- (1.5,-3);
+			\draw[fill] (1.5,-3) circle [radius=.15];
+			\draw[dotted] (0,-7.5) node[font=\tiny,left] {$\hat{p}_1$}  -- (2.9,-7.5);
+			\draw[fill] (2.9,-7.5) circle [radius=.15];
+			\draw[dotted] (0,-9) node[font=\tiny,left] {$p_1$}  -- (3.8,-9);
+			\draw[fill] (3.8,-9) circle [radius=.15];
+			
+			
+			\draw[rounded corners=5mm] (1.2,-1.7) .. controls (1.5,-3) .. (2.9,-7.5)
+			.. controls (3.8,-9) .. (4.5,-10) .. controls (6.5,-10.5) .. (11,-11.2);
+			\draw (5.7,-5.7) node[font=\tiny,right,black,align=left] {(Inverse) Nachfragekurve};
+		\end{tikzpicture}
+}
+```
+]
+.panel[.panel-name[Marktnachfrage]
+
+Horizontale Aggregation
+
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('../images/unit07/NE_agg.png',height='430px')
+```
+]
+.panel[.panel-name[Beispiel]
+
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-04.svg',height='480px')
+```
+]
+]
+
+
+
+???
+
+* Zahlungsbereitschaft (WTP)
+* Hausman - conjoint-Analyse
+* R-Paket (conjoint)[https://cran.r-project.org/web/packages/conjoint/conjoint.pdf]
+
+* Den Preis nehmen die Kunden, wie auch schon in Unit 7 als gegeben
+    * d.h. Zahlungsbereitschaft im Vergleich zum Marktpreis - take it or leave it
+    * Since there are so many consumers wanting to buy breakfast cereals, an individual consumer has no power to negotiate a more advantageous deal, but simply has to accept the price that all other consumers are paying.
+
+
+* während die Kunden bereits in Unit 7 als Preisnehmer modelliert wurden, hatten wir in **Unit 7** angenommen, dass die **Anbieter Preissetzungsmacht** haben 
+
+* In **this unit 8**, we study market equilibria where **both buyers and sellers** are **price-takers** (vollständiger Wettbewerb)
+
+
+
+---
+name: IndivAT
+class: left
+
+# Angebot bei vollständigem Wettbewerb
+
+
+.panelset[
+.panel[.panel-name[Individuell]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-06-d.svg',height='480px')
+```
+]
+.panel[.panel-name[Marktangebot]
+
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-07-d.svg',height='480px')
+```
+]
+.panel[.panel-name[Empirie (1)]
+
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.tagesspiegel.de/wirtschaft/gute-geschaefte-dank-covid-19-wenn-sogar-autokonzerne-atemschutzmasken-produzieren/25666520.html',height='480px')
+```
+]
+.panel[.panel-name[Empirie (2)]
+
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.focus.de/finanzen/boerse/kein-schnaeppchen-trigema-chef-grupp-reagiert-auf-maskenpreis-kritik_id_11887211.html',height='480px')
+```
+]
+.panel[.panel-name[Analytisch]
+* Aus Unit 7 bekannt: $G=R-C$
+* FOC: $G'=MR-MC\stackrel{!}{=}0 \iff MR = MC$
+* Im Optimum entsprechen sich Grenzerlös und Grenzkosten
+* Grenzerlös: 
+    * bei Preissetzungsmacht: 
+          $$R(Q)=P(Q)\cdot Q \iff R'(Q)=P'(Q)\cdot Q+P(Q)$$
+    * bei Preisnehmerverhalten
+          $$R(Q)=P\cdot Q \iff R'(Q)=P$$
+
+* Optimalitätsbedingung bei Preisnehmerverhalten: 
+  $$R'(Q)=P=MC$$
+
+* "Preis-gleich-Grenzkosten-Regel"
+]
+]
+
+???
+
+* Anbieter haben keine Preissetzungsmacht - Preisnehmerverhalten!
+
+   * Marktpreis bestimmt feasible set (horizontale Linien). 
+   * Bei 2,35US$ ist die gewinnmaximale Menge bei 120
+   * Die gewinnmaximale Menge wird wie immer mittels MRT=MRS bestimmt
+   * Hier ist der Tangentialpunkt immer im Durchschnittskostenminimum
+   * Wir wissen, dass die Grenzkostenkurve (MC) immer die AC-Kurve in deren Minimum schneidet.
+   * Mithin gibt die Grenzkostenkurve das Angebot wieder
+
+* Grenzkosten=AT als Willingness to Accept (WTA)
+
+* Marktangebot ergibt sich durch **horizontale Aggregation**
+
+
+* We have seen examples where market participants do not behave as price-takers: the producer of a differentiated product can set its own price because it has no close competitors. 
+
+
+* many sellers selling the identical goods, and many buyers wishing to purchase them.
+
+* Sellers are forced to be price-takers by the presence of other sellers, as well as buyers who always choose the seller with the lowest price. If a seller tried to set a higher price, buyers would simply go elsewhere.
+
+* Implizite Annahme: keine Transaktionskosten
+
+
+* Verlauf Isogewinnlinien wieder wie bei Beautiful cars - steigende AC
+
+
+
+
+---
+name: ATNE
+class: left
+
+# Markträumung und Marktgleichgewicht
+
+
+.panelset[
+.panel[.panel-name[Modell-Annahmen]
+
+* viele Anbieter und viele Kunden (Preisnehmerverhalten bzw. keine Verhandlungsmacht auf beiden Marktseiten)
+
+* Rationale Akteure (homo oeconomicus) 
+   
+    * vollständige Information bzw. vollständige Verträge
+        * Preise und Qualitäten bekannt (impliziert *homogene Güter*)  
+        * keine Transaktionskosten
+   
+    * konvexe Präferenzen (stärker als die Annahme der Konsistenz)
+
+* Unternehmen mit konvexer Technologie
+
+* keine Externalitäten
+]
+.panel[.panel-name[Modell-Vorhersagen]
+
+`r fa("circle-right")` Markträumung (Walrasianischer Auktionator)
+
+`r fa("circle-right")` Arbitrage und einheitlicher Marktpreis (**law of one price**)
+
+`r fa("circle-right")` Preisnehmerverhalten 
+
+`r fa("circle-right")` Wohlfahrtsmaximierung ("unsichtbare Hand")
+]
+.panel[.panel-name[Marshall-Diagramm]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-08.svg',height='480px')
+```
+]
+]
+
+
+???
+
+* In the market equilibrium, each bakery is producing on its marginal cost curve, at the point where its marginal cost is €2.00. 
+
+* Markträumung:
+    * Jeder Anbieter, der die WTA von 2 hat, wird seine Ware verkaufen
+    * Jeder Kunde, der die WTP von 2 hat, wird das Produkt bekommen
+    * es gibt keine Überschussnachfrage (nichts bleibt übrig, nichts fehlt)
+
+* Marktgleichgewicht und Walrasianischer Auktionator
+    * homogene Güter: Alleiniges Kriterium für ständig neu zu schließende Werk- und Tauschverträge ist der Preis. 
+
+    * Existenz des Gleichgewichts wird durch Konvexitätsannahmen gewährleistet (Mathematik: Fixpunktsatz)
+
+    * A competitive market equilibrium is a **Nash equilibrium**, because given what all other actors are doing (trading at the equilibrium price), no actor can do better than to continue what he or she is doing (also trading at the equilibrium price).
+
+
+---
+name: WalrasAukt
+class: left
+
+# Exkurs: Walrasianischer Auktionator
+
+.panelset[
+.panel[.panel-name[Auktion]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('../images/unit08/xetra_auktionsplan.png',height='480px')
+```
+.quellePanURL[[Börse Frankfurt](https://www.xetra.com/xetra-de/handel/handelsmodelle/auktionsplan)]
+]
+.panel[.panel-name[Individuell]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('../images/unit08/inlandsorder_comdirect.png',height='480px')
+```
+]
+.panel[.panel-name[Orderbuch]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('../images/unit08/offenes_Orderbuch_(20200420).png',height='480px')
+```
+.quellePanURL[[Börse Frankfurt](https://www.boerse-frankfurt.de/aktien/offenes-orderbuch/DE0008469008)]
+]
+.panel[.panel-name[Diagramm]
+```{r, echo=FALSE,message=FALSE,warning=FALSE,fig.align='center',out.height='75%'}
+source(xfun::from_root("R/Orderbuch.R"))
+library(plotly)
+ggplotly(p)
+```
+]
+]
+
+
+
+???
+
+* Bid (Geldkurs): gibt an, was ein möglicher Wertpapierkäufer bereit ist, für ein Wertpapier zu bezahlen. Es ist also der höchste Preis, den eine Person, eine Bank oder Broker bietet, um ein Wertpapier zu kaufen.
+
+
+* Ask (Briefkurs): niedrigster Preis, zu dem jemand bereit ist, Wertpapiere zu verkaufen
+
+* Der Walrasianische Auktionator (Léon Walras, 1834-1910)
+
+* Gleichgewicht durch „Tâtonnements“ (Versuch und Irrtum)
+
+    * Ein Auktionator ruft zu Beginn einer Periode für alle Güter Preise aus.
+    * Zu diesen Preisen nennen die Wirtschaftssubjekte ihre Tauschpläne.
+    * Der Auktionator prüft, in welchen Teilmärkten ein
+          * Nachfrageüberschuss oder ein
+          * Angebotsüberschuss herrscht und 
+    * passt die Preise demgemäß an.
+    * Dies wird solange wiederholt, bis sich alle Märkte im Gleichgewicht befinden.
+
+* Gehandelt wird nur im Gleichgewicht.
+
+* Obs!
+  * Tâtonnements-Prozess findet außerhalb der Zeit (bzw. unendlich schnell) statt: Statisches Modell!
+  * Damit verbunden ist die Annahme "perfekter Information" als Eigenschaft des "homo oeconomicus"
+
+
+
+
+---
+name: Wohlfahrt
+class: left
+
+# Wohlfahrt im perfekten Wettbewerbsmarkt
+
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-09-a-d.svg',height='550px')
+```
+
+???
+
+* Buyers and sellers of bread voluntarily engage in trade because both benefit. Their mutual benefits from the equilibrium allocation can be measured by the consumer and producer surpluses introduced in Unit 7.
+
+* On both sides of the market, competition **eliminates bargaining power**.
+
+* The competitive equilibrium allocation of bread has the property that the **total surplus is maximized**. 
+    * Figure 8.9b shows that the surplus would be smaller if **fewer than 5,000 loaves** were produced. There would be consumers without bread who would be willing to pay more than the cost of producing another loaf, so there would be unexploited gains from trade.
+    * And if **more than 5,000 loaves** were produced, the surplus on the extra loaves would be negative: they would cost more to make than consumers were willing to pay.
+
+* **Pareto-Effizienz des Marktgleichgewichts** At the competitive equilibrium allocation in the bread market, it is not possible to make any of the consumers or firms better off (that is, to increase the surplus of any individual) without making at least one of them worse off.
+
+
+* **Fairness als Frage der Elastizität** Relativ Elastische Marktseite erhält den größeren Anteil an den Tauschgewinnen
+
+
+* Kritik:
+  * The Pareto efficiency of a competitive equilibrium allocation is often interpreted as a powerful argument in favour of markets as a means of allocating resources. But we need to be careful not to exaggerate the value of this result:
+  * The allocation may not be Pareto efficient: We might not have taken everything into account. (**Annahmenverletzungen** in der Realität sehr wahrscheinlich! Info nicht vollständig und Externalitäten allgegenwärtig)
+There are other important considerations: Fairness, for example.
+Price-takers are hard to find in real life: It is not as easy as you might think to find behaviour consistent with our simple model of the bread market (as we will see in Section 8.9).
+
+
+---
+name: Kritik
+class: inverse, center, middle
+
+# Modellkritik
+
+---
+name: MatchingMarkets
+class: left
+
+# Güter- vs. Matching-Märkte 
+
+<iframe width="1000" height="550" src="https://www.youtube.com/embed/r7vzgexzXOk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+???
+
+Ausblick Unit 9 und Unit 21
+
+
+
+---
+name: Diskussion
+class: left
+
+# Perfekter Wettbewerb in Gütermärkten (?)
+
+
+<iframe width="900" height="450" src="https://www.youtube.com/embed/5hJF8zNJg5I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+* Bedeutung von Marktzugangsbarrieren aus Sicht...
+  * ...von Unternehmen
+  * ...der Gesellschaft
+
+???
+
+* Rolle von Marktzugangsschranken
+
+
+---
+name: icecream
+class: left
+
+# Differenzierungsstrategien vs. Absprachen
+
+
+```{r,echo=FALSE}
+knitr::include_url('https://www.npr.org/player/embed/1154775118/1155543493',height="550px")
+```
+
+
+???
+
+* Eiscreme in Supermärkten
+  * Ben&Jerry nur Junky
+  * Häagen Dazs nur plain
+  
+* Dagegen Eiscreme in den Brand-Eisdielen in allen Variationen
+
+* Absprache oder Differenzierungsstrategie?
+  * Problem der Identifikation
+  * So oder so: etwa 50% höhere Preise für Konsumenten
+
+---
+name: Analysen
+class: inverse, center, middle
+
+# Analysen
+
+
+
+---
+name: KompStat1
+class: left
+
+# Komparative Statik: Nachfrage-Schocks
+
+
+.panelset[
+.panel[.panel-name[Quinoa-Produktion]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-10-a.svg',height='480px')
+```
+
+]
+.panel[.panel-name[Quinoa-Nachfrage]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-10-c.svg',height='480px')
+```
+]
+.panel[.panel-name[Modell]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-11-d.svg',height='480px')
+```
+]
+]
+
+---
+name: KompStat2
+class: left
+
+# Komparative Statik: Angebots-Schocks
+
+.panelset[
+.panel[.panel-name[Produktivitätssteigerung]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-12-e.svg',height='480px')
+```
+
+]
+.panel[.panel-name[Markteintritte]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-13.svg',height='480px')
+```
+]
+.panel[.panel-name[Beispiel]
+
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.tagesspiegel.de/wirtschaft/gute-geschaefte-dank-covid-19-wenn-sogar-autokonzerne-atemschutzmasken-produzieren/25666520.html',height='480px')
+```
+]
+]
+
+???
+
+* The improvement in the technology of breadmaking leads to:
+    * an increase in supply
+    * a fall in the price of bread
+    * a rise in the quantity sold
+
+* Markteintritt
+
+---
+name: KompStat3
+class: left
+
+# Mengen vs. Wertsteuer
+
+.panelset[
+.panel[.panel-name[Wertsteuer]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-14-d.svg',height='480px')
+```
+]
+.panel[.panel-name[Mengensteuer]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-16-c.svg',height='480px')
+```
+]
+]
+
+???
+
+* The effect of a 30% salt tax.
+* The effect of a fat tax on the retail market for butter.
+* Mengensteuer 10 kronen per kg 
+* Lenkungswirkung vs. Steueraufkommen
+
+
+---
+name: Inzidenz
+class: left
+
+# Steuerinzidenz: Wer trägt die Last der Besteuerung?
+
+
+.panelset[
+.panel[.panel-name[Wertsteuer]
+
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-15-d.svg',height='480px')
+```
+]
+.panel[.panel-name[Mengensteuer]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-17.svg',height='480px')
+```
+]
+]
+
+???
+
+Lenkungswirkung vs. Steueraufkommen
+
+
+
+
+
+---
+name: FazitAusblick
+class: inverse, center, middle
+
+# Fazit und Ausblick
+
+---
+name: Preisnehmer
+class: left
+
+# Preissetzungsmacht vs. Preisnehmerverhalten
+
+.small[
+<table>
+  <thead>
+    <tr>
+      <th>Price-setting firm or monopoly</th>
+      <th>Firm in a perfectly competitive market</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sets price and quantity to maximize profits (‘price-maker’)</td>
+      <td>Takes market determined price as given and chooses quantity to maximize profits (‘price-taker’)</td>
+    </tr>
+    <tr>
+      <td>Chooses an output level at which marginal cost is less than price</td>
+      <td>Chooses an output level at which marginal cost equals price</td>
+    </tr>
+    <tr>
+      <td>Deadweight losses (Pareto inefficient)</td>
+      <td>No deadweight losses for consumers and firms (can be Pareto efficient if no one else in the economy is affected)</td>
+    </tr>
+    <tr>
+      <td>Owners receive economic rents (profits greater than normal profits)</td>
+      <td>If the owners receive economic rents, the rents are likely to disappear as more firms enter the market</td>
+    </tr>
+    <tr>
+      <td>Firms advertise their unique product</td>
+      <td>Little advertising: it costs the firm, but benefits all firms (it’s a public good)</td>
+    </tr>
+    <tr>
+      <td>Firms may spend money to influence elections, legislation and regulation</td>
+      <td>Little expenditure by individual firms on this (same as advertising)</td>
+    </tr>
+    <tr>
+      <td>Firms invest in research and innovation; seek to prevent copying</td>
+      <td>Little incentive for innovation; others will copy (unless the firm can succeed in differentiating its product and escaping from the competitive market)</td>
+    </tr>
+  </tbody>
+</table>
+
+]
+
+
+---
+name: Fazit
+class: left
+
+# Fazit
+
+1. Unternehmen versuchen Wettbewerb zu vermeiden
+  * Absprachen (Kartelle) bei begrenzter Anzahl von Unternehmen
+  * Produktdifferenzierung und Nischenstrategien
+  
+2. In Wettbewerbsmärkten gelingt den Unternehmen dies nicht
+  * Arbitrage und Preisnehmerverhalten
+  * Preis=Grenzkosten-Regel
+  * Wettbewerb hat positive Effekte für die Konsumenten (Wohlfahrtsmaximierung)
+  
+3. Perfekter Wettbewerb als 
+    * idealisiertes Konzept,
+    * nützliches Analysetool
+
+
+---
+name: EndHanks
+class: center
+
+background-size: 75%
+background-image: url(https://media.giphy.com/media/KJ1f5iTl4Oo7u/giphy.gif)
+

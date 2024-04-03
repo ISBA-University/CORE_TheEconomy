@@ -1,0 +1,1994 @@
+---
+title: "Modul Volkswirtschaftslehre"
+author: "Prof. Dr. Jörg Schoder"
+institute: "ISBA" 
+date: "`r Sys.Date()`"
+bibliography: ../lit/my_bib.json
+reference-section-title: Quellenverzeichnis
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    css: 
+        - default
+        - ../css/schoder_theme.css
+        - xaringan-themer.css
+    includes:
+      after_body: ../css/insert-logo.html
+    lib_dir: ../libs
+    nature:
+      slideNumberFormat: "%current%/%total%"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+    seal: false
+    
+---
+class: title-slide
+
+```{r xaringan-themer, include=FALSE}
+library(xaringanthemer)
+style_xaringan(text_color = "#232461",inverse_text_color = "#FFFFFF",inverse_background_color = "#232461", title_slide_background_color = "#232461",header_background_color = "#232461",header_color = "#FFFFFF",header_h1_font_size = "32px",
+  header_h2_font_size = "26px",link_color="#d84116",
+  header_h3_font_size = "20px",text_slide_number_color = "#232461",text_slide_number_font_size = "0.5em")
+```
+
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_progress_bar(color = "#d84116", location = "bottom")
+xaringanExtra::use_xaringan_extra(c("tile_view","scribble","panelset","tachyons"))
+xaringanExtra::style_panelset_tabs(font_family = "inherit")
+#xaringanExtra::use_search(show_icon = TRUE)
+#weitere: "share_again","animate_css", "webcam","freezeframe","clipboard","fit_screen","extra-styles" 
+xaringanExtra::use_editable(expires = 1)
+xaringanExtra::use_freezeframe(trigger = "hover")
+```
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(latex2exp)
+library(fontawesome)
+```
+
+# Volkswirtschaftslehre
+
+## CORE - The Economy
+
+### Unit 4: Soziale Interaktion und Spieltheorie
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+### Sommersemester 2024 
+<br>
+### Prof. Dr. Jörg Schoder
+.mycontacts[
+`r fa('github')` @ISBA-University
+`r fa('linkedin')` @jfschoder
+]
+
+
+
+
+---
+layout: true
+
+<div class="my-footer"></div>       
+
+<div style="position: absolute;left:400px;bottom:10px;color:ISBAblue;font-size:9px">`r r2symbols::sym('copyright')``r rmarkdown::metadata$author`</div>
+  
+
+---
+name: Motivation
+class: left
+
+# Adam Smith und die unsichtbare Hand
+
+.pull-left[
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_graphics("../images/unit04/Smith_(wiwo).jpg")
+
+```
+]
+
+.pull-right[
+.center[
+
+<br>
+<spacer>
+<br>
+
+"It is not from the benevolence of the butcher, the brewer, or the baker that we expect our dinner, but from their regard to their own self-interest. We address ourselves not to their humanity but to their self-love, and never talk to them of our own necessities, but of their advantages."
+.tr[
+— .small[A. Smith (1776): [The Wealth of Nations](http://eet.pixel-online.org/files/etranslation/original/The%20Wealth%20of%20Nations.pdf)]]
+]
+]
+
+???
+
+Adam Smith war nicht der Erfinder der Metapher von der unsichtbaren Hand; sie war zu seiner Zeit eine durchaus übliche meist religiös konnotierte Redensart. Als im Jahr 1703 das Kriegsschiff Prince George einen gewaltigen Sturm überstand, dem etliche andere Schiffe zum Opfer fielen, schrieb der Kommandant Martin ins Schiffstagebuch: Die unsichtbare Hand der Vorsehung hat uns errettet.[3] Es ist umstritten, ob die Metapher der unsichtbaren Hand von Adam Smith religiös verstanden wurde. Jedenfalls hielt er die Metapher für ein zweckmäßiges Mittel, um seinen Zeitgenossen bestimmte Zusammenhänge zu verdeutlichen.
+
+
+
+---
+name: Motiv
+class: left
+
+# Aktuelle Aktion von Penny-Markt
+
+.panelset[
+.panel[.panel-name[Aktion]
+```{r,echo=FALSE,out.width='100%'}
+knitr::include_graphics('../images/unit04/Penny_Aug2023.png')
+```
+]
+.panel[.panel-name[Wahre Kosten]
+```{r,echo=FALSE,out.width='80%'}
+knitr::include_graphics('../images/unit04/Penny0_Aug2023.png')
+```
+]
+.panel[.panel-name[Beispiel]
+```{r,echo=FALSE,out.width='100%'}
+knitr::include_graphics('../images/unit04/Penny1_Aug2023.png')
+```
+]
+.panel[.panel-name[Spende]
+```{r,echo=FALSE,out.width='100%'}
+knitr::include_graphics('../images/unit04/Penny2_Aug2023.png')
+```
+]
+]
+
+
+???
+
+* **Verbieten**? oder unattraktiv machen durch bessere Zugverbindungen?
+
+* Verbote:
+  * Grundproblem: Aktivitäten sind ja auch nützlich. Helikopter für Notarzt
+  * Kosten und Nutzen müssen abgewogen werden
+  * Nutzen kann letztlich nur jeder selbst bewerten
+    * wollen wir eine Bevormundung? oder eine liberale Gesellschaft
+    * Durchsetzbarkeit am Bsp. Corona. 
+    * Liberale Gesellschaft funktioniert nur mit verantwortungsvollen Menschen (sind wir das?)
+    * wir brauchen sicher Regeln - aber keine Regel kann alle Eventualitäten erfassen 
+  * Wir brauchen Regeln und Moral
+
+---
+name: Falk
+class: left
+
+# Verhaltensökonomik
+
+
+.pull-left[
+<br>
+Buchtipp:
+<br>
+<br>
+```{r,echo=FALSE,out.height="100%"}
+knitr::include_graphics("https://www.penguinrandomhouse.de/content/edition/supplement/998943_72dpi_xl.jpg")
+```
+]
+.pull-right[
+<br>
+Podcast:
+<br>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/1x1ncXopC1yDfaLfLqX0cb?utm_source=generator" width="100%" height="450" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+]
+
+
+
+
+
+
+---
+name: Klima
+class: left
+
+
+# Einordnung: Klimapolitik in Zahlen
+
+```{r, echo=FALSE,fig.align='center',out.width='75%'}
+knitr::include_graphics("../images/unit04/Klimaschutz_in_Zahlen_(BMWK_2023).png")
+```
+
+.quelle[Quelle: [BMWK (2023).](https://www.bmwk.de/Redaktion/DE/Publikationen/Klimaschutz/klimaschutz-in-zahlen.html)]
+
+
+???
+
+* Nationaler Flugverkehr: 1,4% der Emmissionen im Verkehr (S. 36)
+* Dann Seite 26:
+    * Verkehrssektor 2020 (2019): 146 (163) Mio t $CO_2$-Äquivalente, d.h. 146/739=20% (163/805=20%)
+    * Größte Emissionsquellen: Energiewirtschaft und Industrie (55%)
+    * Gebäudesektor? 
+       * hier: 15%
+       * [website der Bundesregierung](https://www.bundesregierung.de/breg-de/themen/klimaschutz/klimafreundlich-wohnen-1672900): Eigentlich müsste er  das Doppelte betragen. Denn weitere Emissionen entstehen bei der Herstellung von Strom und Fernwärme oder von Baustoffen. Obwohl man die Produkte maßgeblich im Gebäudesektor benötigt, werden die Emissionen der Energiewirtschaft und der Industrie zugerechnet. Das macht deutlich, wie wichtig es für das Klima ist, Gebäude energetisch zu sanieren, alte Heizungen auszutauschen und umweltschonendes Baumaterial einzusetzen.
+
+      * Zahlungsbereitschaft für nachhaltiges Wohnen? [YouGov-Umfrage](https://www.dabonline.de/2021/05/04/nachhaltigkeit-wohnungskaeufer-eigentumswohnung-rechnen-kosten-energieeffizienz-immobilien-daemmung/)
+
+
+
+
+
+
+
+
+
+
+
+---
+name: KlimaOekonomie
+class: left
+
+# Klimaschutz nach dem ökonomischen Prinzip?
+
+```{r,echo=FALSE,fig.align='center',out.width='50%'}
+knitr::include_graphics('../images/unit04/ch4_trend_gl_(noaa-gov)_20230817.png')
+```
+
+"Cutting methane is the strongest lever we have to slow climate change over the next 25 years and complements necessary efforts to reduce carbon dioxide. The benefits to society, economies, and the environment are numerous and far outweigh the cost. We need international cooperation to urgently reduce methane emissions as much as possible this decade."
+
+.quelle[[Inger Andersen, UNEP Executive Director](https://www.unep.org/news-and-stories/press-release/global-assessment-urgent-steps-must-be-taken-reduce-methane)]
+
+
+???
+
+* Da einsparen, wo es am leichtesten ist.
+* Ist $CO_2$ alles?
+* Methan ist auch ein Hebel. Nur zwölf Jahre in der Atmosphäre ($C0_2$ Hundert(e) Jahre) 
+* Methanreduktion kann also kurzfristge Effekte bringen - Zeit kaufen
+
+* Corona gut fürs Klima? Leider nein. Aktuelle Messungen zeigen, dass Klimagase trotzdem weiter gestiegen sind, Methan sogar so stark wie zuletzt 1983!
+    * Analysis of samples from 2020 also showed a significant jump in the atmospheric burden of methane, which is far less abundant but 28 times more potent than $CO_2$ at trapping heat over a 100-year time frame. NOAA’s preliminary analysis showed the annual increase in atmospheric methane for 2020 was 14.7 parts per billion (ppb), which is the largest annual increase recorded since systematic measurements began in 1983. 
+
+
+
+---
+name: Gliederung
+class: inverse, left, middle
+# Was lernen wir?
+
+.small[Im "Rational Choice Model" (Unit 3) werden Entscheidungen unabhängig vom Verhalten der anderen Gesellschaftsmitglieder getroffen. Das Modell der komparativen Vorteile (Unit 1) hat dabei gezeigt, dass **eigeninteressiertes Handeln** auch zu **sozial erwünschten** Ergebnissen (Tauschgewinne) führen **kann**.]
+
+## .underline[Inhaltliche Leitfragen]
+
+.blockquote[.small[
+1. Was ändert sich, wenn die Optimalität der eigenen Entscheidung davon abhängt, wie sich die anderen Gesellschaftsmitglieder entscheiden? 
+2. Wann führt eigeninteressiertes Handeln **nicht** zu sozial erwünschten Ergebnissen?
+3. Wie können wir solche sozialen Dilemmata überwinden?  
+]
+]
+
+## .underline[Ökonomische Methoden und Konzepte]
+
+.blockquote[.small[
+1. Strategische Interaktion und Spieltheorie 
+    * Auszahlungsmatrix
+    * Strategien und Nash-Gleichgewicht
+2. Öffentliche Güter und Externalitäten (Wohlfahrtsökonomik)
+3. Altruismus, soziale Normen und Information
+]
+]
+
+
+???
+
+* Unit 1: eigeninteressiertes Verhalten und sozial erwünschte Ergebnisse? Was ist gemeint?
+Tauschgewinne (gains from trade)
+
+* wir werden uns mit den Grundlagen der Spieltheorie auseinandersetzen:
+  * Konzept der Auszahlungsmatrix
+  * dominante und gemischte Strategien
+  * Nash-Gleichgewicht
+
+
+---
+name: Teil1
+class: inverse,center,middle
+
+# Teil 1: Soziale Dilemmata und Externalitäten
+
+.blockquote[Pekuniäre vs. technologische Externalitäten]
+
+.blockquote[Kategorien ökonomischer Güter]
+
+.blockquote[Tragik der Allmende]
+
+
+---
+name: SocDil
+class: left
+
+# Soziale Dilemmata
+
+## Definition
+.blockquote[
+Situationen in denen eigeninteressierte Entscheidungen/Handlungen zu einem sozial suboptimalen bzw. unerwünschten Ergebnis führen.
+]
+
+## Ursache
+
+Soziale Dilemmata werden in der Regel durch sog. Externalitäten verursacht. 
+
+.blockquote[
+**Externalitäten** (auch: Externe Effekte) liegen vor, wenn mit der Entscheidung/Handlung eines Akteurs ein spürbarer Vor- oder Nachteil für andere Beteiligte verbunden ist, ohne dass diese Konsequenzen vom Entscheider selbst zu tragen sind. 
+]
+
+
+
+---
+name: Ext
+class: left
+
+# Externalitäten und Marktversagen
+
+## pekuniäre vs. technologische Externalitäten
+
+* pekuniäre Externalitäten werden durch den Preismechanismus übertragen, sodass die damit verbundenen Transaktionen zu einer effizienten Allokation führen (`r fa("circle-right")` Unsichtbare Hand funktioniert).   
+* technologische Externalitäten schlagen sich nicht im Preis nieder: Diskrepanz zwischen privaten und sozialen Kosten bzw. Nutzen führt zu ineffizienter Allokation `r fa("circle-right")` Marktversagen: Unsichtbare Hand funktioniert nicht)
+
+ 
+## Beispiele für technologische Externalitäten
+
+* **Tragik der Allmende**: Mangelhafte Definition von Eigentumsrechten führt zu Übernutzung (negative Externalität).
+* **Trittbrettfahrerverhalten** bei öffentlichen Gütern: Eine Person/Gruppe trägt sämtliche Kosten, während alle Personen/Gruppe in den Genuss der Vorteile kommt (positive Externalität). 
+
+Wie kann Politik derartige Dilemma-Situationen auflösen? Ist Altruismus (bspw. Verzicht auf Flugreisen) eine Lösung? 
+
+
+
+???
+
+* Externalitäten liegen vor, wenn ein Akteur bei seiner Entscheidung/Handlung nicht sämtliche Konsequenzen für die anderen Beteiligten berücksichtigt.
+
+* pekuniäre Externalitäten: werden über den Preismechanismus übertragen und sind damit unproblematisch im Hinblick auf die Effizienz der Allokation 
+
+* Fehlt ein Markt für Externalitäten kann dies als mangelhafte Definition oder Durchsetzbarkeit von Eigentumsrechten interpretiert werden.
+
+
+* Beispiele für Übernutzung?
+* Beispiele für Trittbrettfahrerverhalten
+* Wie kann 
+
+[IMF](https://www.imf.org/external/pubs/ft/fandd/basics/external.htm)
+
+
+
+
+---
+name: Allokation 
+class: left
+
+# Preise und Allokation: Private vs. Soziale Kosten
+
+## Anreize zum "Verzicht" für Konsumenten
+
+.panelset[
+.panel[.panel-name[Private Kosten]
+```{tikz,echo=FALSE,fig.align='center'}
+{\sffamily	
+	\begin{tikzpicture}[scale=.24,thick]
+	\usetikzlibrary{calc}   %allows coordinate calculations.
+	\draw[style=help lines] (0,0) grid (9,9);
+	\draw[-stealth] (0,0) -- (10,0) node[below,text width=1.5cm,text height =6pt, text centered] {\scriptsize $x_F$\\(Flugreisen)};
+	\draw[-stealth] (0,0) -- (0,10) node[left,text width=1.5cm,text height =6pt,text centered] {\scriptsize $x_Z$\\(Zugreisen)};
+	\draw (0,6.5) node[left,text height =6pt, text centered] {$\frac{m}{p_Z}$};
+	\draw (6.5,0) node[below,text height =6pt, text centered] {$\frac{m}{p_F}$};
+	\draw (0,6.5)--(6.5,0);
+	
+	\draw[blue] (1,8) to [out=-85, in=130] (2.5,4.01) to [out=-48, in=170] (7,2.2);
+	
+	\draw[fill] (2.5,4.01) circle [radius =0.1];
+	\draw[fill] (2.5,4.01) node[above,text centered]{\scriptsize A};
+	\draw[dashed] (0,4.01)--(2.5,4.01)--(2.5,0) node[below] {\scriptsize $x_F^P$};
+	\end{tikzpicture}
+}
+```
+]
+.panel[.panel-name[Soziale Kosten]
+```{tikz,echo=FALSE,fig.align='center'}
+{\sffamily	
+	\begin{tikzpicture}[scale=.24,thick]
+	\usetikzlibrary{calc}   %allows coordinate calculations.
+	\draw[style=help lines] (0,0) grid (9,9);
+	\draw[-stealth] (0,0) -- (10,0) node[below,text width=1.5cm,text height =6pt, text centered] {\scriptsize $x_F$\\(Flugreisen)};
+	\draw[-stealth] (0,0) -- (0,10) node[left,text width=1.5cm,text height =6pt,text centered] {\scriptsize $x_Z$\\(Zugreisen)};
+	\draw (0,6.5) node[left,text height =6pt, text centered] {$\frac{m}{p_Z}$};
+	\draw (6.5,0) node[below,text height =6pt, text centered] {$\frac{m}{p_F}$};
+	\draw (0,6.5)--(6.5,0);
+	
+	\draw[blue] (1,8) to [out=-85, in=130] (2.5,4.01) to [out=-48, in=170] (7,2.2);
+	
+	\draw[fill] (2.5,4.01) circle [radius =0.1];
+	\draw[fill] (2.5,4.01) node[above,text centered]{\scriptsize A};
+	\draw[dashed] (0,4.01)--(2.5,4.01)--(2.5,0) node[below] {\scriptsize $x_F^P$};
+  
+	\draw[red] (0,6.5) node[left,text height =6pt, text centered] {$\frac{m}{p_Z}$};
+	\draw (4.5,0) node[below,text height =6pt, text centered] {$\frac{m}{\hat{p}_F}$};
+	\draw[red] (0,6.5)--(4.5,0);
+	
+	\draw[blue] (0.5,7.5) to [out=-85, in=130] (2.5,3.1) to [out=-43, in=168] (6,1.7);
+	\draw[fill,red] (1.65,4.2) circle [radius =0.1];
+	\draw[fill] (1.7,4.2) node[above,text centered,red]{\scriptsize B};
+	\draw[dashed,red] (0,4.2)--(1.7,4.2)--(1.7,0) node[below left] {\scriptsize $x_F^S$};
+	\end{tikzpicture}
+}
+```
+]
+]
+
+???
+
+* Strukturell betrachtet: Negative Externalität wird im eigenen Verhalten nicht berücksichtigt. Es kommt zu einer Übernutzung der Atmosphäre als CO2-Senke
+
+* bzw. umgekehrt: Positive Externalität klimaschonenden Verhaltens!
+  * der einzelne trägt die Kosten (energetische Sanierung, Verzicht auf Flug, teurer Flug)
+  * alle haben einen Nutzen
+
+* Mithin wird von jedem einzelnen zu wenig Klimaschutz verfolgt
+
+
+---
+name: Allokation 
+class: left
+
+# Preise und Allokation: Private vs. Soziale Kosten
+
+## Anreize zur Innovation für Produzenten (Bsp. Stahlproduktion)
+
+.panelset[
+.panel[.panel-name[Private Kosten]
+```{tikz,echo=FALSE,fig.align='center'}
+{\sffamily	
+	\begin{tikzpicture}[scale=.24,thick]
+	\usetikzlibrary{calc}   %allows coordinate calculations.
+	\draw[style=help lines] (0,0) grid (9,9);
+	\draw[-stealth] (0,0) -- (10,0) node[below,text width=1.5cm,text height =6pt, text centered] {\scriptsize $x_K$\\(Kohle)};
+	\draw[-stealth] (0,0) -- (0,10) node[left,text width=1.5cm,text height =6pt,text centered] {\scriptsize $x_W$\\(Wasserstoff)};
+	
+  %Isoquante
+	\draw[blue] (0,6.5)--(6.5,0);
+  \draw[blue] (4,2.5) node[pin={[pin distance=5em]45:{\scriptsize Isoquante}}] {};
+
+  %Isokostenlinie
+  \draw (0,3.5) -- (6.5,0);
+  \draw (0,3.5) node[left,text height=6pt, text centered] {$\frac{C}{p_W}$};
+	\draw (6.5,0) node[below,text height=6pt, text centered] {$\frac{C}{p_K}$};
+  
+  
+	\draw[fill] (6.5,0) circle [radius =0.1];
+	\draw (6.5,0) node[above,text centered] {\scriptsize A};
+	
+	\end{tikzpicture}
+}
+```
+]
+.panel[.panel-name[Soziale Kosten]
+```{tikz,echo=FALSE,fig.align='center'}
+{\sffamily	
+	\begin{tikzpicture}[scale=.24,thick]
+	\usetikzlibrary{calc}   %allows coordinate calculations.
+	\draw[style=help lines] (0,0) grid (9,9);
+	\draw[-stealth] (0,0) -- (10,0) node[below,text width=1.5cm,text height =6pt, text centered] {\scriptsize $x_K$\\(Kohle)};
+	\draw[-stealth] (0,0) -- (0,10) node[left,text width=1.5cm,text height =6pt,text centered] {\scriptsize $x_W$\\(Wasserstoff)};
+  
+  %Isoquante
+	\draw[blue] (0,6.5)--(6.5,0);
+  \draw[blue] (4,2.5) node[pin={[pin distance=5em]45:{\scriptsize Isoquante}}] {};
+  
+  %Isokostenlinien
+  \draw[dashed] (0,3.5)--(6.5,0);
+  \draw[red] (0,6.5)--(3.5,0);
+  \draw[red] (0,6.5) node[left,text height=6pt, text centered] {$\frac{C}{\hat{p}_W}$};
+	\draw[red] (3.5,0) node[below,text height=6pt, text centered] {$\frac{C}{\hat{p}_K}$};
+	
+  
+  %altes Optimum
+	\draw[fill] (6.5,0) circle [radius =0.1];
+	\draw (6.5,0) node[above,text centered]{\scriptsize A};
+  \draw (6.5,0) node[below,text height =6pt, text centered] {$x_K^P$};
+
+  %neues Optimum
+	\draw[red,fill] (0,6.5) circle [radius =0.1];
+	\draw[red] (0,6.5) node[above right,text centered]{\scriptsize B};
+  \draw[red,dashed] (0,6.5) -- (0,0);
+  \draw[red] (0,0) node[below,text height =6pt, text centered] {\scriptsize $x_K^S$};
+	\end{tikzpicture}
+}
+```
+]
+]
+
+???
+
+* Strukturell betrachtet: Negative Externalität wird im eigenen Verhalten nicht berücksichtigt. Es kommt zu einer Übernutzung der Atmosphäre als CO2-Senke
+
+* bzw. umgekehrt: Positive Externalität klimaschonenden Verhaltens!
+  * der einzelne trägt die Kosten (energetische Sanierung, Verzicht auf Flug, teurer Flug)
+  * alle haben einen Nutzen
+
+* Mithin wird von jedem einzelnen zu wenig Klimaschutz verfolgt
+
+
+---
+name: tragik
+class: left
+
+# Tragik der Allmende
+
+
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url("https://www.deutschlandfunk.de/alltaegliche-aergernisse-muell-und-littering-im-oeffentlichen-raum-100.html",height = "550px")
+```
+
+
+
+
+
+
+---
+name: Gueterklassifikation
+class: left
+
+# Kategorien ökonomischer Güter und Externalitäten
+
+
+<table id="multiLevelTable">
+        <caption>Klassifikation wirtschaftlicher Güter</caption>
+        <thead>
+            <tr>
+                <th colspan="2" rowspan="2">  </th>
+                <th colspan="2">Außschließbarkeit von Nicht-Zahlenden</th>
+            </tr>
+            <tr>
+                <th>... möglich</th>
+                <th>... nicht möglich/erwünscht</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="2">Rivalität im Konsum</th>
+                <th>ja</th>
+                <td>(rein) Privates Gut</td>
+                <td>quasi-öffentliches Gut (Allmendegut)</td>
+            </tr>
+            <tr>
+                <th>nein</th>
+                <td>quasi-privates Gut (Klubgut)</td>
+                <td>(rein) öffentliches Gut</td>
+            </tr>
+      </tbody>
+    </table>
+  
+.quelle[Eigene Darstellung.]
+
+
+
+???
+
+* Freie Güter $\neq$ öffentliche Güter (vgl. Knappheit)
+* Beispiele für rein private Güter: Kleidung, Wohnung, Mautstraße mit Stau.
+* Beispiele für rein öffentliche Güter: Landesverteidigung, öffentl. Straßen ohne Stau, Grundlagenforschung, Rechtswesen.
+* Beispiele für Klubgüter (auch Mautgüter):  Fitnessclub, pay-TV, Mautstraße ohne Stau etc. (bis zur Kapazitätsgrenze).
+* Beispiele Allmendegüter: Allmende, Hochseefischerei, Umweltgüter.
+
+
+
+
+---
+name: Tragik
+class: left
+
+# Tragik der Allmende
+
+.pull-left[
+Bitte QR-Code scannen und mitspielen! 
+
+```{r ClassEx1,echo=FALSE, message=FALSE,out.width='90%',fig.align='center'}
+knitr::include_graphics('../images/ClassEx-link.svg')
+```
+]
+
+.pull-right[
+<br>
+<br>
+<br>
+```{r, echo=FALSE,fig.align='center',out.width = "100%"}
+knitr::include_graphics("../images/unit04/Overfishing_(Economist_2020).png")
+```
+]
+
+.quelle[[Economist (22.10.2020).](https://www.economist.com/leaders/2020/10/22/illicit-fishing-devastates-the-seas-and-abuses-crews)]
+
+
+---
+name: PauseMurray
+class: center
+
+
+<iframe src="https://giphy.com/embed/11F0d3IVhQbreE" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/bill-murray-pointing-you-got-this-11F0d3IVhQbreE">via GIPHY</a></p>
+
+
+
+
+---
+name: EffJust
+class: left
+
+# Ausblick Unit 11: 
+
+## Strategien zur Internalisierung externer Effekte
+
+* Verbote (Grenzwert)
+* Preise als Lenkungsinstrument
+  * Besteuerung (Pigou-Steuer): negatives Verhalten wird teurer (bspw. $CO_2$-Steuer)
+  * Subventionen: positives Verhalten wird belohnt (bspw. E-Auto-Prämie, Immobiliensanierung...)
+* Eigentumsrechte (Coase-Theorem)
+  * Effizienzthese vs. Invarianzthese
+  * Zertifikatelösung (endogene Preisbildung)
+
+## Effizienz vs. Gerechtigkeit und das Coase-Theorem
+
+* Effizienz vs. Gerechtigkeit 
+  * Beispiel $CO_2$-Steuer
+  * Beispiel Verschmutzungsrechte
+
+
+
+---
+name: Coase
+class: left
+
+# Coase Theorem
+
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url("https://dev-ii-seminar.readthedocs.io/en/latest/_images/notebooks_Coase_11_0.png",height = "520px")
+```
+
+.quelle[Quelle: [dev-ii-seminar.readthedocs.io](https://dev-ii-seminar.readthedocs.io/en/latest/notebooks/Coase.html)]
+
+???
+
+* Coase-Theorem und Effizienz
+  * Es genügt, Eigentumsrechte zu definieren, dann kommt es zu einer effizienten Lösung.
+  * Beispiel WG
+    * Recht auf Lärm (Musik) vs. Recht auf Ruhe
+    * Coase-Theorem sagt, es ist egal, wer das Recht hat, am Ende ist in der Wohnung
+    der gleiche (effiziente) Geräuschpegel
+    * Unterschied liegt nur, welcher WG-Bewohner den anderen entschädigen muss (Gerechtigkeit)
+  * Voraussetzung (Like frictionless plane in Physics - a logical construction rather than something encountered in real life.): 
+    * Klar definierte Eigentumsrechte 
+    * Keine (verschwindend geringe) Transaktionskosten
+    * vollständige Infos: Spieltheoretisch heißt das, dass sich die Spieler jederzeit austauschen können
+    
+  * Verhandlungsmacht [Bargaining](https://demonstrations.wolfram.com/TheCoaseTheorem/)
+
+* Preise und Gerechtigkeit:
+  * Millionär kann SUV auch bei einem Benzinpreis von 10 Euro betreiben
+  * Krankenschwester nicht
+  * Was sagt das über die Dringlichkeit der Bedürfnisse?
+  
+* Generationengerechtigkeit
+
+* TODO Verhaltensökonomik (Thaler, Misbehaving Beispiel zu Coase)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+name: Teil1
+class: inverse,center,middle
+
+# Teil 2: Spieltheorie
+
+.blockquote[Darstellung von Spielen und Strategien]
+
+.blockquote[Einmalige Spiele]
+
+.blockquote[Wiederholte Spiele und sequentielle Spiele]
+
+.blockquote[Auswege aus Dilemma-Situationen]
+
+
+
+---
+name: StratInt
+class: left
+
+# Externalitäten und strategische Interaktion
+
+## Soziale Interkation
+
+.blockquote[
+Situationen mit mehr als einer Person bzw. Gruppe, in der die Handlung einer Person/Gruppe nicht nur auf diese Person/Gruppe auswirkt, sondern auch auf andere Personen/Gruppen
+]
+
+
+## Strategische Interaktion
+
+.blockquote[
+Eine soziale Interaktion, in der sich die Akteure darüber im Klaren sind, wie ihre Entscheidungen/Handlungen die anderen Akteure betreffen.
+]
+
+## Strategie
+
+.blockquote[
+Entscheidungs-/Handlungsoptionen, die den Akteuren zur Verfügung stehen.
+]
+
+
+## Spieltheorie
+
+.blockquote[
+als Theorie interdependenter Entscheidungen. Sie dient der modellhaften Betrachtung von Situationen mit strategischer Interaktion.
+]
+
+
+???
+
+* Die Neoklassik betrachtete traditionell primär soziale Interaktionen im Sinne von Markttransaktionen. 
+    * Nicht-marktliche Transaktionen waren für die Neoklassik nicht interessant bzw. Ausdruck von unvollständigen Märkten. 
+    * Externalitäten, die durch nicht-marktliche Transaktionen entstanden, sollten eliminiert werden, indem die Eigentumsrechte entsprechend des Coase-Theorems entsprechend definiert werden.
+
+* In den 1970er Jahren setzte sich die (nicht-kooperative) Spieltheorie zunehmend durch. Sie erlaubt es auch nicht-marktliche Interaktionen mit mathematischer Stringenz zu analysieren.
+
+* Perspektive der Spieltheorie: Agents interact through their chosen actions. An action chosen by one agent may **affect the actions of other agents through three channels**:
+    * constraints, 
+    * expectations, and 
+    * preferences
+
+* Mit spieltheoretischen Modellen können wir Situationen identifizieren, in denen die eigeninteressierten Handlungen der Akteure:
+    * zu sozial erwünschten Ergebnissen führen
+    * zu sozialen Dilemmata führen
+* Devising policies to promote people’s wellbeing requires an understanding of the difference between situations in which self-interest can promote general wellbeing, and cases in which it leads to undesirable results. To analyse this, we will introduce game theory, a way of modelling how people interact.
+
+* Social dilemma = a situation in which actions taken independently by self-interested individuals result in a 
+socially suboptimal outcome e.g. traffic jams, climate change
+
+
+
+
+---
+name: GameTheory
+class: left
+
+# Anwendungsbereiche der Spieltheorie
+
+.blockquote[
+Game theory encouraged economists to see
+all interactions as games, with markets as special cases.
+.tr[
+— (Manski (2000), S. 116)
+]]
+
+
+* Geld- und Fiskalpolitik
+  * Besteuerung (und Zölle)
+  * Zeitkonsistenzprobleme und Regelbindung
+* Umweltprobleme
+  * Öffentliche Güter
+  * Externalitäten
+* Industrieökonomik, Verhalten von Unternehmen (Unit 7)
+  * Duopole
+  * Oligopole
+* Organisationstheorie (Verhandlungen und Vertragsprobleme)
+* Auktionen
+* Politikwissenschaft
+* Gesellschaftsspiele (Schach, Poker etc.)
+* ...
+
+
+???
+
+* Politikwissenschaft:
+  * Internationale Beziehungen
+  * (Kriegerische) Konflikte
+  * Geiselnahme
+* Biologie (Evolutionstheorie)
+* Gesellschaftsspiele (Schach, Poker etc.)
+
+
+
+
+---
+name: Payoff
+class: left
+
+# Konzepte der Spieltheorie: Auszahlungsmatrix
+
+
+.panelset[
+.panel[.panel-name[Spiel]
+Ein Spiel ist durch folgende Bestandteile charakterisiert:
+  * Beteiligte Spieler (mindestens 2): Wer interagiert?
+  * Spielregeln:
+      * Welche Entscheidungs-/Handlungsoptionen (Strategien) gibt es?   
+      * Welche Konsequenzen (Geldbeträge, Nutzen,...) sind mit den verschiedenen Kombinationen individueller Entscheidungen/Handlungen verbunden?
+      * einmalige vs. wiederholte Spiele
+          * endlich oft wiederholt
+          * unendliche oft wiederholt
+      * simultane vs. sequenzielle Spiele
+  * Information: was wissen die Spieler bei ihrer Entscheidung?
+    * bspw. über Mitspieler (Rationalität, Nutzen, Reputation ...)
+]    
+
+.panel[.panel-name[Beispiel]
+<img src="https://www.core-econ.org/the-economy/book/images/web/figure-04-01.svg" height="450px" width="800px" />
+]
+
+.panel[.panel-name[Normalform]
+```{tikz,echo=FALSE,fig.align='center'}
+{\sffamily	
+\begin{tikzpicture}[scale=1.5]%font=\scriptsize]
+		%Outlinebox
+		\draw[thick] (0,0) -- (2.2,0);
+		\draw[thick] (0,0)-- (0,2.2);
+		\draw[thick] (2.2,2.2) -- (2.2,0);
+		\draw[thick] (2.2,2.2) -- (0,2.2);
+		\draw[thick] (-0.3,1.1) -- (2.2,1.1);
+		\draw[thick] (1.1,0) -- (1.1,2.5);
+		%Payoffdividers
+		\draw[densely dotted] (.1,2.1) -- (1,1.2);
+		\draw[densely dotted] (.1,1) -- (1,0.1);
+		\draw[densely dotted] (1.2,1) -- (2.1,0.1);
+		\draw[densely dotted] (1.2,2.1) -- (2.1,1.2);
+		%Strategylabels
+		\coordinate[label=left:Reis] (p1) at (-0.1,1.6);
+		\coordinate[label=left:Maniok] (p1) at (-0.1,0.4);
+		\coordinate[label=above:Reis] (p1) at (0.55,2.2);
+		\coordinate[label=above:Maniok] (p1) at (1.65,2.2);
+		
+		\coordinate[label=above:\textcolor{blue}{\textbf{Bala}}] (p1) at (1.1,2.5);
+		\coordinate[label=left: \textcolor{red}{\textbf{Anil}}]( p1) at (-0.3,1.1);
+		%Thepayoffsforbothplayers:
+		\fill[red] (.35,1.4) node {1};
+		\fill[blue] (0.8,1.9) node {3};
+		
+		\fill[red] (1.4,1.4) node {2};
+		\fill[blue] (1.9,1.9) node {2};
+		\fill[red] (0.35,0.35) node {4};
+		\fill[blue] (0.8,0.8) node {4};
+		
+		\fill[red] (1.4,0.35) node {3};
+		\fill[blue] (1.9,0.8) node {1};
+	\end{tikzpicture}
+}
+```
+]
+.panel[.panel-name[Diagramm]
+```{tikz,echo=FALSE,fig.align='center'}
+	{\sffamily
+		\begin{tikzpicture}[scale=.5,thick]
+		\usetikzlibrary{calc}   %allows coordinate calculations.					
+		\coordinate (RR) at (1,3);
+		\coordinate (RM) at (2,2);
+		\coordinate (MR) at (4,4);
+		\coordinate (MM) at (3,1);
+		
+		\draw[-stealth] (0,0) -- (6,0) node[below, text width=1.5cm,text height =6pt, text centered] {Payoff Anil};
+		\draw[-stealth] (0,0) -- (0,6) node[left,text height =6pt,text centered] {Payoff Bala};
+%Indifferenzkurve		
+%		\draw[blue,line width=.15em] (2,5.5) to [out=275,in=175] (5.5,2);
+%		\draw[blue,line width=.15em] (.65,5) to [out=275,in=175] (5,.65);
+		
+		\draw [fill] (RR) circle [radius=.1];
+		\draw (RR) node[above] {(R,R)};
+		\draw [fill] (RM) circle [radius=.1];
+		\draw (RM) node[above] {(R,M)};
+		\draw [fill] (MR) circle [radius=.1];
+		\draw (MR) node[above] {(M,R)};
+		\draw [fill] (MM) circle [radius=.1];
+		\draw (MM) node[above] {(M,M)};
+	\end{tikzpicture}
+}
+```
+]
+]
+
+???
+
+* "simultan" nicht wörtlich gemeint, sondern: ein Spieler kennt die gewählten
+Aktionen seiner Gegenspieler nicht, wenn er am Zug ist
+* "unabhängig": Spieler können keine bindenden Vereinbarungen treffen
+
+* We often need only **ordinal information**; i.e., two options a and b,
+and we imagine a (real-valued) utility function u (·) that represents
+the ranking of different options, and we simply check whether
+
+* But **in game theory we often need cardinal information** because
+decisions are made under **natural or strategic uncertainty**. The theory
+of decision-making under uncertainty was originally developed by
+John von Neumann and Oskar Morgenstern.
+
+
+* Erwartungen über Verhalten der anderen hängt vor allem von den Infos ab (wiederholt, einmalig etc.)
+
+* [Stanford Encyclopedia of Philosophy](https://plato.stanford.edu/entries/game-theory/)
+* [Covid Game](https://vivfang.medium.com/coronavirus-game-6fdf4d4d4007)
+
+* CORE Beispiel
+    * Two farmers decide which crop to specialize in.
+    * They interact only once (one-shot game). 
+    * Players – Anil and Bala.
+    * Feasible strategies – Rice or Cassava
+    * Information – Each farmer does not know what the other chose.
+    * Payoffs – depend on market prices and quality of land.
+
+
+
+---
+name: einmalig
+class: inverse, center, middle
+
+
+# Einmalige Spiele
+
+.blockquote[Beste Antworten und Dominante Strategien]
+
+.blockquote[Nash-Gleichgewicht]
+
+.blockquote[Gefangenendilemma]
+
+
+???
+
+* Kooperation wird eher unattraktiv. Asoziales Verhalten hat keine Konsequenz
+für die Zukunft
+* also **nicht**: "Man sieht sich immer zweimal im Leben"
+
+
+
+
+---
+name: optResp
+class: left
+
+# Beste Antworten und Dominanz - Die Häkchen-Methode 
+
+
+.panelset[
+.panel[.panel-name[Definitionen]
+
+* **Beste Antwort**: Was ist für einen Akteur die beste Wahl, wenn er die Entscheidung des anderen kennt?
+
+* Identifikation mit der "Häkchen-Methode": Isolierte Betrachtung der Entscheidungsprobleme der (hier: beiden) Spieler.
+
+* **Dominante Strategie**: Gibt es eine beste Wahl, die für alle Entscheidungen des anderen Akteurs optimal ist?
+
+]
+
+.panel[.panel-name[Schritt 1]
+```{tikz,echo=FALSE,fig.align='center'}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+{\sffamily	
+\begin{tikzpicture}[scale=1.5]%font=\scriptsize]
+		%Outlinebox
+		\draw[thick] (0,0) -- (2.2,0);
+		\draw[thick] (0,0)-- (0,2.2);
+		\draw[thick] (2.2,2.2) -- (2.2,0);
+		\draw[thick] (2.2,2.2) -- (0,2.2);
+		\draw[thick] (-0.3,1.1) -- (2.2,1.1);
+		\draw[thick] (1.1,0) -- (1.1,2.5);
+		%Payoffdividers
+		\draw[densely dotted] (.1,2.1) -- (1,1.2);
+		\draw[densely dotted] (.1,1) -- (1,0.1);
+		\draw[densely dotted] (1.2,1) -- (2.1,0.1);
+		\draw[densely dotted] (1.2,2.1) -- (2.1,1.2);
+		%Strategylabels
+		\coordinate[label=left:Reis] (p1) at (-0.1,1.6);
+		\coordinate[label=left:Maniok] (p1) at (-0.1,0.4);
+		\coordinate[label=above:Reis] (p1) at (0.55,2.2);
+		\coordinate[label=above:Maniok] (p1) at (1.65,2.2);
+		
+		\coordinate[label=above:\textcolor{blue}{\textbf{Bala}}] (p1) at (1.1,2.5);
+		\coordinate[label=left: \textcolor{red}{\textbf{Anil}}](p1) at (-0.3,1.1);
+		%Thepayoffsforbothplayers:
+  %oben links
+		\fill[red] (.35,1.4) node {1};
+		\fill[blue] (0.8,1.9) node {3};
+	%oben rechts	
+		\fill[red] (1.4,1.4) node {2};
+		\fill[blue] (1.9,1.9) node {2};
+  %unten links
+		\fill[red] (0.35,0.35) node {4\checkmark};
+		\fill[blue] (0.8,0.8) node {4};
+	%unten rechts	
+		\fill[red] (1.4,0.35) node {3};
+		\fill[blue] (1.9,0.8) node {1};
+	\end{tikzpicture}
+}
+```
+]
+
+.panel[.panel-name[Schritt 2]
+```{tikz,echo=FALSE,fig.align='center'}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+{\sffamily	
+\begin{tikzpicture}[scale=1.5]%font=\scriptsize]
+		%Outlinebox
+		\draw[thick] (0,0) -- (2.2,0);
+		\draw[thick] (0,0)-- (0,2.2);
+		\draw[thick] (2.2,2.2) -- (2.2,0);
+		\draw[thick] (2.2,2.2) -- (0,2.2);
+		\draw[thick] (-0.3,1.1) -- (2.2,1.1);
+		\draw[thick] (1.1,0) -- (1.1,2.5);
+		%Payoffdividers
+		\draw[densely dotted] (.1,2.1) -- (1,1.2);
+		\draw[densely dotted] (.1,1) -- (1,0.1);
+		\draw[densely dotted] (1.2,1) -- (2.1,0.1);
+		\draw[densely dotted] (1.2,2.1) -- (2.1,1.2);
+		%Strategylabels
+		\coordinate[label=left:Reis] (p1) at (-0.1,1.6);
+		\coordinate[label=left:Maniok] (p1) at (-0.1,0.4);
+		\coordinate[label=above:Reis] (p1) at (0.55,2.2);
+		\coordinate[label=above:Maniok] (p1) at (1.65,2.2);
+		
+		\coordinate[label=above:\textcolor{blue}{\textbf{Bala}}] (p1) at (1.1,2.5);
+		\coordinate[label=left: \textcolor{red}{\textbf{Anil}}](p1) at (-0.3,1.1);
+		%Thepayoffsforbothplayers:
+  %oben links
+		\fill[red] (.35,1.4) node {1};
+		\fill[blue] (0.8,1.9) node {3};
+	%oben rechts	
+		\fill[red] (1.4,1.4) node {2};
+		\fill[blue] (1.9,1.9) node {2};
+  %unten links
+		\fill[red] (0.35,0.35) node {4\checkmark};
+		\fill[blue] (0.8,0.8) node {4};
+	%unten rechts	
+		\fill[red] (1.4,0.35) node {3\checkmark};
+		\fill[blue] (1.9,0.8) node {1};
+	\end{tikzpicture}
+}
+```
+]
+
+.panel[.panel-name[Schritt 3]
+```{tikz,echo=FALSE,fig.align='center'}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+{\sffamily	
+\begin{tikzpicture}[scale=1.5]%font=\scriptsize]
+		%Outlinebox
+		\draw[thick] (0,0) -- (2.2,0);
+		\draw[thick] (0,0)-- (0,2.2);
+		\draw[thick] (2.2,2.2) -- (2.2,0);
+		\draw[thick] (2.2,2.2) -- (0,2.2);
+		\draw[thick] (-0.3,1.1) -- (2.2,1.1);
+		\draw[thick] (1.1,0) -- (1.1,2.5);
+		%Payoffdividers
+		\draw[densely dotted] (.1,2.1) -- (1,1.2);
+		\draw[densely dotted] (.1,1) -- (1,0.1);
+		\draw[densely dotted] (1.2,1) -- (2.1,0.1);
+		\draw[densely dotted] (1.2,2.1) -- (2.1,1.2);
+		%Strategylabels
+		\coordinate[label=left:Reis] (p1) at (-0.1,1.6);
+		\coordinate[label=left:Maniok] (p1) at (-0.1,0.4);
+		\coordinate[label=above:Reis] (p1) at (0.55,2.2);
+		\coordinate[label=above:Maniok] (p1) at (1.65,2.2);
+		
+		\coordinate[label=above:\textcolor{blue}{\textbf{Bala}}] (p1) at (1.1,2.5);
+		\coordinate[label=left: \textcolor{red}{\textbf{Anil}}](p1) at (-0.3,1.1);
+		%Thepayoffsforbothplayers:
+  %oben links
+		\fill[red] (.35,1.4) node {1};
+		\fill[blue] (0.8,1.9) node {3\checkmark};
+	%oben rechts	
+		\fill[red] (1.4,1.4) node {2};
+		\fill[blue] (1.9,1.9) node {2};
+  %unten links
+		\fill[red] (0.35,0.35) node {4\checkmark};
+		\fill[blue] (0.8,0.8) node {4};
+	%unten rechts	
+		\fill[red] (1.4,0.35) node {3\checkmark};
+		\fill[blue] (1.9,0.8) node {1};
+	\end{tikzpicture}
+}
+```
+]
+
+.panel[.panel-name[Schritt 4]
+```{tikz,echo=FALSE,fig.align='center'}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+{\sffamily	
+\begin{tikzpicture}[scale=1.5]%font=\scriptsize]
+		%Outlinebox
+		\draw[thick] (0,0) -- (2.2,0);
+		\draw[thick] (0,0)-- (0,2.2);
+		\draw[thick] (2.2,2.2) -- (2.2,0);
+		\draw[thick] (2.2,2.2) -- (0,2.2);
+		\draw[thick] (-0.3,1.1) -- (2.2,1.1);
+		\draw[thick] (1.1,0) -- (1.1,2.5);
+		%Payoffdividers
+		\draw[densely dotted] (.1,2.1) -- (1,1.2);
+		\draw[densely dotted] (.1,1) -- (1,0.1);
+		\draw[densely dotted] (1.2,1) -- (2.1,0.1);
+		\draw[densely dotted] (1.2,2.1) -- (2.1,1.2);
+		%Strategylabels
+		\coordinate[label=left:Reis] (p1) at (-0.1,1.6);
+		\coordinate[label=left:Maniok] (p1) at (-0.1,0.4);
+		\coordinate[label=above:Reis] (p1) at (0.55,2.2);
+		\coordinate[label=above:Maniok] (p1) at (1.65,2.2);
+		
+		\coordinate[label=above:\textcolor{blue}{\textbf{Bala}}] (p1) at (1.1,2.5);
+		\coordinate[label=left: \textcolor{red}{\textbf{Anil}}](p1) at (-0.3,1.1);
+		%Thepayoffsforbothplayers:
+  %oben links
+		\fill[red] (.35,1.4) node {1};
+		\fill[blue] (0.8,1.9) node {3\checkmark};
+	%oben rechts	
+		\fill[red] (1.4,1.4) node {2};
+		\fill[blue] (1.9,1.9) node {2};
+  %unten links
+		\fill[red] (0.35,0.35) node {4\checkmark};
+		\fill[blue] (0.8,0.8) node {4\checkmark};
+	%unten rechts	
+		\fill[red] (1.4,0.35) node {3\checkmark};
+		\fill[blue] (1.9,0.8) node {1};
+	\end{tikzpicture}
+}
+```
+]
+]
+
+
+
+
+???
+
+* simultan heißt nicht unbedingt gleichzeitig, sondern, dass die Spieler sich nicht
+absprechen können und dementsprechend nicht wissen, was der andere macht!
+
+* Häkchen Methode:
+  * Zunächst schauen wir uns die besten Antworten für den Zeilenspieler (hier: Anil) an:
+    * zuerst überlegen wir, was die beste Entscheidung/Antwort von Anil ist, wenn Bala Reis (Spalte) wählt. Dort setzen wir ein Häkchen
+    * als nächstes überlegen wir: Wenn Bala Maniok (Spalte) wählt, was ist dann die beste Antwort von Anil? Dort setzen wir das zweite Häkchen
+  * Nun schauen wir uns die besten Antworten für den Spaltenspieler (hier Bala) an:
+    * Was ist für Bala die beste Antwort, wenn Anil Reis spielt (Zeile) spielt?
+    * schließlich: wenn Anil Maniok anbaut, was ist dann die beste Antwort von Bala? (4. Schritt: Reis)
+
+* Dominante und dominierte Strategien
+
+
+
+---
+name: dominance
+class: left
+
+# Dominante Strategie und Gleichgewichtskonzepte
+
+.panelset[
+.panel[.panel-name[Definitionen]
+
+## Gleichgewicht in dominanten Strategien (GDS)
+.blockquote[
+Eine Strategiekombination (bspw. Anil: Maniol, Bala: Reis) ist ein GDS, wenn
+alle beteiligten Spieler ihre dominanten Strategien spielen.
+]
+
+Mithin hat in diesem Fall jeder Spieler eine dominante Strategie, die unabhängig von
+der Entscheidung/Handlung der anderen Spieler am besten ist. Meist hängen die optimalen Strategien der Spieler aber von den Strategien ab, die ihre Mitspieler wählen.
+
+## Nash-Gleichgewicht (NG)
+
+.blockquote[
+Ein Nash-Gleichgewicht ist eine Strategiekombination, bei der für jeden Spieler gilt, dass seine Entscheidung/Handlung für gegebene Entscheidungen der anderen Spieler die beste Antwort ist.
+]
+
+Jedes Gleichgewicht in dominanten Strategien ist ein Nash-Gleichgewicht.
+]
+
+.panel[.panel-name[GDS]
+```{tikz,echo=FALSE,fig.align='center'}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+{\sffamily	
+\begin{tikzpicture}[scale=1.5]%font=\scriptsize]
+		%Outlinebox
+		\draw[thick] (0,0) -- (2.2,0);
+		\draw[thick] (0,0)-- (0,2.2);
+		\draw[thick] (2.2,2.2) -- (2.2,0);
+		\draw[thick] (2.2,2.2) -- (0,2.2);
+		\draw[thick] (-0.3,1.1) -- (2.2,1.1);
+		\draw[thick] (1.1,0) -- (1.1,2.5);
+		%Payoffdividers
+		\draw[densely dotted] (.1,2.1) -- (1,1.2);
+		\draw[densely dotted] (.1,1) -- (1,0.1);
+		\draw[densely dotted] (1.2,1) -- (2.1,0.1);
+		\draw[densely dotted] (1.2,2.1) -- (2.1,1.2);
+		%Strategylabels
+		\coordinate[label=left:Reis] (p1) at (-0.1,1.6);
+		\coordinate[label=left:Maniok] (p1) at (-0.1,0.4);
+		\coordinate[label=above:Reis] (p1) at (0.55,2.2);
+		\coordinate[label=above:Maniok] (p1) at (1.65,2.2);
+		
+		\coordinate[label=above:\textcolor{blue}{\textbf{Bala}}] (p1) at (1.1,2.5);
+		\coordinate[label=left: \textcolor{red}{\textbf{Anil}}](p1) at (-0.3,1.1);
+		%Thepayoffsforbothplayers:
+  %oben links
+		\fill[red] (.35,1.4) node {1};
+		\fill[blue] (0.8,1.9) node {3};
+	%oben rechts	
+		\fill[red] (1.4,1.4) node {2};
+		\fill[blue] (1.9,1.9) node {2};
+  %unten links
+		\fill[red] (0.35,0.35) node {4\checkmark};
+		\fill[blue] (0.8,0.8) node {4\checkmark};
+	%unten rechts	
+		\fill[red] (1.4,0.35) node {3};
+		\fill[blue] (1.9,0.8) node {1};
+	\end{tikzpicture}
+}
+```
+]
+
+.panel[.panel-name[NG]
+```{tikz,echo=FALSE,fig.align='center'}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+{\sffamily	
+\begin{tikzpicture}[scale=1.5]%font=\scriptsize]
+		%Outlinebox
+		\draw[thick] (0,0) -- (2.2,0);
+		\draw[thick] (0,0)-- (0,2.2);
+		\draw[thick] (2.2,2.2) -- (2.2,0);
+		\draw[thick] (2.2,2.2) -- (0,2.2);
+		\draw[thick] (-0.3,1.1) -- (2.2,1.1);
+		\draw[thick] (1.1,0) -- (1.1,2.5);
+		%Payoffdividers
+		\draw[densely dotted] (.1,2.1) -- (1,1.2);
+		\draw[densely dotted] (.1,1) -- (1,0.1);
+		\draw[densely dotted] (1.2,1) -- (2.1,0.1);
+		\draw[densely dotted] (1.2,2.1) -- (2.1,1.2);
+		%Strategylabels
+		\coordinate[label=left:Reis] (p1) at (-0.1,1.6);
+		\coordinate[label=left:Maniok] (p1) at (-0.1,0.4);
+		\coordinate[label=above:Reis] (p1) at (0.55,2.2);
+		\coordinate[label=above:Maniok] (p1) at (1.65,2.2);
+		
+		\coordinate[label=above:\textcolor{blue}{\textbf{Bala}}] (p1) at (1.1,2.5);
+		\coordinate[label=left: \textcolor{red}{\textbf{Anil}}](p1) at (-0.3,1.1);
+		%Thepayoffsforbothplayers:
+  %oben links
+		\fill[red] (.35,1.4) node {1};
+		\fill[blue] (0.8,1.9) node {3};
+	%oben rechts	
+		\fill[red] (1.4,1.4) node {2};
+		\fill[blue] (1.9,1.9) node {2};
+  %unten links
+		\fill[red] (0.35,0.35) node {4\checkmark};
+		\fill[blue] (0.8,0.8) node {4\checkmark};
+	%unten rechts	
+		\fill[red] (1.4,0.35) node {3};
+		\fill[blue] (1.9,0.8) node {1};
+	\end{tikzpicture}
+}
+```
+]
+]
+
+???
+
+
+* Die Vorstellung von dominanten Strategien hilft uns das Ergebnis eines Spiels
+vorherzusagen.
+
+* Voraussetzung: Wir haben es mit rationalen, eigeninteressierten Akteuren zu tun.
+
+* Insofern: Erweiterung des Rational Choice Modells
+
+* Ergebnis des Spiels als Gleichgewicht - im Sinne einer stabilen Situation. Keiner will
+sein Verhalten verändern, wenn diese Situation eingetreten ist.
+
+* Hier: Weil beide eine dominante Strategie haben  ist die Vorhersage
+ihrer Entscheidung und damit des Spielausgangs einfach: sie werden ihre jeweilige dominante Strategie spielen. (Anil: Maniok, Bala: Reis)
+
+* Gleichgewicht (dominanter Strategien): Ergebnis, wenn alle Akteure die dominante Strategie verfolgen.
+
+Hier: Kein Interessenkonflikt - Unsichtbare Hand funktioniert!
+
+
+* So ein Gleichgewicht in dominanten Strategien ist eher selten.
+
+* Ein allgemeineres Gleichgewichtskonzept, das in einer größeren Anzahl von Spielen
+eine Lösung bzw. eine Vorhersage des Spielausgangs ermöglicht ist das **Nash-Gleichgewicht**:
+
+  * weniger strenge Bedingungen im Vergleich zu Gleichgewicht in dominierten Strategien
+  * es gilt: Jedes Gleichgewicht in dominierten Strategien ist ein Nash-Gleichgewicht
+  * aber nicht andersrum
+
+* Im simultanen Spiel wird angenommen, dass einem Spieler bei seiner Entscheidung nicht bekannt ist, was die anderen Spieler machen.
+
+* Erwartungen spielen eine zentrale Rolle. **Nash-Gleichgewicht als Erwartungspaar über die Entscheidung jeder Person**.
+
+* Im Nash-Gleichgewicht hat kein Spieler einen Anreiz, seine Entscheidung zu ändern, wenn die Entscheidungen der anderen Spieler offengelegt werden.
+
+* Nash-Gleichgewicht: Strategie-Menge (eine pro Spieler), die gegeben die Strategie des (der) anderen Spieler(s) die beste Strategie beinhaltet.
+
+
+---
+name: BunteGala
+class: left
+
+# Strategisches Denken und Strategische Entscheidungen
+
+## Beispiel Maxmin-Strategie...
+
+...oder was ist, wenn mein Gegenspieler ein Dummkopf ist?
+
+.pull-left[
+### Bunte vs. Gala: Welche Titelgeschichte?
+* Reality Show (RS)
+* Promi-Interview (PI)
+]
+.pull-right[
+```{tikz,echo=FALSE,fig.align='center'}
+{\sffamily	
+\begin{tikzpicture}[scale=1.1]%font=\scriptsize]
+		%Outlinebox
+		\draw[thick] (0,0) -- (2.2,0);
+		\draw[thick] (0,0)-- (0,2.2);
+		\draw[thick] (2.2,2.2) -- (2.2,0);
+		\draw[thick] (2.2,2.2) -- (0,2.2);
+		\draw[thick] (-0.3,1.1) -- (2.2,1.1);
+		\draw[thick] (1.1,0) -- (1.1,2.5);
+		%Payoffdividers
+		\draw[densely dotted] (.1,2.1) -- (1,1.2);
+		\draw[densely dotted] (.1,1) -- (1,0.1);
+		\draw[densely dotted] (1.2,1) -- (2.1,0.1);
+		\draw[densely dotted] (1.2,2.1) -- (2.1,1.2);
+		%Strategylabels
+		\coordinate[label=left:RS] (p1) at (-0.1,1.6);
+		\coordinate[label=left:PI] (p1) at (-0.1,0.4);
+		\coordinate[label=above:RS] (p1) at (0.55,2.2);
+		\coordinate[label=above:PI] (p1) at (1.65,2.2);
+		
+		\coordinate[label=above:\textcolor{blue}{\textbf{Bunte}}] (p1) at (1.1,2.5);
+		\coordinate[label=left: \textcolor{red}{\textbf{Gala}}]( p1) at (-0.3,1.1);
+		%Thepayoffsforbothplayers:
+		\fill[red] (.35,1.4) node {300};
+		\fill[blue] (0.8,1.9) node {0};
+		
+		\fill[red] (1.4,1.4) node {400};
+		\fill[blue] (1.9,1.9) node {400};
+		\fill[red] (0.35,0.35) node {500};
+		\fill[blue] (0.8,0.8) node {300};
+		
+		\fill[red] (1.4,0.35) node {450};
+		\fill[blue] (1.9,0.8) node {200};
+	\end{tikzpicture}
+}
+```
+]
+
+
+.blockquote[
+Die optimale Entscheidung eines Spielers hängt von seinen .underline[Erwartungen] über die Entscheidungen anderer Spieler ab.
+]
+
+.quelle[Goolsbee/Levitt/Syverson (2014, S. 632f.)]
+
+
+
+???
+
+* Gala hat dominante Strategie: PI immer besser als RS
+* Bunte hat keine dominante Strategie
+* Trotzdem können wir ein Gleichgewicht bestimmen, 
+  * üblicherweise nehmen wir eigeninteressiertes rationales Verhalten der Spieler an.
+  * Dadurch wird das Verhalten der Spieler "prognostizierbar"
+  * Tun wir dies:
+  * Nash-Gleichgewicht mit Häkchen-Methode: Gala PI, Bunte RS
+  * Keiner hätte einen Anreiz, aus dieser Situation auszubrechen
+  
+
+* Wenn wir diese Annahme nicht treffen, wird es kompliziert:
+  * Die Prognosen von Spieler A hängen davon ab, was er glaubt, dass Spieler B glaubt,
+  was er spielt
+  * Und die Prognose von Spieler B hängt davon ab, was Spieler A glaubt, was Spieler B glaubt...
+
+  * Konkret: 
+    * Angenommen das Management der Bunten glaubt, dass die Verantwortlichen bei Gala dumm sind. Heißt: Gala weiss nicht, dass sie mit PI eine dominante Strategie hat
+      * Würde Gala RS spielen, wäre RS für Bunte eine Katastrophe.
+      * Um den Schaden zu minimieren könnte Bunte dann PI wählen
+
+
+---
+name: mixed
+class: left
+
+# Gemischte Strategien
+
+```{tikz,echo=FALSE,fig.align='center'}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+{\sffamily	
+\begin{tikzpicture}[scale=1.5]%font=\scriptsize]
+		%Outlinebox
+		\draw[thick] (0,0) -- (2.2,0);
+		\draw[thick] (0,0)-- (0,2.2);
+		\draw[thick] (2.2,2.2) -- (2.2,0);
+		\draw[thick] (2.2,2.2) -- (0,2.2);
+		\draw[thick] (-0.3,1.1) -- (2.2,1.1);
+		\draw[thick] (1.1,0) -- (1.1,2.5);
+		%Payoffdividers
+		\draw[densely dotted] (.1,2.1) -- (1,1.2);
+		\draw[densely dotted] (.1,1) -- (1,0.1);
+		\draw[densely dotted] (1.2,1) -- (2.1,0.1);
+		\draw[densely dotted] (1.2,2.1) -- (2.1,1.2);
+		%Strategylabels
+		\coordinate[label=left:links] (p1) at (-0.1,1.6);
+		\coordinate[label=left:rechts] (p1) at (-0.1,0.4);
+		\coordinate[label=above:links] (p1) at (0.55,2.2);
+		\coordinate[label=above:rechts] (p1) at (1.65,2.2);
+%Spaltenspieler		
+		\coordinate[label=above:\textcolor{blue}{\textbf{Torwart}}] (p1) at (1.1,2.5);
+%Zeilenspieler
+		\coordinate[label=left: \textcolor{red}{\textbf{Schütze}}](p1) at (-0.3,1.1);
+		%Thepayoffsforbothplayers:
+  %oben links
+		\fill[red] (.35,1.4) node {0};
+		\fill[blue] (0.8,1.9) node {1\checkmark};
+	%oben rechts	
+		\fill[red] (1.4,1.4) node {1\checkmark};
+		\fill[blue] (1.9,1.9) node {0};
+  %unten links
+		\fill[red] (0.35,0.35) node {1\checkmark};
+		\fill[blue] (0.8,0.8) node {0};
+	%unten rechts	
+		\fill[red] (1.4,0.35) node {0};
+		\fill[blue] (1.9,0.8) node {1\checkmark};
+	\end{tikzpicture}
+}
+```
+
+
+???
+
+* Der Schütze möchte immer das Gegenteil vom Torwart
+* Es gibt kein Feld mit zwei Häkchen
+* Bedeutet: Es gibt keine Strategie, bei der beide Spieler gleichzeitig die beste Reaktion auf die gewählte Strategie des anderen Spielers wählen
+* **kein Nash-Gleichgewicht reinen Strategien** (dazu sind zwei Häkchen in einem Feld nötig)
+* aber: es gibt dennoch ein Nash-Gleichgewicht
+  * nämlich, wenn die Spieler sich mal so und mal anders entscheiden (gemischte Strategie)
+  * bspw. 80 Prozent rechts, 20 Prozent links
+  * Kann 80/20 ein Gleichgewicht sein? Nein - dann würde der Torwart immer nach  rechts springen.
+    * wenn aber der Torwart immer nach rechts springt, will der Schütze lieber nach links schießen (Widerspruch)
+    * und wenn der Schütze nach links schießen will, will der Torwart lieber nach rechts schießen
+  * Das einzige Nash-Gleichgewicht, das bei gemischten Strategien besteht ist 50/50 links/rechts
+  * Obs! Bei drei Optionen ist ein Nash-Ggw in gemischten Strategien bei 1/3-1/3-1/3
+  * wichtig: Es muss zufällig sein. Also nicht: einmal links, nächstes mal rechts, dann wieder links!
+  
+  
+---
+name: PD
+class: left
+
+# Das Gefangenen-Dilemma
+
+.panelset[
+.panel[.panel-name[Auszahlungsmatrix]
+```{tikz,echo=FALSE,fig.align='center'}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+{\sffamily	
+\begin{tikzpicture}[scale=1.5]%font=\scriptsize]
+		%Outlinebox
+		\draw[thick] (0,0) -- (2.2,0);
+		\draw[thick] (0,0)-- (0,2.2);
+		\draw[thick] (2.2,2.2) -- (2.2,0);
+		\draw[thick] (2.2,2.2) -- (0,2.2);
+		\draw[thick] (-0.3,1.1) -- (2.2,1.1);
+		\draw[thick] (1.1,0) -- (1.1,2.5);
+		%Payoffdividers
+		\draw[densely dotted] (.1,2.1) -- (1,1.2);
+		\draw[densely dotted] (.1,1) -- (1,0.1);
+		\draw[densely dotted] (1.2,1) -- (2.1,0.1);
+		\draw[densely dotted] (1.2,2.1) -- (2.1,1.2);
+		%Strategylabels
+		\coordinate[label=left:Werbung] (p1) at (-0.1,1.6);
+		\coordinate[label=left:keine W.] (p1) at (-0.1,0.4);
+		\coordinate[label=above:Werbung] (p1) at (0.55,2.2);
+		\coordinate[label=above:keine W.] (p1) at (1.65,2.2);
+%Spaltenspieler		
+		\coordinate[label=above:\textcolor{blue}{\textbf{Netflix}}] (p1) at (1.1,2.5);
+%Zeilenspieler
+		\coordinate[label=left: \textcolor{red}{\textbf{Disney}}](p1) at (-0.3,1.1);
+		%Thepayoffsforbothplayers:
+  %oben links
+		\fill[red] (.35,1.4) node {150\checkmark};
+		\fill[blue] (0.8,1.9) node {150\checkmark};
+	%oben rechts	
+		\fill[red] (1.4,1.4) node {450\checkmark};
+		\fill[blue] (1.9,1.9) node {-75};
+  %unten links
+		\fill[red] (0.35,0.35) node {-75};
+		\fill[blue] (0.8,0.8) node {450\checkmark};
+	%unten rechts	
+		\fill[red] (1.4,0.35) node {225};
+		\fill[blue] (1.9,0.8) node {225};
+	\end{tikzpicture}
+}
+```
+]
+.panel[.panel-name[Freerider-Problem]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-04-07.svg',height = "480px")
+```
+]
+]
+
+
+
+
+???
+
+* In The Economy das Beispiel der Pestizide 
+  * IPC
+  * Terminator
+  * Beide entscheiden sich für das schädlichere Mittel
+* Auszahlungen sind Gewinne in Millionen Dollar
+* Ursprünglich Gefangene und Kronzeugenregelung
+* Struktur des PD findet sich in vielen Situationen
+  * Umweltprobleme, öffentliche Güter und free-rider-Problem
+  * Kartelle (Preisabsprachen)
+  * ...
+* Einmalig vs. wiederholt!
+
+
+
+
+---
+name: Repeated
+class: inverse, center, middle
+
+# Wiederholte und sequenzielle Spiele
+
+.blockquote[Endliche vs. unendliche Wiederholung]
+
+.blockquote[Rückwärtsinduktion]
+
+
+
+---
+name: Werbespiel
+class: left
+
+
+# Endliche vs. unendliche Wiederholung
+
+```{tikz,echo=FALSE,fig.align='center'}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+{\sffamily	
+\begin{tikzpicture}[scale=1.5]%font=\scriptsize]
+		%Outlinebox
+		\draw[thick] (0,0) -- (2.2,0);
+		\draw[thick] (0,0)-- (0,2.2);
+		\draw[thick] (2.2,2.2) -- (2.2,0);
+		\draw[thick] (2.2,2.2) -- (0,2.2);
+		\draw[thick] (-0.3,1.1) -- (2.2,1.1);
+		\draw[thick] (1.1,0) -- (1.1,2.5);
+		%Payoffdividers
+		\draw[densely dotted] (.1,2.1) -- (1,1.2);
+		\draw[densely dotted] (.1,1) -- (1,0.1);
+		\draw[densely dotted] (1.2,1) -- (2.1,0.1);
+		\draw[densely dotted] (1.2,2.1) -- (2.1,1.2);
+		%Strategylabels
+		\coordinate[label=left:Werbung] (p1) at (-0.1,1.6);
+		\coordinate[label=left:keine W.] (p1) at (-0.1,0.4);
+		\coordinate[label=above:Werbung] (p1) at (0.55,2.2);
+		\coordinate[label=above:keine W.] (p1) at (1.65,2.2);
+%Spaltenspieler		
+		\coordinate[label=above:\textcolor{blue}{\textbf{Netflix}}] (p1) at (1.1,2.5);
+%Zeilenspieler
+		\coordinate[label=left: \textcolor{red}{\textbf{Disney}}](p1) at (-0.3,1.1);
+		%Thepayoffsforbothplayers:
+  %oben links
+		\fill[red] (.35,1.4) node {150};
+		\fill[blue] (0.8,1.9) node {150};
+	%oben rechts	
+		\fill[red] (1.4,1.4) node {450};
+		\fill[blue] (1.9,1.9) node {-75};
+  %unten links
+		\fill[red] (0.35,0.35) node {-75};
+		\fill[blue] (0.8,0.8) node {450};
+	%unten rechts	
+		\fill[red] (1.4,0.35) node {225};
+		\fill[blue] (1.9,0.8) node {225};
+	\end{tikzpicture}
+}
+```
+
+???
+
+* Macht es einen Unterschied, wenn sie zweimal spielen? dreimal?
+  * Idee der Rückwärtsinduktion
+  * in der letzten Runde wäre Defektion (nicht kooperieren) dominante Strategie. Weil die Spieler das erkennen, wird von Anfang an nicht kooperiert.
+* ...unendlich oft?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+name: Markteinritt
+class: left
+
+# Sequentielle Spiele: Beispiel Markteintritt
+
+```{tikz,echo=FALSE,fig.align='center'}
+{\sffamily
+\begin{tikzpicture}[scale=1]
+% \node [above] at (0.55, 1.1) {A};
+  \node [above,align=left] at (5.3, 1.1) {kein\\ Preiskrieg};
+  \node [above left,yshift=.5em] at (2.5, 2.2) {kein Markteintritt};
+% \node [above] at (2.5, 1.1) {D};
+  \node [above,yshift=.5em] at (5.5, 2.1) {Markteintritt};
+  \node [above] at (7.5, 1.1) {Preiskrieg};
+ % \draw [fill] (1.3, 1.8) circle [radius=0.1] node [above] {g};
+  \draw [fill] (6.5, 1.8) circle [radius=0.1] node [blue,above] {Apple};
+  \draw [fill = white] (3.9, 2.7) circle [radius=0.1] node [blue,above] {Amazon};
+  \draw (1.3, 1.8) node [below] {(0,2000)} -- (3.83, 2.65);
+%  \draw (0, 0) node [below] {(-1,-1)}-- (1.3, 1.8) -- (3.83, 2.65);
+  \draw (3.96, 2.65) -- (6.5, 1.8) -- (7.8, 0) node [below] {(-500,800)};
+  %\draw (1.3, 1.8) -- (2.6, 0) node [below] {(-10,0)};
+  \draw (6.5, 1.8) -- (5.2, 0) node [below] {(500,1000)};
+\end{tikzpicture}
+}
+```
+
+* Teilspiel
+
+* Rückwärtsinduktion
+
+* Teilspielperfektheit
+
+
+???
+
+* Bisher: simultan, d.h. Entscheidungen der anderen Spieler unbekannt
+* Jetzt: sequenziell. bsp. Markteintritt
+* Amazon überlegt, ob es in den Tablet-Markt einsteigen soll
+* Rückwärts-Induktion zeigt, dass Apple keinen Preiskrieg führen wird in dieser
+Konfiguration
+* Millionen Dollar
+
+
+
+---
+name: Drohung
+class: left
+
+# Markteintritt und glaubwürdige Drohung
+
+```{tikz,echo=FALSE,fig.align='center'}
+{\sffamily
+\begin{tikzpicture}[scale=1]
+% \node [above] at (0.55, 1.1) {A};
+  \node [above,align=left] at (5.3, 1.1) {kein\\ Preiskrieg};
+  \node [above left,yshift=.5em] at (2.5, 2.2) {kein Markteintritt};
+% \node [above] at (2.5, 1.1) {D};
+  \node [above,yshift=.5em] at (5.5, 2.1) {Markteintritt};
+  \node [above] at (7.5, 1.1) {Preiskrieg};
+ % \draw [fill] (1.3, 1.8) circle [radius=0.1] node [above] {g};
+  \draw [fill] (6.5, 1.8) circle [radius=0.1] node [blue,above] {Apple};
+  \draw [fill = white] (3.9, 2.7) circle [radius=0.1] node [blue,above] {Amazon};
+  \draw (1.3, 1.8) node [below] {(0,1200)} -- (3.83, 2.65);
+%  \draw (0, 0) node [below] {(-1,-1)}-- (1.3, 1.8) -- (3.83, 2.65);
+  \draw (3.96, 2.65) -- (6.5, 1.8) -- (7.8, 0) node [below] {(-500,800)};
+  %\draw (1.3, 1.8) -- (2.6, 0) node [below] {(-10,0)};
+  \draw (6.5, 1.8) -- (5.2, 0) node [below] {(500,600)};
+\end{tikzpicture}
+}
+```
+
+???
+
+* Anders, wenn Apple Überkapazitäten aufgebaut hat. 
+* Glaubwürdige Drohung
+* Aufbau von Überkapazität senkt zwar den Monopolgewinn (von 2000 auf 1200), dieser ist aber immer noch
+größer als im Nash-Gleichgewicht in der vorherigen Situation (1000)
+
+* **Reputation** - für Apple kann es durchaus sinnvoll sein, die Kosten des Kampfes geben Amazon auf sich zu nehmen, um seine Reputation als Kämpfer zu stärken und weitere Hersteller wie bspw. HP oder Asus abzuschrecken
+
+* Unendliche Wiederholung
+  * Tit for Tat
+  * Grim-Trigger
+
+
+---
+name: Escapes
+class: inverse, middle, center
+
+# Wege aus Sozialen Dilemma-Situationen
+
+.blockquote[Soziale Präferenzen]
+
+.blockquote[Berücksichtigung von Sanktionsmöglichkeiten]
+
+.blockquote[Institutionen]
+
+
+???
+
+* Soziale Präferenzen 
+  * Interesse am Wohlergehen der anderen
+  * Identity Economics (!)
+
+* Berücksichtigung von Sanktionsmöglichkeiten (Behaving selfishly in one period has consequences in future periods, so it may no longer be a dominant strategy.)
+  * Wiederholte Spiele
+  * Soziale Normen (informelle Regeln)
+  * Bestrafung
+  
+* Institutionen und Politik
+  * Schaffung von Spielregeln
+
+
+
+
+---
+name: SocPref
+class: left
+
+# Soziale Präferenzen
+
+.panelset[
+.panel[.panel-name[Altruismus]
+```{r ,echo=FALSE, message=FALSE,out.width='100%',fig.align='center'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-04-06-c.svg',height='480px')
+```
+]
+.panel[.panel-name[Weitere Formen]
+* Aversion gegen Ungleichheit
+
+* Reziprozität
+
+* Soziale Normen
+]
+]
+
+
+
+???
+
+
+* Wir hatten Bala und Anil bereits hinsichtlich der Anbau-Entscheidung (Reis, Maniok) betrachtet. Nun schauen wir uns ihre Entscheidung hinsichtlich der **Anbaumethode** an.
+    * The first is to use an inexpensive chemical called **Terminator**. It kills every insect for miles around. Terminator also leaks into the water supply that they both use.
+    * The second is to use **integrated pest control (IPC)** instead of a chemical. A farmer using IPC introduces *beneficial insects* to the farm. The beneficial insects eat the pest insects.
+
+
+* Economists sometimes use experiments to learn about preferences.
+
+1. Lab experiments: 
+  * Can control participants’ decisions and their outcomes.
+  * Can create a control/treatment group for comparison.
+  * Results can be replicated.
+  * Can control for other variables.
+2. Field experiments:
+  * Lab experiments may not predict real-world decision making.
+  * More realistic context in which people make decisions.
+
+
+* Social dilemmas arise when players only care about their own payoffs. 
+* However, in experiments, many players show altruism by choosing the dominated strategy.
+* Altruistic preferences affect the shape of indifference curves. 
+* Sollten wir uns darauf verlassen? Funktioniert höchstens in kleinen Gruppen
+
+
+
+---
+name: IdentityEcon
+class: left
+
+# Identity Economics
+
+<iframe width="1000" height="550" src="https://www.youtube.com/embed/p-DrKwdK7Eg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+---
+name: PubGoodsGame
+class: left
+
+# Beispiel: Wiederholtes Public Goods Game
+
+.pull-left[
+Bitte QR-Code scannen und mitspielen! 
+
+```{r, echo=FALSE, message=FALSE,out.width='90%',fig.align='center'}
+knitr::include_graphics('../images/ClassEx-link.svg')
+```
+]
+
+.pull-right[
+
+<br>
+<br>
+<br>
+<img src="https://www.misesde.org/wp-content/uploads/2020/06/leuchtturm.jpeg" height="250px" width="500px" />
+
+]
+
+
+
+
+
+---
+name: Spielregeln
+class: left
+
+# Ultimatum-Spiel und Institutionen
+
+## "Wettbewerb fördert Eigensinn"
+
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-04-14.svg',height = "480px")
+```
+
+???
+
+* Einführung von Wettbewerb (nicht nur ein Responder, sondern zwei) verschiebt Ergebnisse im Ultimatum-Spiel zu stärker eigeninteressiertem Verhalten
+
+
+---
+name: Klimapolitik
+class: left
+
+# Institutionen und Klimawandel
+
+
+.panelset[
+.panel[.panel-name[Klimapolitik als Spiel]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-04-17-a.svg',height = "480px")
+```
+]
+.panel[.panel-name[PD]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-04-17-b.svg',height = "480px")
+```
+]
+.panel[.panel-name[Reziprozität]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-04-17-c.svg',height = "480px")
+```
+]
+]
+
+
+???
+
+* Nash-Equilibrium and Climate Change, Exercise 
+
+* Business as usual (BAU) is the dominant strategy for purely self-interested players 
+* An emissions treaty would produce the socially optimal outcome
+
+  * Aber: (Restrict, Restrict) is not a Nash equilibrium, because each country can
+benefit from deviating.
+  * The country that deviates to BAU will be better
+off (receiving the ‘best’ payoff rather than just a ‘good’ payoff), while
+the other country receives the ‘worst’ payoff. 
+  * This beneficial deviation makes it difficult for countries to commit to (Restrict, Restrict), even if they could reach an agreement.
+
+* Inequality aversion and reciprocity will result in two Nash equilibria here which include the social optimum
+  * If countries were inequality averse, then they would prefer outcomes
+where both countries receive the same payoffs: (Restrict, Restrict) or (BAU,BAU)
+  * If they were also motivated by reciprocity then they might
+be willing to restrict emissions, as long as the other country did the
+same. Hence, the payoff matrix may look like Figure 4.18b - 2 Nash-Gleichgewichte
+ * BAU ist noch Nash-Gleichgewicht, aber keine dominante Strategie mehr
+
+* Probleme in der Umsetzung?
+  * Es gibt noch Anreize zur Abweichung
+  * Kosten müssen internalisiert werden. 
+    * Bspw. Emissionshandel
+    * fallende Kosten klimaneutralen Verhaltens
+
+* Globale Sanktionsmöglichkeiten?
+
+
+---
+name: Development
+class: left
+
+# Ungleichheit und Klimapolitik
+
+<iframe src="https://ourworldindata.org/grapher/cumulative-co-emissions?country=DEU~CHN~IND~GBR~USA" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+
+
+
+
+---
+name: Final
+class: inverse, center, middle
+
+# Zusammenfassung und Ausblick
+
+
+
+---
+name: Fazit
+class: left
+
+# Zusammenfassung und Fazit
+
+
+* Verschiedene Mechanismen zur Internalisierung externer Effekte
+  * Effizienz vs. Gerechtigkeit
+  * Politischer Prozess und Wiederwahlchancen eines Politikers
+
+* Strategische Interaktionen können mit spieltheoretischen Modellen analysiert werden.
+  * Beste Antworten und Rationalität
+  * Gleichgewichte und Prognosen
+  
+* Soziale Dilemmata wie das Gefangenen-Dilemma können durch soziale Präferenzen, Bestrafung und/oder geeignete Spielregeln aufgelöst werden.
+
+* Multiple Nash-Gleichgewichte und Institutionen
+
+
+
+
+
+
+---
+name: Ausblick
+class: left
+
+# Ausblick (Unit 5)
+
+
+* Bewertung sozialer Ergebnisse: Effizienz und Fairness
+
+* Die Bedeutung von Institutions für die sozial effiziente Allokationen
+
+* Verhandlungsmacht und Verteilung von Effizienzgewinnen
+
+
+???
+
+Nächstes Mal (Unit 5)
+* The role of institutions in social allocations
+* How to evaluate social outcomes: efficiency and fairness
+* How bargaining power affects the distribution of surplus
+

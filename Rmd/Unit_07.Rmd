@@ -1,0 +1,1117 @@
+---
+title: "VO Volkswirtschaftslehre"
+subtitle: "Intake 2022 B"
+author: "Prof. Dr. Jörg Schoder"
+institute: "ISBA" 
+date: "`r Sys.Date()`"
+bibliography: ../lit/my_bib.json
+reference-section-title: Quellenverzeichnis
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    css: 
+        - default
+        - ../css/schoder_theme.css
+        - xaringan-themer.css
+    includes:
+      after_body: ../css/insert-logo.html
+    lib_dir: ../libs
+    nature:
+      slideNumberFormat: "%current%/%total%"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+    seal: false
+    
+---
+class: title-slide
+
+```{r xaringan-themer, include=FALSE}
+library(xaringanthemer)
+style_xaringan(text_color = "#232461",inverse_text_color = "#FFFFFF",inverse_background_color = "#232461", title_slide_background_color = "#232461",header_background_color = "#232461",header_color = "#FFFFFF",header_h1_font_size = "32px",
+  header_h2_font_size = "26px",link_color="#d84116",
+  header_h3_font_size = "20px",text_slide_number_color = "#232461",text_slide_number_font_size = "0.5em")
+```
+
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_progress_bar(color = "#d84116", location = "bottom")
+xaringanExtra::use_xaringan_extra(c("tile_view","scribble","panelset","tachyons"))
+xaringanExtra::style_panelset_tabs(font_family = "inherit")
+#xaringanExtra::use_search(show_icon = TRUE)
+#weitere: "share_again","animate_css", "webcam","freezeframe","clipboard","fit_screen","extra-styles" 
+xaringanExtra::use_editable(expires = 1)
+xaringanExtra::use_freezeframe(trigger = "hover")
+```
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(latex2exp)
+library(fontawesome)
+```
+
+# Volkswirtschaftslehre
+
+## Intake 2022B
+
+### CORE - The Economy: Unit 7 (Unternehmen und Kunden)
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+### Sommersemester 2023 
+<br>
+### Prof. Dr. Jörg Schoder
+.mycontacts[
+`r fa('github')` @ISBA-University
+`r fa('linkedin')` @jfschoder
+]
+# Volkswirtschaftslehre
+
+
+
+### Sommersemester 2023 - Intake 2022B
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+### Prof. Dr. Jörg Schoder
+<br>
+.mycontacts[
+`r fa('github')` @ISBA-University
+`r fa('linkedin')` @jfschoder
+]
+
+---
+layout: true
+
+<div class="my-footer"></div>       
+
+<div style="position: absolute;left:400px;bottom:10px;color:ISBAblue;font-size:9px">`r r2symbols::sym('copyright')``r rmarkdown::metadata$author`</div>
+
+
+
+---
+name: Unternehmen
+class: left
+
+# Unternehmen und Strukturen in Europa
+
+
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Structural_business_statistics_overview',height='550px')
+```
+
+.quelle[Quelle: [Eurostat.](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Structural_business_statistics_overview#Size_class_analysis)]
+
+
+???
+
+* Eurostat: small (<49), medium (50-249), large (250+) 
+
+* Unternehmen verfolgen unterschiedliche Strategien
+
+* In jedem Unternehmen müssen viele Entscheidungen getroffen werden, die erfolgsrelevant sind
+
+
+
+
+---
+name: Porter
+class: left
+
+# Wettbewerbsstrategien nach M. Porter
+
+
+.panelset[
+.panel[.panel-name[5 Forces]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('../images/unit07/Branchenstruktur_5forces.svg',height='470px')
+```
+
+.quellePanURL[Bildquelle: [Wikipedia](https://de.wikipedia.org/wiki/Wettbewerbsstrategie#/media/Datei:Wettbewerbsstrategien_Michael_E._Porter.svg).]
+]
+.panel[.panel-name[Strategien]
+.center[
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('../images/unit07/Wettbewerbsstrategien_Porter.svg',height='470px')
+```
+]
+.quellePanURL[Bildquelle: [Wikipedia](https://de.wikipedia.org/wiki/Wettbewerbsstrategie#/media/Datei:Wettbewerbsstrategien_Michael_E._Porter.svg).]
+]
+.panel[.panel-name[Podcast]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://podcastaddict.com/episode/127803475',height='470px')
+```
+
+]
+]
+
+
+???
+
+* Wahl der Strategie abhängig von 
+  * der Kostenstruktur in der Branche
+  * der Zahlungsbereitschaft der Zielgruppe
+
+* Strategisches Managament im 5. Semester
+
+
+---
+name: Lernziele
+class: inverse, left, middle
+# Was lernen wir?
+
+.small[In Unit 5 haben wir gesehen, dass die Verhandlungsmacht darüber entscheidet, wie das Ergebnis der Produktion verteilt wird. Die Produktion findet in Unternehmen statt, die wir in dieser Einheit als Black Box betrachten. Mithin wollen wir nicht den Entscheidungsprozess des Managements modellieren (vgl. Unit 6) sondern das Ergebnis der unternehmerischen Entscheidungen in Form des Güterangebots erklären.]
+
+## Inhaltliche Leitfragen
+
+.blockquote[.small[
+1. Wie können wir die Produktionsmenge und die Preispolitik von Unternehmen verstehen?
+2. Wie können wir die Verhandlungsmacht zwischen Anbietern und ihren Kunden analysieren?
+]
+]
+
+## Ökonomische Methoden und Konzepte 
+
+.blockquote[.small[
+1. Einflussfaktoren der Preispolitik und der Herstellungsmengen
+  * Produktions- und Kostentheorie
+  * Preiselastizität
+  * Marktmacht (und Marktformen)
+2. Wohlfahrtsgewinne
+]
+]
+
+???
+
+The purpose of our economic analysis is not to model the manager’s thought process, but to understand the outcome, and its relationship to the firm’s cost and consumer demand
+
+
+---
+name: FirmDecisions
+class: left
+
+# Erfolgsrelevante Unternehmensentscheidungen
+
+
+<iframe src="../images/unit07/decisions.png" style="width: 100%; height: 550px; border: 0px none; margin-left: 100px"></iframe>
+
+
+
+
+???
+
+* Unternehmen verfolgen unterschiedliche Strategien
+
+* In jedem Unternehmen müssen viele Entscheidungen getroffen werden, die erfolgsrelevant sind
+
+* Kontext der Entscheidungen wird in der Abbildung verdeutlicht  
+
+
+* In **this unit**, we will **focus particularly on how a firm chooses the price of a product, and the quantity to produce.** This will depend on the demand it faces—that is, the willingness of potential consumers to pay for its product—and its production costs.
+  * The demand for a product will depend on its price, and the costs of production may depend on how many units are produced.
+  * But a firm can actively influence both consumer demand and costs in more ways than through price and quantity. As we saw in Unit 2, innovation may lead to new and attractive products, or to lower production costs. If the firm can innovate successfully it can earn economic rents—at least in the short term until others catch up. Further innovation may be needed if it is to stay ahead. Advertising can increase demand. And as we saw in Unit 6, the firm sets the wage, which is an important component of its cost. As we will see in later units, the firm also spends to influence taxes and environmental regulation in order to lower its production costs.
+
+
+---
+name: secNachfrage
+class: inverse, center, middle
+
+# Nachfrage
+
+
+
+---
+name: NEtheorie
+class: left
+
+# Nachfrage (Theorie)
+
+
+.panelset[
+.panel[.panel-name[Individuell]
+```{tikz,echo=FALSE}
+{\sffamily
+	\begin{tikzpicture}[scale=.16,thick]
+			\usetikzlibrary{calc}   %allows coordinate calculations.	
+			%RC-Diagram	
+			\draw[-stealth] (0,0) -- (17,0) node[below, text centered] {$x_1$};	
+			\draw[-stealth] (0,0) -- (0,10) node[left,text centered] {$x_2$};
+
+		%Ausgangssituation
+			\draw[red,line width=.1em] (0,8) -- (12,0) node[font=\tiny,below right] {$\frac{m}{p_1}$};
+			\draw[blue] (1.6,9.2)  to [out=275,in=170] (9.3,3.6) node {};
+			\draw[fill] (3.8,5.5) circle [radius=.15] node[below] {};
+			\draw[dotted] (3.8,5.5) -- (3.8,0);
+			\draw[red,line width=.1em] (0,8) -- (8,0) node[font=\tiny,below right] {$\frac{m}{\hat{p}_1}$};
+			\draw[blue] (1,9.1)  to [out=275,in=168] (9,2.3) node {};
+			\draw[fill] (2.9,5.1) circle [radius=.15] node[below] {};
+			\draw[dotted] (2.9,5.1) -- (2.9,0);
+			
+			% Weitere Preiserhöhung	
+			\draw[red,line width=.1em] (0,8) -- (4,0) node[font=\tiny,below right] {$\frac{m}{\tilde{p}_1}$};
+			\draw[blue] (.5,8.7)  to [out=272,in=173] (8.5,.65) node {};
+			\draw[fill] (1.5,4.9) circle [radius=.15] node[below] {};
+			\draw[dotted] (1.5,4.9) -- (1.5,0);
+
+			\path[draw,green,rounded corners=1mm]  (.8,4.8) -- (1.5,4.9) -- (2.9,5.1) -- (3.8,5.5) -- (5.5,6.3);
+			\draw (5.7,6.3) node[font=\tiny,right,black,align=left] {Preis-Konsum-Kurve};
+	
+			% Verbindungslinien dotted			
+			\draw[dotted] (1.5,0) -- (1.5,-12) ;
+			\draw[dotted] (2.9,0) -- (2.9,-12) ;
+			\draw[dotted] (3.8,0) -- (3.8,-12);	
+			
+			%Unteres Diagramm
+			\draw[-stealth] (0,-12) -- (17,-12) node[font=\tiny,below, text width=1.5cm,text height =6pt, text centered] {$x_1$};
+			\draw[-stealth] (0,-12) -- (0,-2) node[font=\tiny,above left,text height =6pt,text centered] {\textbf{Preis} $p_1$};
+			
+			\draw[dotted] (0,-3) node[font=\tiny,left] {$\tilde{p}_1$} -- (1.5,-3);
+			\draw[fill] (1.5,-3) circle [radius=.15];
+			\draw[dotted] (0,-7.5) node[font=\tiny,left] {$\hat{p}_1$}  -- (2.9,-7.5);
+			\draw[fill] (2.9,-7.5) circle [radius=.15];
+			\draw[dotted] (0,-9) node[font=\tiny,left] {$p_1$}  -- (3.8,-9);
+			\draw[fill] (3.8,-9) circle [radius=.15];
+			
+			
+			\draw[rounded corners=5mm] (1.2,-1.7) .. controls (1.5,-3) .. (2.9,-7.5)
+			.. controls (3.8,-9) .. (4.5,-10) .. controls (6.5,-10.5) .. (11,-11.2);
+			\draw (5.7,-5.7) node[font=\tiny,right,black,align=left] {(Inverse) Nachfragekurve};
+		\end{tikzpicture}
+}
+```
+]
+.panel[.panel-name[Marktnachfrage]
+
+Horizontale Aggregation
+
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('../images/unit07/NE_agg.png',height='550px')
+```
+]
+.panel[.panel-name[Gesetz?]
+* Hat die Nachfragekurve immer einen fallenden Verlauf?
+
+.blockquote[
+Gesetz der Nachfrage
+
+"Wenn die Nachfrage nach einem Gut auf Grund einer
+Einkommenserhöhung steigt, dann muss die Nachfrage nach diesem Gut
+bei einem Anstieg seines Preises fallen."
+.tr[
+— Varian (2016, S. 161)
+]
+]
+* Giffen-Güter?
+]
+]
+
+
+---
+name: NEempirie
+class: left
+
+
+# Nachfrage (Empirie)
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-03.svg',height='550px')
+```
+
+
+
+
+
+
+---
+name: secKosten
+class: inverse, center,middle
+
+# Produktion/Technologie und Kosten
+
+
+
+
+---
+name: Produktion
+class: left
+
+# Produktion
+
+
+.panelset[
+.panel[.panel-name[Refresher]
+
+.blockquote[
+Produktionsfunktion
+
+Die Produktionsfunktion beschreibt den Zusammenhang zwischen Faktoreinsatzmengen (Inputs) und der Ausbringungsmenge (Output).
+]
+Grundtypen mit 2 Produktionsfaktoren: Arbeit (L) und Kapital (K)
+
+* lineare Produktionsfunktion
+  $$Q=f(K,L)=a\cdot K+ b\cdot L$$
+  
+* Leontief-Produktionsfunktion
+  $$Q=f(K,L)=min\{aK,bL\}$$
+
+* Cobb-Douglass-Produktionsfunktion: begrenzt substituierbare Inputs
+  $$Q=f(K,L)=a\cdot K^\alpha\cdot L^\beta,~\mbox{mit}~\alpha,\beta>0$$
+]
+.panel[.panel-name[Cobb-Douglas]
+```{r, echo=FALSE}
+knitr::include_url('http://www2.hawaii.edu/~fuleky/anatomy/anatomy.html',height='490px')
+```
+]
+.panel[.panel-name[Isoquanten]
+```{r, echo=FALSE}
+knitr::include_url('../images/unit07/Isoquanten.png',height = '490px')
+```
+]
+]
+
+
+---
+name: Kosten
+class: left
+
+# Kosten und Isokostenlinien
+
+.panelset[
+.panel[.panel-name[Analytisch]
+* Für die Nutzung der Produktionsfaktoren (K und L) im Produktionsprozess fallen Kosten an.
+Die Gesamtkosten $(TC)$ setzen sich somit aus Arbeits- und Kapitalkosten zusammen.
+
+$$TC=\underbrace{w\cdot L}_{\mbox{Arbeitskosten}}+\underbrace{r\cdot K}_{\mbox{Kapitalkosten}}$$
+* Ein bestimmtes Kostenniveau $\overline{TC}$ lässt sich mit unterschiedlichen Kombinationen der Produktionsfaktoren erreichen. Für eine gegebene Menge Kapital ergibt sich die mit dem Kostenniveau $\overline{TC}$ korrespondierende Einsatzmenge des Faktors Arbeit als:
+
+$$L(K)=\frac{\overline{TC}}{w}-\frac{r}{w}\cdot K$$
+
+* Diese Funktion beschreibt die **Isokostenlinie**. 
+
+* Die Steigung der Isokostenlinie entspricht dem Faktorpreisverhältnis!
+]
+.panel[.panel-name[Grafisch]
+.center[
+```{tikz,echo=FALSE}
+	\begin{tikzpicture}[yscale=1,scale=.022,thick]
+		% Draw gridline.
+	%	\draw[style=help lines,step=5] (0,0) grid (150,150);
+		% Draw x and f(x) axes.
+		\draw[color=black][-stealth] (0,0) -- (160,0) node [below right] {{\footnotesize $L$}};
+		\draw[color=black][-stealth] (0,0) -- (0,160) node [left] {{\footnotesize $K$}};
+%		\foreach \x in {10,30,50,70,90,110,130,150}
+%		\node [black,below] at (\x,0) {\scriptsize\x};
+%		\foreach \y in {10,30,50,70,90,110,130,150}
+%		\node [black,left] at (0,\y) {\scriptsize\y};
+		% Plot 
+		
+%		\draw [smooth,color=blue][domain=20:150] plot (\x,{3000*\x^-1}) node [right] {$\bar{Q}_1$};	
+%		\draw [smooth,color=blue][domain=45:150] plot (\x,{6750*\x^-1}) node [right] {$\bar{Q}_2$};		%$x=k^\frac{3}{10}L^$\frac{3}{5} $\iff$ x=K*L^2 $\Rightarrow$ 62,5=f(2.5,5)=2.5*25$
+		%	\draw [color=blue,dashed][domain=1.5:8] plot (\x,{(3*\x^-0.5)^2}) node [above right] {};
+		%	\draw [color=blue,dashed][domain=3:8] plot (\x,{(5*\x^-0.5)^2}) node [above right] {};
+		
+		
+		%GRTS 	
+		%	\draw [color=red][domain=15:35] plot (\x,{240-4.8*\x}) node [left] {$\mbox{GRTS}_A$};
+		%	\draw [color=red][domain=50:140] plot (\x,{60-0.3*\x}) node [below] {$\mbox{GRTS}_B$};
+		
+		%	\draw [dashed] (5,2.5) -- (5,0) node [below] {{\scriptsize $L^\ast$}};
+		%	\draw [dashed] (5,2.5) -- (0,2.5) node [left] {{\scriptsize $K^\ast$}};
+		%	
+		
+		%	\draw [color=blue][domain=7:11] plot (\x,{500*\x^-2}) node [above right] {$\bar{Y_1}=6,4519<2\cdot\bar{Y_0}$};
+		%	\draw[fill] (30,100) circle [radius =1] node [above right] {A};
+		%	\draw[black,fill] (100,30) circle [radius =1] node [above right] {B};
+		%	\draw[fill] (67.5,100) circle [radius =1] node [above right] {C};
+		%	\draw[black,fill] (25,120) circle [radius =1] node [above right] {A};
+		%	\draw[fill] (45,150) circle [radius =1] node [above right] {C};
+		
+		%Isokostenlinien
+	
+		\draw [color=blue,line width=1pt][domain=0:132] plot (\x,{130-\x}) node [color=black,font=\tiny,below,yshift=-1.3mm] {$\overline{TC_1}$};
+%		\draw[black,fill] (100,30) circle [radius=1] node [above right] {B};
+
+%		\draw [color=red][domain=50:135] plot (\x,{60-0.3*\x}) node [below] {$\mbox{GRTS}_B$};
+
+		\draw [color=blue,line width=1pt][domain=0:112] plot (\x,{2*3000^0.5-\x}) node [font=\tiny,color=black,below,xshift=-3mm,yshift=-1mm] {$\overline{TC_0}$};
+				
+		%Optimum
+
+%		\draw[color=black,dashed,line width=1.3pt] ({3000^0.5},0) -- ({3000^0.5}, ({3000^0.5})-- (0,{3000^0.5});
+%		\draw[color=black] ({3000^0.5},0) node[below,xshift=1mm,yshift=-2mm] {$K^\ast$};
+%		\draw[color=black] (0,{3000^0.5}) node[left,xshift=-2mm] {$L^\ast$};
+		\end{tikzpicture}
+```
+]
+]]
+
+
+---
+name: Minimalkostenkombination
+class: left
+# Minimalkostenkombination
+
+
+
+.panelset[
+.panel[.panel-name[Minimalkostenkombination]
+```{tikz,echo=FALSE}
+	\begin{tikzpicture}[yscale=1,scale=.022,thick]
+		% Draw gridline.
+	%	\draw[style=help lines,step=5] (0,0) grid (150,150);
+		% Draw x and f(x) axes.
+		\draw[color=black][-stealth] (0,0) -- (160,0) node [below right] {{\footnotesize $L$}};
+		\draw[color=black][-stealth] (0,0) -- (0,160) node [left] {{\footnotesize $K$}};
+%		\foreach \x in {10,30,50,70,90,110,130,150}
+%		\node [black,below] at (\x,0) {\scriptsize\x};
+%		\foreach \y in {10,30,50,70,90,110,130,150}
+%		\node [black,left] at (0,\y) {\scriptsize\y};
+		% Plot 
+		
+		\draw [smooth,color=green][domain=20:150] plot (\x,{3000*\x^-1}) node [font=\tiny,right] {$\bar{Q}_1$};	
+		\draw [smooth,color=green][domain=45:150] plot (\x,{6750*\x^-1}) node [font=\tiny,right] {$\bar{Q}_2$};		%$x=k^\frac{3}{10}L^$\frac{3}{5} $\iff$ x=K*L^2 $\Rightarrow$ 62,5=f(2.5,5)=2.5*25$
+		%	\draw [color=blue,dashed][domain=1.5:8] plot (\x,{(3*\x^-0.5)^2}) node [above right] {};
+		%	\draw [color=blue,dashed][domain=3:8] plot (\x,{(5*\x^-0.5)^2}) node [above right] {};
+		
+		
+		%GRTS 	
+			\draw [color=red][domain=15:35] plot (\x,{240-4.8*\x}) node [font=\tiny,left] {$\mbox{\textsf{GRTS}}_A$};
+			\draw [color=red][domain=50:140] plot (\x,{60-0.3*\x}) node [font=\tiny,below] {$\mbox{\textsf{GRTS}}_B$};
+		
+		%	\draw [dashed] (5,2.5) -- (5,0) node [font=\tiny,below] {{\scriptsize $L^\ast$}};
+		%	\draw [dashed] (5,2.5) -- (0,2.5) node [font=\tiny,left] {{\scriptsize $K^\ast$}};
+		%	
+		
+%			\draw [color=blue][domain=7:11] plot (\x,{500*\x^-2}) node [font=\tiny,above right] {$\bar{Y_1}=6,4519<2\cdot\bar{Y_0}$};
+		%	\draw[fill] (30,100) circle [radius =1] node [above right] {A};
+		%	\draw[black,fill] (100,30) circle [radius =1] node [above right] {B};
+		%	\draw[fill] (67.5,100) circle [radius =1] node [above right] {C};
+		%	\draw[black,fill] (25,120) circle [radius =1] node [above right] {A};
+		%	\draw[fill] (45,150) circle [radius =1] node [above right] {C};
+		
+		%Isokostenlinien
+	
+		\draw [color=blue,line width=1pt][domain=0:132] plot (\x,{130-\x}) node [color=black,font=\tiny,below,yshift=-1.3mm] {$\overline{TC_1}$};
+		\draw[black,fill] (100,30) circle [radius=1] node [above right] {B};
+
+%		\draw [color=red][domain=50:135] plot (\x,{60-0.3*\x}) node [below] {$\mbox{\textsf{GRTS}}_B$};
+
+		\draw [color=blue,line width=1pt][domain=0:112] plot (\x,{2*3000^0.5-\x}) node [font=\tiny,color=black,below,xshift=-3mm,yshift=-1mm] {$\overline{TC_0}$};
+				
+		%Optimum
+
+		\draw[color=black,dashed,line width=1.3pt] ({3000^0.5},0) -- ({3000^0.5}, ({3000^0.5})-- (0,{3000^0.5});
+		\draw[color=black] ({3000^0.5},0) node[font=\tiny,below,xshift=1mm,yshift=-2mm] {$K^\ast$};
+		\draw[color=black] (0,{3000^0.5}) node[font=\tiny,left,xshift=-2mm] {$L^\ast$};
+		\end{tikzpicture}
+```
+]
+.panel[.panel-name[Optimalitätsbedingung]
+* Das Optimum ist dadurch gekennzeichnet, dass sich die Marginale Rate der Transformation (MRT, hier: Faktorpreisverhätnis $\frac{w}{r}$) und die
+Marginale Rate der (hier: technischen!) Substitution (MRTS, hier: Steigung der Isoquante) entspricht.
+
+* Formal:
+  $$\frac{w}{r}=\mbox{MRTS}$$
+  
+* Refresher (Wirtschaftsmathematik): $\mbox{MRTS}=\frac{\mbox{GP}_K}{\mbox{GP}_L}$
+  
+* Die Optimalitätsbedingung bestimmt das **optimale Verhältnis der Produktionsfaktoren** K und L.
+  *  Einsatz**verhältnis** $\neq$ Einsatz**menge**
+  * Die optimale Einsatzmengen hängen vom Produktionsniveau $(Q)$ ab, das wiederum von der Marktstruktur (Konkurrenz, Monopol,...) abhängig ist
+
+]
+]
+
+---
+name: Kostenfunktion
+class: left
+
+# Kostenfunktion
+
+.blockquote[
+Die Kostenfunktion $\mbox{TC}_{\mbox{LR}}(Q)$ beschreibt den Zusammenhang zwischen den Gesamtkosten $\mbox{TC}_{\mbox{LR}}$ und der zu minimalen Kosten hergestellten Ausbringungsmenge $(Q)$. 
+]
+
+.blockquote[
+**Kurzfristige Kostenfunktion**
+
+In der kurzen Frist ist die Einsatzmenge eines der Produktionsfaktoren weniger leicht veränderbar (Beispiel Restaurant: Raum vs. Aushilfskräfte). Dieser Faktor wird als fixer Faktor betrachtet. Die kurzfristige Kostenfunktion $\mbox{TC}_{\mbox{SR}}(Q)$ kann daher in zwei Komponenten aufgeteilt werden:
+
+  $$\mbox{TC}_{\mbox{SR}}=C_{\mbox{fix}}+C_{\mbox{variabel}}$$
+]
+
+
+* Kurzfristige Gesamtkosten $\mbox{TC}$ als Summe von Fixkosten $C_f$ und variablen Kosten $C_v(x)$:
+		
+$$\mbox{TC}(x)=C_f+C_v(x)$$
+* Mithin gilt für die durchschnittlichen Gesamtkosten (Average Cost: AC):
+
+$$\mbox{AC}(x)=\frac{C(x)}{x}=\frac{C_f}{x}+\frac{C_v(x)}{x}$$.
+
+
+
+
+???
+Kosten können auch in Abhängigkeit von der Ausbringungsmenge
+(x) gemessen werden. Verbindung: Technologie!
+
+---
+name: 
+class: left
+
+# Kurzfristige vs. langfristige Kostenfunktionen
+
+.panelset[
+.panel[.panel-name[Expansionspfade]
+```{r, echo=FALSE}
+knitr::include_url('../images/unit07/Expansion_SR_LR_(Goolsbee_S267).PNG',height = '490px')
+```
+
+.quellePanURL[Quelle: Goolsbee et al (2016, S. 267).]
+]
+.panel[.panel-name[Kostenfunktionen]
+```{r, echo=FALSE}
+knitr::include_url('../images/unit07/TC_SR_LR_(Goolsbee_S268).PNG',height = '490px')
+```
+
+.quellePanURL[Quelle: Goolsbee et al (2016, S. 268).]
+]
+]
+
+
+---
+name: AC
+class: left
+
+# Durchschnittskosten vs. Grenzkosten
+
+.panelset[
+.panel[.panel-name[AC]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-06-g.svg',height='470px')
+```
+]
+.panel[.panel-name[MC]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-07-h.svg',height='470px')
+```
+]
+]
+
+
+
+???
+* AC: Wirtschaftsmathe: Fahrstrahl an die TC
+* MC: Steigung der TC
+* Obs! Grenzkosten schneiden die AC in deren Minimum!
+
+
+
+---
+name: TechKost
+class: left
+
+# Beispiel: Technologie und Kurzfristige Kosten
+
+
+.panelset[
+.panel[.panel-name[Beispiel]
+.blockquote[
+Ein Unternehmen produziert mit dem fixen Faktor Kapital (Fixkosten:
+30) und dem variablen Faktor Arbeit (Lohnsatz: 10 Euro). 
+]
+Zwischen Input und Output bestehe die folgende (technologische) Beziehung:
+
+L |Q |C_L|C_f|C|AC|GP_L|MC
+--|--|---|---|-|--|----|--
+0 |0 |  |  |  |  |  |
+1 |60 |  |  |  |  |  |
+2 |110|  |  |  |  |  |
+3 |150|  |  |  |  |  |
+4 |180|  |  |  |  |  |
+5 |200|  |  |  |  |  |
+6<img width=120/>|210<img width=120/>|<img width=120/>|<img width=120/>|<img width=120/>|<img width=120/>|<img width=120/>|<img width=120/>
+
+]
+.panel[.panel-name[Kosten]
+```{r,echo=FALSE,message=FALSE,warning=FALSE}
+Q<-c(0,60,110,150,180,200,210)
+L<-c(0:6)
+cost_ex<-data.frame(Q,L)
+cost_ex<-cost_ex %>%
+  mutate(C_L=L*10,C_f=30,TC=C_L+C_f)
+GP_L<-cost_ex$Q[2:7]-cost_ex$Q[1:6]
+GP_L<-c(NA,GP_L)
+MC<-round((cost_ex$TC[2:7]-cost_ex$TC[1:6])/(cost_ex$Q[2:7]-cost_ex$Q[1:6]),2)
+MC<-c(NA,MC)
+AC<-round(cost_ex$TC/cost_ex$Q,2)
+cost_ex<-data.frame(cost_ex,AC,GP_L,MC)
+cost_ex %>%
+  kbl() %>%
+  kable_material(c("striped", "hover"))
+```
+]
+]
+
+
+
+
+---
+name: Scale
+class: left
+
+# Vorteile der Massenproduktion
+
+* Skalenerträge beschreiben den Effekt einer Skalierung der Produktion auf die Ausbringungsmengen
+  
+  * Wie verändert sich der Output, wenn der Input verändert wird?
+     * konstant: Output verändert sich **proportional** zum Faktoreinsatz
+     * abnehmend: Output verändert sich **unterproportional** zum Faktoreinsatz
+     * zunehmend: Output verändert sich **überproportional** zum Faktoreinsatz
+
+* Beispiele:
+  * Technologische Vorteile ([Beispiel Pfeife](https://www.core-econ.org/the-economy/book/text/07.html#einstein-the-size-and-cost-of-a-pipe))
+  * Kostenvorteile 
+    * durch Fixkostendegression (Software, Patente, etc.)
+    * durch Verhandlungsmacht bei der Beschaffung von Produktionsfaktoren
+  * Nachfragevorteile durch Netzwerkeffekte (Wert des Produkts steigt mit zunehmender Nutzerzahl)
+
+* Aber: Diseconomies of Scale ("Wasserkopf" in großen Organisationen)
+
+
+???
+* [Skalenerträge vs. Grenzerträge](http://www2.hawaii.edu/~fuleky/anatomy/anatomy.html)
+
+
+
+
+---
+name: Nfx
+class: left
+
+# Netzwerkeffekte
+
+.panelset[
+.panel[.panel-name[Netzwerkeffekte]
+<iframe width="750" height="470" src="https://www.youtube.com/embed/aoeal3ljnqw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+.panel[.panel-name[Wert von Netzwerken]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://guides.co/g/the-network-effects-bible/121725
+',height='480px')
+```
+.quellePanURL[Quelle: [guides.co](https://guides.co/g/the-network-effects-bible/121725)]
+
+]
+]
+
+???
+* Wert (V) von Netzwerken abhängig von der Zahl der Verbindungen (N)
+  * Sarnoff: V=N
+  * Metcalfe: $V=N^2$
+  * Reed: $V=2$
+
+
+
+---
+name: Strategie
+class: left
+
+# Exkurs: Unternehmensstrategie
+
+* Angriff (acquisition) und Viral Effects
+* Verteidigung (defensibility) und Netzwerkeffekte
+
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('../images/unit07/ViralNFX-Chart.png',height='470px')
+```
+
+
+ 
+
+
+
+---
+name: 
+class: inverse,center,middle
+
+# Angebot und Nachfrage
+
+
+---
+name: WarumKosten
+class: left
+
+# Ökonomische Gewinne und Kostenminimierung
+
+
+.panelset[
+.panel[.panel-name[Gewinne]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('../images/unit07/Gewinne_(Stocker).PNG',height='470px')
+```
+.quellePanURL[Quelle: Stocker (2007, S. 7).]
+]
+.panel[.panel-name[Kostenminimierung]
+* Gewinnmaximierung? In Einheit 6 wurden mögliche Unternehmensziele diskutiert (vgl. [Einhörner oder Zebras?](https://news.gaborsteingart.com/online.php?u=C4SLy2i5744))
+
+  * Ökonomischer Gewinn (G) = Erlös (Revenue, R) - Opportunitätskosten (C)
+
+  * Erlöse werden durch die Preispolitik und den Absatz bestimmt.
+
+  * Für einen gegebenen Erlös können die Gewinne nie maximal sein, wenn die Kosten nicht minimal sind.
+  
+* Kostenminimierung als...
+
+  * ...ökonomisches Gebot (ein Ziel mit möglichst wenig Aufwand (Ressourcenverbrauch) erreichen)
+  
+  * ...notwendige Bedingung für ein Gewinnmaximum
+]
+.panel[.panel-name[Existenzbedingungen]
+Existenzbedingungen:
+* Langfristig müssen die gesamten Durchschnittskosten mindestens gedeckt sein.
+* Kurzfristig genügt ein positiver Deckungsbeitrag $p_x>C_v(x)$ für die Fixkosten.
+* Bei Preisen unter den variablen Durchschnittskosten $C_v(x)$ ist die Unternehmung bereits kurzfristig nicht wirtschaftlich zu betreiben.
+]
+]
+
+???
+* Ökonomische Gewinne: relevant sind stets die Opportunitätskosten
+
+* Opportunitätskosten (Ökonomische Kosten) setzen sich aus expliziten und impliziten Kosten zusammen
+
+  * explizite Kosten führen zu einer Auszahlung (Beschaffung von Produktionsfaktoren an den Faktormärkten)
+
+  * implizite Kosten führen nicht zu einer Auszahlung (Alternative Verwendungsmöglichkeiten für Produktionsfaktoren im Eigentum eines Unternehmens)
+  
+* **Implizite Kosten**: Unternehmer könnte in der gleichen Zeit als Manager bei einer anderen Unternehmung ein Einkommen erzielen, das Eigenkapital könnte auch auf Finanzmärkten angelegt werden, und die Gebäude könnten vermietet werden. Dies sind entgangene Einnahmen, weil diese Faktoren nicht auf den Markt gebracht wurden, und werden deshalb implizite Kosten genannt. Explizite und implizite Kosten zusammen bilden die ökonomischen Kosten, d.h. die Opportunitätskosten.
+  
+* Aufgrund der Bedeutung der Kostenseite schauen wir uns diese genauer an
+
+
+
+---
+name: isoprofit
+class: left
+
+# Isogewinnlinien bei...
+
+.panelset[
+.panel[.panel-name[...konstanten MC]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-04-f.svg',height='470px')
+```
+]
+.panel[.panel-name[...steigenden MC]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-10-a.svg',height='470px')
+```
+]
+]
+
+???
+
+* Isoprofit curves show price-quantity combinations that give the same profit. 
+
+$$Gewinn=Umsatz-Kosten = PQ-C(Q)=Q(P-\frac{C(Q)}{Q})=Q(P-AC)$$
+
+* Damit hängt der Verlauf der Isogewinnlinie vom Verlauf der Durchschnittskostenkurve ab!
+
+    * Bei den **Cheerio Cornflakes** wurden konstante Stückkosten von 2US$ unterstellt (mithin sind auch die Grenzkosten konstant)
+    * Bei den **Beautiful Cars** wurden Fixkosten unterstellt, bei gleichzeitig steigenden Grenzkosten. Damit ergibt sich eine U-förmig verlaufende AC-Kurve
+        * Isoprofit curves slope downward at points where $P > MC$
+        * Isoprofit curves slope upward at points where $P < MC$
+
+* The lowest (lightest blue) curve shows the zero-economic-profit curve: the combinations of price and quantity for which economic profit is equal to zero, because the price is just equal to the average cost at each quantity.
+
+
+
+---
+name: Profitmax1
+class: left
+
+# Gewinnmaximierung
+
+.panelset[
+.panel[.panel-name[Angebotsentscheidung]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-10-f.svg',height='470px')
+```
+]
+.panel[.panel-name[Optimum]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-11.svg',height='470px')
+```
+]
+]
+
+
+
+
+???
+
+Notice that in Figure 7.10:
+
+* Isoprofit curves slope downward at points where $P > MC$.
+* Isoprofit curves slope upward at points where $P < MC$.
+
+The difference between the price and the marginal cost is called the **profit margin**
+
+* At any point on an isoprofit curve the **slope** is given by:
+
+      * $\frac{(P-MC)}{Q}$
+      * Verhältnis Gewinnmarge (profit margin) zu Mengeneinheiten Q
+      * Stückgewinn bzw. Grenzgewinn
+
+* Ausgangspunkt G
+  * Erhöhung der Ausbringungsmenge um 1 nur möglich, wenn der Preis um $\frac{(P-MC)}{Q}$ (=Steigung der Isoprofitkurve) sinkt (implizit in der Isogewinnlinie)
+  * Profit bleibt der Gleiche (gleiche Isogewinnlinie)
+
+
+To understand why, **think again about point G** in Figure 7.10 at which Q = 23, and the price is much higher than the marginal cost. If you:
+
+* increase Q by 1
+* reduce P by (P − MC)/Q
+* then your profit will stay the same because the extra profit of (P − MC) on car 24 will be offset by a fall in revenue of (P − MC) on the other 23 cars.
+
+**Leibniz:** Isoprofit curves and their slopes
+The same reasoning applies at every point where $P > MC$. The profit margin is positive so the slope is negative. And it also applies when $P < MC$. In this case, the profit margin is negative so an increase in price is required to keep profit constant when quantity rises by 1. The isoprofit curve slopes upward.
+
+
+* Im **Optimum (Punkt E)** gilt $MRT=MRS$ (Perspektive des Unternehmens!)
+    * MRT: Steigung der Nachfragekurve, die das feasible set bestimmt
+    * MRS: Steigung der Isogewinnlinie (wieviel Preisnachlass ist der Unternehmer bereit zu geben, um mehr Autos absetzen zu können)
+
+
+---
+name: Profitmax
+class: left
+
+# Gewinnmaximierung: alternative Darstellung
+
+.panelset[
+.panel[.panel-name[Analytisch]
+
+* Gewinn:
+$$G=R-C$$
+
+* FOC:
+$$G'=MR-MC\stackrel{!}{=}0$$
+
+* Im Optimum entsprechen sich Grenzerlös und Grenzkosten
+
+$$MR=MC$$
+]
+
+.panel[.panel-name[Grafisch]
+
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-12-b-i.svg',height='470px')
+```
+
+]
+]
+
+???
+
+* Remember that if Q cars are sold at a price P, revenue R is given by R = P × Q. 
+* The marginal revenue, MR, is the increase in revenue obtained by increasing the quantity from Q to Q + 1
+
+* Nachfragekurve: Willingness to Pay (Zahlungsbereitschaft)
+
+* Angebotskurve: Willingness to Accept 
+
+
+---
+class: GainsfromTrade
+class: left
+
+# Wohlfahrt
+
+.panelset[
+.panel[.panel-name[Konkurrenzmarkt]
+
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-14-c.svg',height='470px')
+```
+]
+.panel[.panel-name[Monopol]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-14-e.svg',height='470px')
+```
+]
+.panel[.panel-name[Preisdiskriminierung]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-14-e.svg',height='470px')
+```
+
+]
+]
+
+
+???
+
+* Preisdiskriminierung (1. Grades bzw. perfekt: wenn der Anbieter die Zahlungsbereitschaft der Kunden kennt) ermöglicht dem Unternehmer die gesamten Tauschgewinne zu vereinnahmen.
+
+* komplette Flächen einheitlich schattieren 
+
+
+---
+name: Preisdiskriminierung
+class: left
+
+# Realitätscheck zur Preisdiskriminierung
+
+```{r, echo=FALSE,fig.align='center',out.width='80%'}
+knitr::include_graphics('../images/unit07/dm_Preispolitik_(wiwo_20190830).png')
+```
+
+.quelle[Quelle: [Wirtschaftswoche (30.08.2019)](https://www.wiwo.de/unternehmen/handel/neue-strategie-dm-verabschiedet-sich-vom-einheitspreis/24960714.html)].
+
+???
+
+Weitere Beispiele: 
+* Flüge (Kontingente)
+* Abonnements (digital, print, kombi)
+* etc.
+
+---
+name: Elast
+class: left
+
+# Verteilung der Wohlfahrtsgewinne
+
+.panelset[
+.panel[.panel-name[Refresher]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-15-e.svg',height='470px')
+```
+]
+.panel[.panel-name[elastische NE]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-16.svg',height='470px')
+```
+]
+.panel[.panel-name[unelastische NE]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-17.svg',height='470px')
+```
+]
+]
+
+
+???
+
+Verteilung der Wohlfahrtsgewinne abhängig von der Elastizität.
+ * die relativ elastischere Seite hat die höhere Verhandlungsmacht...
+ * ...und kann entsprechend einen größeren Anteil vom Tauschgewinn beanspruchen
+ 
+ 
+* Firms that face relatively elastic demand curves: have little market power, low profit margins, and generate a small amount of deadweight loss (Standard-Android-Phone).
+
+* Firms that face relatively inelastic demand curves have lots of market power, high profit margins, and generate a large amount of deadweight loss (Iphone).
+
+* **In perfect competition, firms face horizontal demand curves and have no market power (Unit 8).**
+
+
+---
+name: Werbung
+class: left
+
+# Elastizität: Innovation vs. Werbung
+
+
+.panelset[
+.panel[.panel-name[Innovation]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Toyota_Prius_in_Toyota_Automobile_Museum.jpg/640px-Toyota_Prius_in_Toyota_Automobile_Museum.jpg',height='470px')
+```
+]
+.panel[.panel-name[Markenbildung]
+<iframe src="https://ourworldindata.org/grapher/advertising-expenditure-and-market-share-of-breakfast-cereals-in-chicago" loading="lazy" style="width: 100%; height: 470px; border: 0px none;"></iframe>
+]
+]
+
+
+???
+
+* When deciding what goods to produce, the firm would ideally like to find a product that is
+
+  * both attractive to consumers **and**
+  * has different characteristics from the products sold by other firms. 
+  
+* In this case demand would be high (many consumers would wish to buy it at each price) and the elasticity low.
+
+* Of course, this is not likely to be easy. A firm wishing to make a new breakfast cereal, or type of car, knows that there are already many brands on the market.
+
+* But **technological innovation** may provide opportunities to get ahead of competitors.
+    * After Toyota developed the first mass-produced hybrid car, the **Prius, in 1997**, there were for some years very few comparable cars available. Toyota effectively monopolized the hybrid market. By **2013** there were **several competing brands**, but the **Prius remained the market leader, with more than 50% of hybrid sales**.
+    * Beispiel Nespresso
+    
+* If a firm has invented or created a new product, it may be able to prevent competition altogether by claiming exclusive rights to produce it, using **patent or copyright laws**. Ironically, in the 1970s a company called Parker Brothers spent years fighting in court to protect a monopoly that they had on a profitable board game called Monopoly. This kind of legal protection of monopoly may help to provide incentives for research and development of new products, but at the same time limits the gains from trade. In Unit 21, we analyse intellectual property rights in more detail.
+
+* **Advertising** is another strategy that firms can use to influence demand. It is widely used by both car manufacturers and breakfast cereal producers. When products are differentiated, the firm can use advertising to inform consumers about the existence and characteristics of its product, attract them away from its competitors, and create brand loyalty.
+  * According to Schonfeld and Associates, a firm of market analysts, advertising on breakfast cereals in the US is about 5.5% of total sales revenue—about 3.5 times higher than the average for manufactured products. 
+  * The data in Figure 7.21 is for the highest-selling 35 breakfast cereal brands sold in the Chicago area in 1991 and 1992.
+  * **The graph shows the relationship between market share and quarterly expenditure on advertising**. 
+  * If you investigated the breakfast cereals market more closely, you would see that market share is not closely related to price. But it is clear from Figure 7.21 that the brands with the highest share are also the ones that spend the most on advertising. 
+  * Matthew Shum, an economist, analysed cereal purchases in Chicago using this dataset, and showed that **advertising was more effective than price discounts in stimulating demand for a brand**. 
+  * Since the most well-known brands were also the ones spending most on advertising, he concluded that its **main function was not to inform consumers about the product, but rather to increase brand loyalty**, and encourage consumers of other cereals to switch.
+
+
+---
+name: FazitAusblick
+class: inverse, center, middle
+
+# Fazit und Ausblick
+
+
+---
+name: Fazit
+class: left
+
+# Fazit
+
+.small[
+1. Zusammenhang von Produktionstechnologie und Kosten
+  * Kurzfristige vs. langfristige Kosten (fixer Faktor)
+  * Kostenminimum als notwendige Bedingung für ein Gewinnmaximum, unabhängig (!) von der Marktform (Konkurrenzmarkt, Monopolmarkt, Monopolistische Konkurrenz,...)  
+
+2. Modell eines Unternehmens mit Preissetzungsmacht
+  * Entscheidung über Preis und Ausbringungsmenge abhängig von der
+  Kostenstruktur und der Marktgröße (Kundennachfrage)
+  * Notwendige Bedingung für ein Gewinnmaximum: 
+    * MRS = MRT (Steigung der Isogewinnlinie=Steigung der Nachfragekurve) bzw. 
+    * MR=MC (Grenzerlös=Grenzkosten)
+
+3. Wohlfahrtseffekt in der Marktwirtschaft (Gains from Trade)
+ * Wohlfahrt = Konsumentenrente (KR) + Produzentenrente (PR)
+    * maximal im Konkurrenzmarkt (Preis ist für Anbieter ein Datum `r fa("circle-right")` p=MC)
+    * Wohlfahrtsverlust (Dead Weight Loss) im Monopolfall (gleichzeitig: Umverteilung von KR zu PR)
+ * Preiselastizität der Nachfrage (im Verhältnis zu jener des Angebots) entscheidet über Verteilung der Tauschgewinne. Die unelastischere Marktseite ist im Nachteil.
+  
+]
+
+
+
+---
+name: Ausblick
+class: left
+
+# Ausblick
+
+* Angebot und Nachfrage im Wettbewerbsmarkt (keine Preissetzungsmacht)
+
+* Wettbewerbsgleichgewicht: Bestimmungsgründe und Voraussetzungen
+
+* Ähnlichkeiten und Unterschiede zwischen Unternehmen mit/ohne Preissetzungsmacht

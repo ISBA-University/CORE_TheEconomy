@@ -1,0 +1,24 @@
+<!-- name: ArbeitszeitInter -->
+  <!-- class: left -->
+
+  <!-- # Internationale Entwicklungen der Arbeitsstunden -->
+
+  <!-- ```{r, echo=FALSE} -->
+  <!-- knitr::include_url("https://personal.lse.ac.uk/minns/Huberman_Minns_EEH_2007.pdf",height = "550px") -->
+  <!-- ``` -->
+
+
+
+  <!-- ??? -->
+
+  <!-- Tabelle 3, Seite 11 -->
+
+  <!-- Aktuelle Entwicklungen -->
+
+  <!-- [OECD-Daten](https://stats.oecd.org/Index.aspx?DataSetCode=ANHRS) -->
+
+  <!-- Deutschland (2019: 1386 Stunden) vs. Griechenland (2019: 1949 Stunden) -->
+  <!-- Schweiz (2019: 1557 Stunden), Norwegen (2019: 1384 Stunden),  -->
+
+  <!-- geringste Arbeitsstunden (2019): Dänemark (1380) -->
+  <!-- höchste Arbeitsstanden (2019): Mexiko (2137), dann schon Griechenland! -->

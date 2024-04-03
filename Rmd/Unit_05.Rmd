@@ -1,0 +1,693 @@
+---
+title: "VO Volkswirtschaftslehre"
+subtitle: "Intake 2022 B"
+author: "Prof. Dr. Jörg Schoder"
+institute: "ISBA" 
+date: "`r Sys.Date()`"
+bibliography: ../lit/my_bib.json
+reference-section-title: Quellenverzeichnis
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    css: 
+        - default
+        - ../css/schoder_theme.css
+        - xaringan-themer.css
+    includes:
+      after_body: ../css/insert-logo.html
+    lib_dir: ../libs
+    nature:
+      slideNumberFormat: "%current%/%total%"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+    seal: false
+    
+---
+class: title-slide
+
+```{r xaringan-themer, include=FALSE}
+library(xaringanthemer)
+style_xaringan(text_color = "#232461",inverse_text_color = "#FFFFFF",inverse_background_color = "#232461", title_slide_background_color = "#232461",header_background_color = "#232461",header_color = "#FFFFFF",header_h1_font_size = "32px",
+  header_h2_font_size = "26px",link_color="#d84116",
+  header_h3_font_size = "20px",text_slide_number_color = "#232461",text_slide_number_font_size = "0.5em")
+```
+
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_progress_bar(color = "#d84116", location = "bottom")
+xaringanExtra::use_xaringan_extra(c("tile_view","scribble","panelset","tachyons"))
+xaringanExtra::style_panelset_tabs(font_family = "inherit")
+#xaringanExtra::use_search(show_icon = TRUE)
+#weitere: "share_again","animate_css", "webcam","freezeframe","clipboard","fit_screen","extra-styles" 
+xaringanExtra::use_editable(expires = 1)
+xaringanExtra::use_freezeframe(trigger = "hover")
+```
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(latex2exp)
+library(fontawesome)
+```
+
+
+# Volkswirtschaftslehre
+
+## Intake 2022B
+
+### CORE - The Economy: Unit 5 (Effizienz, Gerechtigkeit und die Bedeutung von Macht)
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+### Sommersemester 2023 
+<br>
+### Prof. Dr. Jörg Schoder
+.mycontacts[
+`r fa('github')` @ISBA-University
+`r fa('linkedin')` @jfschoder
+]
+
+
+
+---
+layout: true
+
+<div class="my-footer"></div>       
+
+<div style="position: absolute;left:400px;bottom:10px;color:ISBAblue;font-size:9px">`r r2symbols::sym('copyright')``r rmarkdown::metadata$author`</div>
+  
+
+---
+name: Motivation
+class: left
+
+# Motivation
+
+.panelset[
+.panel[.panel-name[Tarifverhandlungen]
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_url("https://www.faz.net/aktuell/wirtschaft/4-tage-woche-wegen-fachkraeftemangel-durchsetzbar-18806734.html",height = "500px")
+```
+]
+.panel[.panel-name[4-Tage Woche?]
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_url("https://www.iwd.de/artikel/interview-ich-warne-davor-arbeit-beliebig-zu-verdichten-580285/",height = "500px")
+```
+]
+]
+
+
+
+
+
+
+---
+name: Ausgangspunkt
+class: left
+
+# Einordnung
+
+
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-05-11.svg",height = "550px")
+```
+
+
+???
+
+* In Unit 4 haben wir strategische Interaktionen mit Hilfe der Spieltheorie betrachtet. * **Interactions** between economic actors **can result in mutual gains**, but also **in conflicts** over how the gains are distributed.
+
+* In Unit 3 haben wir den RCT Ansatz kennengelernt, ein Entscheidungsmodell das 2 wesentliche Bausteine hat: Ziele und Nebenbedingungen. 
+  * Die Ziele hängen von den individuellen Präferenzen ab.
+  * Als Nebenbedingungen hatten wir insbesondere die **Technologie** betrachtet, die das **feasible set** bestimmt.
+  * Aber in Unit 1 und 2 haben wir gesehen, dass es neben der Technologie weitere Einflüsse auf das feasible set gibt:
+    * **Biologie** und
+    * **Institutionen** (vgl. Unit 4, bspw. Ultimatumspiel mit und ohne Konkurrenz, PublicGoodsGame mit und ohne Anführer/Bestrafung)
+  * Aus dem Zusammenspiel dieser Größen (also von Präferenzen, Technologie, Biologie und Institutionen) ergibt sich dann das entsprechende ökonomische Ergebnis
+  * Obs! **Deterministisches Modell**, grundsätzlich sind aber natürlich auch stochastische Betrachtungen in diesem Modellrahmen möglich
+  
+  * **Institutions influence the power** and other bargaining advantages of actors.
+  * The **criteria of efficiency and fairness** can help evaluate economic institutions and the outcomes of economic interactions.
+
+
+---
+name: Motivation
+class:
+
+# Vilfredo Pareto Allokation und Distribution
+
+
+
+.pull-left[
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Vilfredo_Pareto_1870s2.jpg/360px-Vilfredo_Pareto_1870s2.jpg",height = "480px")
+```
+]
+.pull-right[
+.center[
+<br>
+"The assertion that men are objectively equal is so absurd that it does not even merit being refuted."
+<br>
+<br>
+"[T]he efforts of men are utilized in two different ways: they are directed to the production or transformation of economic goods, or else to the appropriation of goods produced by others." 
+<br>
+<br>
+
+.tr[— Vilfredo Pareto (1906).]
+]
+]
+
+
+???
+
+* Pareto war studierter Ingenieur und hatte das Ziel Soziologie und Ökonomik zu stärker faktenbasierten Wissenschaften zu machen - nach dem Vorbild der Naturwissenschaften.
+* Das Pareto-Gesetz beasagt, dass ein kleiner Teil von Menschen einen Großteil des Vermögens besitzt 
+  * zur Zeit Paretos: 80-20, d.h. 80 Prozent des Vermögens gehört 20 Prozent der Menschenin Pareto’s time, 
+  * heute in den USA eher 90-20
+* Given this inequality, Pareto argued that people fight over their share of the pie (Zitat): Menschliches **Engagement hat letztlich zwei Zielrichtungen**
+    * entweder Engagement in der **Produktion/Transformation** wirtschaftlicher Güter
+    * oder das Engagement richtet sich auf die Aneignung von Gütern, die von anderen hergestellt wurden. 
+* Besonders bekannt ist Pareto für seinen Effizienzbegriff. 
+  * Bisher: Technologische Effizienz und Ökonomische Effizienz (Unit 2 und Unit 3)
+  * Pareto-Effizienz bewertet die Effizienz sozialer Systeme
+
+
+
+---
+name: Motivation
+class: left
+
+# Bartholomew Roberts und die "Royal Rover’s Articles"
+
+.pull-left[
+.center[
+Article I
+
+.small[Every man has a vote in affairs of moment; has equal title to the fresh provisions, or strong liquors, at any time seized, and may use them at pleasure, unless a scarcity (not an uncommon thing among them) makes it necessary, for the good of all, to vote a retrenchment.]
+
+Article III
+
+.small[No person to Game at Cards or Dice for Money.]
+
+Article IV
+
+.small[The Lights and Candles to be put out at eight a-Clock at Night; If any of the Crew after that Hour still remained enclined for drinking, they are to do so on the open Deck...]
+.tr[ .small[
+— [The Royal Rover’s Articles](https://en.wikipedia.org/wiki/Pirate_code#:~:text=I.,all%2C%20to%20vote%20a%20retrenchment.)]]
+]
+]
+
+.pull-right[
+
+<br>
+<br>
+
+```{r, echo=FALSE,fig.align='center',out.width="69%"}
+knitr::include_url("http://theageofpirates.com/wp-content/uploads/bartholomew-roberts-01.jpg",height = "375px")
+```
+]
+
+
+
+???
+
+
+* Bezug zu Pareto-Zitat: Piraten stellen nichts her, sondern eignen sich fremdes Eigentum an
+* Halten sich nicht an Recht
+* Aber auch Piraten haben Regeln. 
+* Bartholomew Roberts (Abbildung) 
+    * gilt als der größte Pirat im Goldenen Zeitalter um 1700. 
+    * Er hatte 11 Artikel formuliert.
+*Andere Kommandanten hatten zum Teil nur 6 Regeln
+
+
+
+
+
+
+
+
+
+---
+name: Gliederung
+class: inverse, left, middle
+# Was lernen wir?
+
+.small[Die spieltheoretischen Analysen (Unit 4) haben gezeigt, dass Institutionen (Spielregeln) das soziale Ergebnis wesentlich beeinflussen. In der RCT (Unit 3) können Institutionen als Einflussgrößen des Möglichkeitsraums (Feasible Set) betrachtet werden.]
+
+## .underline[Inhaltliche Leitfragen]
+
+.blockquote[.small[
+1. Welche Regeln wären sozial wünschenswert? Wie können Gesellschaften zu solchen Spielregeln kommen?
+2. Welche Rolle spielt das Institut des Privateigentums für Allokation und Distribution?
+]
+]
+
+## .underline[Ökonomische Methoden und Konzepte]
+
+.blockquote[.small[
+1. Allokation (Effizienz) vs. Distribution (Gerechtigkeit)
+2. Verhandlungsmacht im RCT-Modell
+]
+]
+
+
+???
+
+* Einfluss der Regeln/Regeländerungen
+  * Public Goods Game
+      * Standard
+      * Mit "Leader" wart ihr kooperativer
+  * Ultimatum Spiel
+      * Mit Konkurrenz (zwei Respondents) werden auch schlechtere Angebote akzeptiert
+      
+* Während Regeln in der RCT i.a. als gegeben angenommen und nicht weiter thematisiert werden, sind Sie in der Neuen Institutionenökonomik (Unit 6) explizit Gegenstand der Analyse (Transaktionskosten).
+
+
+---
+name: Teil1
+class: inverse,center,middle
+
+# Teil 1: Effizienz und Gerechtigkeit
+
+.blockquote[Allokation vs. Distribution]
+
+.blockquote[Pareto Dominanz/Effizienz]
+
+.blockquote[Materielle vs. Prozedurale Gerechtigkeit]
+
+
+
+
+---
+name: institutions
+class: left
+
+# Institutionen und Macht
+
+* Institutionen als "Spielregeln" bzw. als...
+.blockquote[
+... die formellen (kodifizierten) und informellen Regeln unter denen soziale Interaktionen (sowie Interaktionen mit der Bioshäre) stattfinden.
+]
+
+--
+* Institutionen...
+--
+
+    * ...**beschränken** individuelles Verhalten bzw. **schützen** vor Übergriffen (im Rechtsstaat auch vor Übergriffen des Staates)
+--
+    * ...geben **Verhaltensanreize** (durch Belohnung und Bestrafung)
+--
+    * ...bestimmen...
+        * ...wie das Spiel gespielt wird
+        * ...welches soziale Ergebnis erreicht werden kann (Größe des Kuchens, **Allokation**)
+        * ...wie das soziale Ergebnis verteilt wird (**Distribution**)
+        
+
+
+
+--
+* Damit bestimmen Institutionen, welche Macht die verschiedenen Akteure haben
+
+.blockquote[
+Macht als Fähigkeit sich gegen den Willen anderer durchzusetzen.
+]
+
+
+???
+
+In Unit 1 hatten wir bereits Institutionen definiert
+
+* Bezug zu Royal Rovers Articles: 
+    * Nowhere else in the world during the late seventeenth and early eighteenth century did ordinary workers have the right
+        * to vote, 
+        * to receive compensation for occupational injuries,
+        * or to be protected from the kinds of checks on arbitrary authority that were taken for granted on the Royal Rover.
+    * The Royal Rover’s articles 
+        * laid down in black and white the understandings among the pirates **about their working conditions**. 
+        * They **determined who did what aboard the ship** (Allokation)
+        * and **what each person would get** (Distribution). For example, the size of the helmsman’s dividend compared to that of the gunner.
+    * There were also unwritten informal rules of appropriate behaviour that the pirates followed by custom, or to avoid condemnation by their crewmates.
+
+* Institutionen **bestimmen** als Spielregeln, wie das Spiel gespielt wird, welche Allokation und Distribution resuliert:
+    * For example, in the **ultimatum game** the rules (institutions) specify the size of the pie, who gets to be the Proposer, what the Proposer can do (offer any fraction of the pie), what the Responder can do (accept or refuse), and who gets what as a result.
+    * We also saw that **changing the rules of the game changes the outcome**. In particular, when there are **two Responders in the ultimatum game**, they are more likely to accept lower offers because each is not sure what the other will do. And this means that the Proposer can make a lower offer, and obtain a higher payoff.
+
+
+
+---
+name: Bargaining Power
+class:
+
+# Ökonomische Macht
+
+.panelset[
+.panel[.panel-name[Aktuell]
+```{r, echo=FALSE,fig.align='center',out.width="100%"}
+knitr::include_url("https://www.deutschlandfunk.de/zuliefererstreit-bei-vw-bei-dieser-einkaufsstrategie-langt-100.html",height = "480px")
+```
+]
+.panel[.panel-name[Verhandlungsmacht]
+
+
+* Ökonomische Macht wird als **Verhandlungsmacht (Bargaining Power)** bezeichnet. 
+
+* Verhandlungsmacht...
+
+  * ...bestimmt die Bedingungen des Handels bzw. interpersonellen Austauschs
+ 
+  * ...erlaubt die Drohung oder Auferlegung/Weitergabe von Kosten
+
+* Diktatur vs. Rechtsstaat
+
+* F.A. Hayek: Marktwirtschaftliche Ordnung als Instrument der Machtbegrenzung  
+]
+]
+
+???
+
+* Mit den Tarifverhandlungen haben wir schon ein Bsp. ökonomischer Macht gesehen.
+* Ein weiteres Beispiel findet sehen wir hier im Kontext der Automobilindustrie
+* Die Freiheit "nein sagen zu können"
+* Konkurrenz bedeutet Alternativen zu haben und damit Macht zu begrenzen
+
+
+
+
+---
+name: positivNormativ
+class: left
+
+# Positive vs. normative Ökonomik
+
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-05-17.svg",height = "550px")
+```
+
+
+???
+
+Effizienz und Gerechtigkeit
+
+
+
+---
+name: ParetoEffizienz
+class: left
+
+# Pareto-Effizienz und Soziale Dilemmata revisited
+
+.panelset[
+.panel[.panel-name[Effizienzbegriffe]
+In Unit 2 und 3 haben wir bereis zwei Effizienzbegriffe kennengelernt:
+
+* **Technologische** Effizienz (Input-Output-Beziehung):
+  * Herstellung einer gegebenen Menge mit möglichst wenig Ressourceneinsatz (Minimalprinzip)
+  * Herstellung einer möglichst großen Menge mit gegebenem Ressourceneinsatz (Maximalprinzip) 
+    
+* **Ökonomische Effizienz** (Einbeziehung der Knappheit bzw. der relativen Kosten)
+  * Herstellung einer gegebenen Menge zu möglichst geringen Kosten (Minimalprinzip)
+  * Herstellung einer möglichst großen Menge zu vorgegebenen Kosten (Maximalprinzip)
+
+* Das **Pareto-Kriterium** zur Bewertung ökonomischer Allokationen
+]
+.panel[.panel-name[Pareto-Effizienz]
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-05-01-e.svg",height = "480px")
+```
+]
+.panel[.panel-name[Soziales Dilemma]
+Refresher Unit 4: 
+
+* Soziales Dilemma als Situation, in der individuell eigeninteressiertes Handeln zu einem Ergebnis führt, das für alle weniger vorteilhaft ist, als das Ergebnis, das bei kooperativem Verhalten möglich gewesen wäre.
+
+Mit dem Konzept der Pareto-Effizienz lässt sich dies knapper formulieren:
+
+* Ein Soziales Dilemma ist ein Pareto-ineffizientes Nash-Gleichgewicht.
+]
+]
+
+
+???
+
+* An allocation that is not Pareto dominated by any other allocation is described as **Pareto efficient**.
+* A Pareto comparison
+
+(I, I) lies in the rectangle to the north-east of (T, T), so an outcome where both Anil and Bala use IPC Pareto dominates one where both use Terminator.
+
+* Compare (T, T) and (T, I)
+
+If Anil uses Terminator and Bala IPC, then he is better off but Bala is worse off than when both use Terminator. The Pareto criterion cannot say which of these allocations is better.
+
+* No allocation Pareto dominates (I, I)
+
+None of the other allocations lie to the north-east of (I, I), so it is not Pareto dominated.
+
+* What can we say about (I, T) and (T, I)?
+
+Neither of these allocations are Pareto dominated, but they do not dominate any other allocations either.
+
+
+
+---
+name: Fairness
+class: left
+
+# Distribution und Fairness
+
+.panelset[
+.panel[.panel-name[Gerechtigkeitsbegriffe]
+* Materielle Gerechtigkeit (ergebnisorientiert)
+  * Bewertung eines Zustands 
+  * Mögliche Indikatoren:
+      * Einkommen
+      * Vermögen
+      * Zufriedenheit (vgl. Schoder, 2015)
+
+* Verfahrensgerechtigkeit (prozessorientiert)
+  * Bewertung der Spielregeln, die ein Ergebnis hervorbringen
+  * Indikatoren:
+      * Freiwilligkeit (!)
+      * Chancengleichheit
+      * "deservingness"
+]
+.panel[.panel-name[Rawls]
+<iframe width="1000" height="480" src="https://www.youtube.com/embed/4rRzMeAkULc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+.panel[.panel-name[Werturteilsstreit]
+<iframe width="1000" height="480" src="https://www.youtube.com/embed/ligM6wZdLLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+]
+
+???
+
+* Materielle Fairness, bspw. Einkommensverteilung. Lässt sich meist gut beobachten/messen
+  * Substantive judgements are based on inequality in some aspect of the allocation such as:
+      * Income: The reward in money (or some equivalent measure) of the individual’s command over valued goods and services.
+      * Happiness: Economists have developed indicators by which subjective wellbeing can be measured.
+      * Freedom: The extent that one can do (or be) what one chooses without socially imposed limits.
+
+* Verfahrensgerechtigkeit, bspw. Chancengleichheit. 
+  * The rules of the game that brought about the allocation may be evaluated according to aspects such as:
+    * **Voluntary exchange** of private **property** acquired by legitimate means: Were the actions resulting in the allocation the result of freely chosen actions by the individuals involved, for example each person buying or selling things that they had come to own through **inheritance, purchase, or their own labour**? Or was **fraud or force** involved?
+    * **Equal opportunity for economic advantage**: Did people have an equal opportunity to acquire a large share of the total to be divided up, or were they subjected to some kind of **discrimination or other disadvantage** because of their race, sexual preference, gender, or who their parents were?
+    * **Deservingness**: Did the rules of the game that determined the allocation take account of the extent to which an individual **worked hard**, or otherwise upheld social norms?
+
+* Rawls
+  * We **adopt the principle that fairness applies to all people**: For example, if we swapped the positions of An and Bai, so that it was Bai instead of An who picked up $100, we would still apply exactly the same standard of justice to evaluate the outcome.
+  * Imagine a **veil of ignorance**: Since fairness applies to everyone, including ourselves, Rawls asks us to imagine ourselves behind what he called a veil of ignorance, **not knowing the position** that we would occupy in the society we are considering. We could be male or female, healthy or ill, rich or poor (or with rich or poor parents), in a dominant or an ethnic minority group, and so on. In the $100 on the street game, we would not know if we would be the person picking up the money, or the person responding to the offer.
+  * From behind the veil of ignorance, we can make a judgement: For example, the choice of a set of institutions—imagining as we do so that we will then become part of the society we have endorsed, with an equal chance of having any of the positions occupied by individuals in that society.
+
+* Rawls ist schon überzeugend, aber es gibt auch andere überzeugende Positionen (Philosophie)
+  * bspw. Trolley-Problem (heute Relevanz: Autonomes Fahren!) [Rawlsian Algorithm](https://icps.gwu.edu/sites/g/files/zaxdzs1736/f/downloads/Derek%20Leben%20A%20Rawlsian%20Algorithm%20for%20Autonomous%20Vehicles_0.pdf)
+  * estimation of probability of survival for each player in each action, then calculate which action each player would agree to if he or she were in an original bargaining position of fairness
+
+* Weber und die Werturteilsfreiheit
+  * Transparenz und Konditionalsätze! (im Video: Bedingte Empfehlungen)
+
+---
+name: Teil1
+class: inverse,center,middle
+
+# Teil 2: Verhandlungsmacht im Rational Choice Modell
+
+.blockquote[Freiwilligkeit vs. Zwang]
+
+.blockquote[Tauschlinse und Pareto Dominanz/Effizienz]
+
+
+
+???
+
+Recall the model in Unit 3 of the farmer, Angela, who produces a crop. We will develop the model into a sequence of scenarios involving two characters:
+
+1. Initially, Angela works the land on her own, and gets everything she produces.
+2. Next, we introduce a second person, who does not farm, but would also like some of the harvest. He is called Bruno.
+   a. At first, **Bruno can force Angela to work** for him. In order to survive, she has to do what he says.
+   b. Later, the rules change: the **rule of law replaces the rule of force**. Bruno can no longer coerce Angela to work. But he owns the land and if she wants to farm his land, she must agree, for example, to pay him some part of the harvest.
+   c. Eventually, the rules of the game change again in Angela’s favour. She and her fellow farmers achieve the **right to vote** and legislation is passed that increases Angela’s claim on the harvest.
+
+
+
+---
+name: Model
+class:
+
+# Konflikte im Rational Choice Modell
+
+.panelset[
+.panel[.panel-name[Technologie]
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-05-03-e.svg",height = "480px")
+```
+]
+.panel[.panel-name[Biologie]
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-05-05-g.svg",height = "480px")
+```
+]
+.panel[.panel-name[Institutionen]
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-05-07-a-c.svg",height = "480px")
+```
+]
+.panel[.panel-name[Pareto Effizienz]
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-05-08-e.svg",height = "480px")
+```
+]
+]
+
+
+???
+
+
+Panel 1 (Technologie):
+  * Angela arbeitet, Bruno eignet sich an
+  * The **feasible frontier** shows the maximum amount of grain available to Angela and Bruno together, given Angela’s amount of free time. If Angela takes 12 hours of free time and works for 12 hours then she produces 10.5 bushels of grain.
+  * **Point E** is a possible outcome of the interaction between Angela and Bruno. Angela works for 12 hours and produces 10.5 bushels of grain. The distribution of grain is such that 5.25 bushels go to Bruno and Angela retains the other 5.25 bushels for her own consumption.
+  * **Point F** shows an allocation in which Angela **works more** than at point E and **gets less** grain, and 
+  * **point G** shows the case in which she **works more** and **gets more** grain.
+  * An **outcome at H** in which Angela works 12 hours a day, Bruno consumes the entire amount produced and Angela consumes nothing **would not be possible: she would starve**.
+
+
+* Panel 2 (Biologie, Recht des Stärkeren):
+  * Biologisch möglich: Energieerzeugung (obere Kurve, MRT) $>$ Energieverbrauch (untere Hyperbel MRS)
+  * Im Optimum $MRT=MRS$ Bruno hat Interesse am Überleben von Angela, wenn seine **Outside Option** null ist
+  * Bruno lässt Angela 11 Stunden arbeiten
+  * Kurve unten wurde in den 1980er Jahren als **Laffer-Kurve** bekannt. Steuerreformen unter Präsident R. Reagan in den USA.
+
+* Panel 3 (Institutionen, Freiwilligkeit, aber Angela muss Land pachten):
+  * Point Z, the allocation in which Angela does not work and gets only survival rations from the government, is called her reservation option.
+  * The curve showing all of the allocations that are just as highly valued by Angela as the reservation option is called her **reservation indifference curve**.
+  * The points in the area bounded by the reservation indifference curve and the feasible frontier (including the points on the frontiers) define the set of all **economically feasible allocations**
+  * With voluntary exchange, **allocation B is not available**. The **best that Bruno can do** is **allocation D** ($MRS=MRT$), where **Angela works for 8 hours**, giving him grain equal to CD
+
+* Panel 4 (Tauschlinie C-D)
+  * Ökonomischer Möglichkeitsraum zeigt Bandbreite für freiwillige Verhandlungslösungen auf
+  * Wo zwischen C und D die beiden landen, hängt von Ihren Außenoptionen ab (reservation wage, was kann Angela woanders verdienen)
+  * As an independent farmer, Angela chose point C, where MRT = MRS. She consumed 9 bushels of grain: 4.5 bushels would have been enough to put her on her reservation indifference curve at D. But she obtained the whole surplus CD—an additional 4.5 bushels
+  * When Bruno owned the land and made a take-it-or-leave-it offer (Panel 3), he chose a contract in which the land rent was CD (4.5 bushels). Angela accepted and worked 8 hours. The allocation was at D, and once again, MRT = MRS.
+  * Remember that Angela’s MRS doesn’t change as she consumes more grain. At any point along the line CD, such as G, there is an indifference curve with the same slope. **Implizite Annahme: quasilineare Präferenzen**
+  
+  
+---
+name: Politics
+class: left
+
+# Gewerkschaften und die Verteilung des Tauschgewinns
+
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-05-09-d.svg",height = "550px")
+```
+
+???
+
+* Before the short-hours law Angela worked for 8 hours and received 4.5 bushels of grain. This is point D in Figure 5.9. The new law implements the allocation in which Angela and her friends work 4 hours, getting 20 hours of free time and the same number of bushels. Since they have the same amount of grain and more free time, they are better off. Figure 5.9 shows they are now on a higher indifference curve.
+
+* The **new law** has **increased Angela’s bargaining power** and Bruno is worse off than before. You can see she is better off at F than at D. **She is also better off than she would be with her reservation option**, which means she is **now receiving an economic rent**.
+
+* Angela’s **rent can be measured**, in bushels of grain, as the vertical distance between her reservation indifference curve (IC1 in Figure 5.9) and the indifference curve she is able to achieve under the new legislation (IC2). 
+
+* We can think of the **economic rent** as:
+  * The **maximum amount of grain per year that Angela would give up to live under the new law** rather than in the situation before the law was passed.
+  * Or (because Angela is obviously political) the **amount she would be willing to pay so that the law passed**, for example by lobbying the legislature or contributing to election campaigns.
+
+
+---
+name: Lorenz
+class: left
+
+# Statistik-Refresher: Lorenz-Kurve und Gini-Koeffizient
+
+.panelset[
+.panel[.panel-name[Lorenz-Kurve]
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-05-15-d.svg",height = "480px")
+```
+]
+.panel[.panel-name[Gini]
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-05-16.svg",height = "480px")
+```
+]
+]
+
+
+???
+
+Panel 2: Internationaler Vergleich der Verteilung von **verfügbaren Einkommen** (Verweis Makro, VGR)
+
+
+---
+name: Final
+class: inverse, center, middle
+
+# Zusammenfassung und Ausblick
+
+
+
+---
+name: Fazit
+class: left
+
+# Zusammenfassung und Fazit
+
+
+* Institutionen und Macht
+
+* Effizienz und Gerechtigkeit
+
+* RCT-Modell mit Einbeziehung von Konflikten zeigt...
+  * ...Verhandlungsspielraum
+  * ...Bedeutung von Außenoptionen (reservation wage)
+
+
+
+
+
+
+
+---
+name: Ausblick
+class: left
+
+# Ausblick (Unit 6)
+
+* Probleme bei unvollständiger und asymmetrischer Information
+
+* Interessenkonflikte in Unternehmen
+
+* Prinzipal-Agenten-Problematik
+
+* Effizienlöhne als Anreizinstrumente
+
+
+???
+
+
+

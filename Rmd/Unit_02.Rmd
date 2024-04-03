@@ -1,0 +1,1270 @@
+---
+title: "Modul Volkswirtschaftslehre"
+author: "Prof. Dr. Jörg Schoder"
+institute: "ISBA" 
+date: "`r Sys.Date()`"
+bibliography: ../lit/my_bib.json
+reference-section-title: Quellenverzeichnis
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    css: 
+        - default
+        - ../css/schoder_theme.css
+        - xaringan-themer.css
+    includes:
+      after_body: ../css/insert-logo.html
+    lib_dir: ../libs
+    nature:
+      slideNumberFormat: "%current%/%total%"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+    seal: false
+    
+---
+class: title-slide
+
+```{r xaringan-themer, include=FALSE}
+library(xaringanthemer)
+style_xaringan(text_color = "#232461",inverse_text_color = "#FFFFFF",inverse_background_color = "#232461", title_slide_background_color = "#232461",header_background_color = "#232461",header_color = "#FFFFFF",header_h1_font_size = "32px",
+  header_h2_font_size = "26px",link_color="#d84116",
+  header_h3_font_size = "20px",text_slide_number_color = "#232461",text_slide_number_font_size = "0.5em")
+```
+
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_progress_bar(color = "#d84116", location = "bottom")
+xaringanExtra::use_xaringan_extra(c("tile_view","scribble","panelset","tachyons"))
+xaringanExtra::style_panelset_tabs(font_family = "inherit")
+#xaringanExtra::use_search(show_icon = TRUE)
+#weitere: "share_again","animate_css", "webcam","freezeframe","clipboard","fit_screen","extra-styles" 
+xaringanExtra::use_editable(expires = 1)
+xaringanExtra::use_freezeframe(trigger = "hover")
+```
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(tidyverse)
+library(latex2exp)
+library(fontawesome)
+```
+
+# Volkswirtschaftslehre
+
+## CORE - The Economy
+
+### Unit 2:  Einführung in die Modellbildung
+ 
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+### Sommersemester 2024 
+<br>
+### Prof. Dr. Jörg Schoder
+.mycontacts[
+`r fa('github')` @ISBA-University
+`r fa('linkedin')` @jfschoder
+]
+
+
+
+---
+layout: true
+
+<div class="my-footer"></div>       
+
+<div style="position: absolute;left:400px;bottom:10px;color:ISBAblue;font-size:9px">`r r2symbols::sym('copyright')``r rmarkdown::metadata$author`</div>
+
+
+
+---
+name: Wohlstand
+class: left
+
+# Entwicklung von Wohlstand und Bevölkerung
+
+```{r, echo=FALSE,out.width = "100%"}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-01.svg", height = "550px")
+```
+
+.quelle[Quelle: [CORE - The Economy](https://www.core-econ.org/the-economy/book/text/02.html#subheadline).]
+
+
+
+---
+name: Gliederung
+class: inverse, left, middle
+# Was lernen wir?
+
+Einheit 1 hat gezeigt, dass die langfristige Zunahme des Wohlstands durch das Zusammentreffen von technologischer und kapitalistischer Revolution erklärt werden kann. Im Zentrum von Einheit 2 steht die Einführung des **ökonomischen Denkens in Modellen**. So wollen wir versuchen, den flachen Teil und den Anstieg des Hockey-Sticks mit Hilfe ökonomischer Modelle zu erklären.
+
+## Inhaltliche Leitfragen
+
+.blockquote[
+1. Wie ist die lange Phase der Stagnation vor dem 18. Jahrhundert zu erklären?
+2. Wie kann der steile Anstieg des Wohlstands seit dem 18. Jahrhundert erklärt werden?
+      * Warum begann es (ausgerechnet) zu dieser Zeit?  
+      * Warum fand die industrielle Revolution zuerst in England statt?
+]
+
+## Ökonomische Methoden und Konzepte 
+
+.blockquote[
+1. Formulierung ökonomischer Modelle
+2. Erklärungsgehalt von Modellen (Kontextabhängigkeit), Reflektion von Modellannahmen
+]
+
+
+
+???
+
+This is the first of two units on the individual as decision-maker. It formally introduces the use of models as a way to explain economics. The problem to be explained here is the rise in living standards after a very long period of stagnation. 
+
+Students are introduced to the nature of abstraction and models, but are also shown that models that work in one context may not be relevant for other contexts. For example, the Malthusian model is used to explain both the relative stagnation of wages until the 19th century and some of the fluctuations in that long historical period, for example the wage movements following the great plague. But it does not necessarily mean that it can continue to explain what happened to wages in the late 19th century. This is a clear early lesson for students of the limitations of models and the need to assess carefully their applicability to a specific context. 
+
+
+
+---
+name: Stagnation
+class: inverse, center, middle
+
+
+
+# Teil 1
+
+## Ökonomische Erklärung der langen Stagnationsphase vor dem 18. Jahrhundert
+
+
+.blockquote[Modell-Baustein 1: Produktionsfunktion und Durchschnitts-/Grenzprodukt]
+
+.blockquote[Modell-Baustein 2: Bevölkerungswachstum]
+
+
+???
+Zur Beantwortung benötigen wir ein anderes Modell
+
+
+
+
+
+
+---
+name: Produktionsfunktion
+class: left
+
+
+# Baustein 1: Produktionsfunktion
+
+.blockquote[
+Eine (ökonomische) Produktionsfunktion beschreibt den Zusammenhang zwischen Faktoreinsatzmengen (engl. Input) und Produktionsergebnis (Ausbringungsmenge, engl. Output)
+]
+--
+
+<center>
+```{r Fig:Prodfkt,echo=FALSE, message=FALSE,fig.align="center",out.width="67%"}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-14-b-a.svg",height = "290px")
+```
+</center>
+.quelle[Bildquelle: [CORE Unit 2](https://www.core-econ.org/the-economy/book/text/02.html#figure-2-14ba).]
+
+
+--
+* Ein Produktionsfaktor?
+
+--
+  * Nur ein **variabler** Faktor
+  * Alles andere **konstant** (ceteris paribus):
+      * Technologie (Malthus-Modell?)
+      * andere Produktionsfaktoren (bspw. Boden) 
+
+
+???
+* Implizite Annahme bei dieser Darstellung (analog zu Malthus!):
+    * Land kann nicht vermehrt werden 
+    * Die Flächen werden nur durch (Land-)Arbeiter bewirtschaftet
+
+* Abstrakt: Ein fixer (Land) und ein variabler (Arbeit) Produktionsfaktor
+
+
+---
+name: AP-MP
+class: left
+
+# Durchschnittsprodukt
+
+```{r Fig:AP,echo=FALSE, message=FALSE}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-14-b-e.svg",height = "550px")
+```
+
+
+???
+On its own, the diminishing average product of labour does not explain the long, flat portion of the hockey stick. It just means that living standards depend on the size of the population. It doesn’t say anything about why, over long periods, living standards and population didn’t change much. For this we need the other part of Malthus’s model: his argument that increased living standards create a population increase.
+
+---
+name: Produktionsfunktion
+class: left
+
+# Aufgabe: Landwirtschaftliche Produktion
+.panelset[
+.panel[.panel-name[Aufgabe 2.6]
+```{r EX-2-6,echo=FALSE, message=FALSE}
+knitr::include_url("https://www.core-econ.org/the-economy/book/text/02.html#exercise-26-the-farmers-production-function", height = "450px")
+```
+]
+.panel[.panel-name[Lösungsskizze]
+1. Kalorienverbrauch (pro Stunde) Landwirt?
+2. Kaloriengehalt Getreide (pro kg)?
+3. Durchschnittsprodukt Landwirt ([Tabelle 2.14a](https://www.core-econ.org/the-economy/book/text/02.html#figure-2-14a))?
+4. Arbeitsstunden pro Jahr?
+  * Kalorienverbrauch pro Jahr?
+  * Produktionsmenge pro Jahr?
+]
+.panel[.panel-name[Reflektion]
+```{r EX-2-6ref,echo=FALSE, message=FALSE}
+knitr::include_url("https://www.infosperber.ch/wirtschaft/landwirtschaft/die-minus-kalorien-der-schweizer-landwirtschaft/", height = "450px")
+```
+]
+]
+
+
+???
+
+* One first needs to research how many **calories are burned in
+agricultural work**. There are plenty of sources and students will only
+be able to approximate this. Calorie Lab (http://tinyco.re/9625441) for
+example, gives **476 calories per hour**.
+* The next information we need to know is **grain production of a farmer per year**. This depends on the number of farmers working on the land. The numbers are expressed as output at the end of the growing
+season, so we use this as yearly output. Let’s assume we are at point B
+on the production function where the **average product (Tabelle)** of the farmer is **458 kg per farmer**.
+* We also have to make assumptions on the standard **working hours per year per farmer**. Published research is (surprisingly) not definitive! For now, we **assume** that work towards grain production was 300 days a year, for 8 hours a day (students may find different estimates). 
+* Hence, **2,400 hours a year**, which means that the **average production per hour is roughly 0.2 kg grain/hour**.
+* Kalorien in einem Kg Getreide: 3780kcal. Damit: 
+    * Produktion $$0,2\cdot 3780=756$$kcal
+    * Verbrauch 476kcal
+* Based on these assumptions, grain production results in a **net benefit.**
+* Finally, discuss the limitations of this calculation.
+
+[Minus-Kalorien Landwirtschaft Schweiz](https://www.infosperber.ch/wirtschaft/landwirtschaft/die-minus-kalorien-der-schweizer-landwirtschaft/)
+
+
+
+
+---
+name: Pop
+class: left
+
+# Baustein 2: Bevölkerung
+
+.blockquote[
+"Elevated as man is above all other animals by his intellectual facilities, it is not to be supposed that the physical laws to which he is subjected should be essentially different from those which are observed to prevail in other parts of the animated nature."
+.tr[
+— (T. R. Malthus)
+]]
+
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_url('https://www.geogebra.org/m/aqazjzze', height='350px')
+```
+
+
+???
+
+population expands if living standards increase
+
+
+
+---
+name: Ex:MenschTier
+class: left
+
+# Gruppenarbeit
+
+```{r, echo=FALSE,out.width = "100%"}
+knitr::include_url("https://www.core-econ.org/the-economy/book/text/02.html#exercise-27-are-people-really-like-other-animals",height = "550px")
+``` 
+
+```{r,echo=FALSE}
+countdown::countdown(
+minutes = 5,
+seconds = 0,
+warn_when = 30
+)
+```
+
+???
+
+* **Introduction**
+  * The aim of this question is to make students reflect on the difference between
+models in natural and social science.
+  * What are the similarities? What are the differences?
+
+* **Answer**
+  * Malthus is not entirely wrong. 
+  * There are many similarities between humans and other animals. Humans need food to survive, we need nutrition to grow and flourish and we have life expectancies that are to a great extent dependent on the nutrition that they obtain. 
+  * **The key attribute that we share with other animals**, according to Malthus, is that better nutrition will increase the probability of surviving to an age at which one can reproduce, and how many offspring (who also survive to reproductive age) one produces. 
+  * This was true for most people for most of history, and still true in some of the world’s poorest economies.
+
+* **Marking guidance**
+  * A good answer will include:
+    * A discussion of the sense in which other animals are similar to human life. Need for food, nutrition and success in reproducing offspring. In the Malthusian model this link is important and students should explain this relationship to the model.
+    * A discussion of in which ways humans and other animals differ. Because of our ability to develop sophisticated language and our extraordinary learning abilities and cognitive capacities humans differ from most other animals many ways, among which is the scale on which we can cooperate and also the scale on which we wage wars (ants and other social insects also do these things on a grand scale).
+    
+* **Teaching ideas**
+  * This is a provocative statement and one could use this in a debate.
+  * One may want to ask students what the similarities and differences imply for economic modelling.
+
+
+---
+name: MalthusModell
+class: left
+
+# Malthusianisches Modell
+
+```{r, echo=FALSE,out.width = "100%"}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-16-e.svg",height = "550px")
+```
+
+
+???
+
+The two diagrams together explain the Malthusian population trap. Population will be constant when the wage is at subsistence level, it will rise when the wage is above subsistence level, and it will fall when the wage is below subsistence level.
+
+
+---
+name: Prognose
+class: left
+
+# Malthus' Vorhersage
+
+```{r, echo=FALSE,out.width = "100%"}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-15.svg",height = "550px")
+``` 
+
+
+???
+
+In a nutshell: Während die Bevölkerung linear oder gar exponentiell wächst, steigt die Produktion nur unterlinear. 
+
+
+
+
+---
+name: Trap
+class: left
+
+# Die Malthusianische Falle und der Hockeystick
+
+```{r, echo=FALSE,out.width = "100%"}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-18.svg",height = "550px")
+```
+
+
+???
+
+* Beulenpest 
+
+* The relationship between real wages and population in England between 1280-1600 show evidence of this "Malthusian trap".
+
+* But what about the subsequent "hockey-stick" growth?
+
+**3 conditions are required to stay in the Malthusian trap:**
+  * Diminishing average product of labour 
+  * Rising population in response to increases in wages
+  * An absence of improvements in technology to offset the diminishing average product of labour
+
+* The permanent technological revolution meant that third condition no longer holds, and explains why Britain was able to escape the Malthusian trap.
+
+
+
+
+
+
+
+---
+class: inverse, center,middle
+
+# Teil 2 
+
+## Ökonomische Modellbildung
+
+
+
+
+---
+class: left
+
+
+# Ökonomik als Methode
+
+
+.pull-left[
+```{r, echo=FALSE}
+knitr::include_graphics("../images/unit02/Keynes_(wiwo).png")
+```
+
+.quelle[Bildquelle: [wiwo.de](https://www.wiwo.de/images/john-maynard-keynes-der-brite-forderte-eine-aktive-rolle-des-staates-in-wirtschaftskrisen/4881664/1-format7001.jpg)]
+]
+.pull-right[
+<br>
+<br>
+<br>
+.center[
+"Economics is a method rather than a doctrine, an apparatus of the mind, a technique of thinking which helps the possessor to draw correct conclusions.
+<br>
+...Economics is a science of thinking in terms of models joined to the art of choosing models which are relevant to the contemporary world."
+.tr[
+— (J.M. Keynes)
+]
+]
+]
+
+
+
+---
+name: Meth-chart
+class: left
+
+# Ökonomische Theoriebildung
+
+```{tikz,echo=FALSE}
+   \usetikzlibrary{angles,quotes,babel,calc,matrix,patterns,math,fit,arrows,arrows.meta,shapes.arrows,shapes,shapes.geometric,positioning,intersections,chains,trees,mindmap,shadows,shadows.blur,shadings,backgrounds,colorbrewer,decorations.markings,decorations.pathreplacing,decorations.text}
+  	\definecolor{nblu}{HTML}{5465FF}
+   \definecolor{cblu}{HTML}{788BFF}
+   \definecolor{mblu}{HTML}{9BB1FF}
+   \definecolor{lblu}{HTML}{BFD7FF}
+\tikzset{font=\normalsize\bfseries\sffamily,
+         node distance = 1em and 1em,
+			start chain = going below,
+			box/.style = {rectangle, rounded corners, draw=blue!75, very thick,
+				minimum height=16mm, text width=110mm, align=flush left,
+				top color=nblu!90, bottom color=nblu!30,
+				drop shadow, on chain},
+			cir/.style = {circle, draw=blue!75, very thick,
+				minimum size=16mm, inner sep=2pt, outer sep=0pt,
+				top color=nblu!90, bottom color=nblu!30,
+				drop shadow},
+			every node/.style={transform shape}
+			}
+		\begin{tikzpicture}[scale=0.85]
+			\node (n1) [box=nblu]   {\textbf{Beobachtung eines realen Phänomens} (Daten)};
+			\node (n2) [box=cblu]   {\textbf{Vereinfachte Abbildung der realen Welt} (Modell)\begin{itemize}
+					\item Methode der Deduktion
+					\item Methode der abnehmenden Abstraktion
+				\end{itemize}
+			};
+			\node (n3) [box=mblu]  {\textbf{Abgleich von Modell und Daten} (Empirische Evidenz)\begin{itemize}
+					\item Statistik (Inferenz) bzw.
+					\item Ökonometrie
+			\end{itemize}};
+			\node (n4) [box=lblu]  {\textbf{Anwendung "guter/bewährter" Modelle}\begin{itemize}
+					\item Erklärung historischer Ereignisse
+					\item Prognose künftiger Entwicklungen
+					\item Bewertung (wirtschafts-)politischer Maßnahmen
+			\end{itemize}};
+			\begin{scope}[on background layer]
+				\node [cir=nblu, left=of n1]    {\Large 1};
+				\node [cir=cblu, left=of n2]    {\Large 2};
+				\node [cir=mblu, left=of n3]    {\Large 3};
+				\node [cir=lblu, left=of n4]    {\Large 4};
+			\end{scope}
+		\end{tikzpicture}
+```
+
+.quelle[Eigene Darstellung.]
+
+
+---
+class: left
+
+# Ceteris Paribus? Beispiel GameStop 
+
+Von einer "normalen" Aktie zur [Meme-Aktie](https://www.morningstar.de/de/news/213095/was-ist-eine-meme-aktie.aspx)
+
+```{r, echo=FALSE,out.width = "90%"}
+knitr::include_url("../images/unit02/ModelsGamestop_small.png",height = "500px")
+```
+
+
+???
+
+* GameStop-Aktie Anfang 2020 im Fokus von Kleinanlegern, die sich über Internetplattformen zu konzertierten Käufen über Billigbroker-Apps (Vorteil: keine expliziten Transaktionskosten) verabretet haben. (Meme Aktien)
+
+* Im Januar erlebte die Welt ein bisher einmaliges Börsenschauspiel: Nutzer der Internetforen-Plattform Reddit hatten sich zusammengeschlossen, um den Hedgefonds eins auszuwischen. Abgesprochen im Forum "Wall Street Bets" kauften Kleinanleger über Neobroker-Apps wie Robin Hood massenhaft Aktien der gebeutelten stationären Videospiel-Ladenkette Gamestop und des strauchelnden Kinobetreibers AMC. Auf beide Unternehmen waren besonders viele Short-Positionen abgeschlossen worden – Wetten auf fallende Kurse. Die stark steigenden Aktien sorgten für Milliardenverluste bei einigen Hedgefonds wie Melvin Capital, der britische Fonds White Square Capital gab nach heftigen Verlusten zu Beginn des Jahres inzwischen das Geschäftsfeld mit den Absturz-Wetten auf.
+
+* So ein reales Wachstum gibt es bei Gamestop und AMC nicht. Für den Druckkochtopf der sich gegenseitig befeuernden Erwartungen brauchte es nur ein Internetforum. Dank Neobroker-Apps wie Trade Republic können die User ohne Kommission selbst direkt an der Börse handeln und sich bei steigenden Kursen immer weiter anheizen.
+
+* Auf den fundamentfreien Hype folgte aber eine weitere Überraschung: Die Kurse brachen bei weitem nicht so stark wieder ein, wie Experten es voraussagten. Die Reddit-Investoren sind hartnäckiger als gedacht.
+
+Quelle: [Wirtschaftswoche](https://www.wiwo.de/unternehmen/handel/trendaktien-wie-gamestop-und-amc-ihre-meme-aktien-nutzen-auf-kosten-der-investoren/27364198.html)
+
+
+
+---
+class: left
+
+# Modelle in der Wirtschaftstheorie
+
+* Für die Beantwortung einer konkreten Fragestellung
+
+    * sind bestimmte Charakteristika einer Volkswirtschaft relevant
+    
+    * während andere vielleicht sogar ignoriert werden können
+
+--
+
+* Wert der Abstraktion und Methode der abnehmenden Abstraktion (vgl. Grundlagen VWL)
+
+--
+
+* Komplexität: Partialanalyse vs. Totalanalyse
+
+--
+
+* Bewertung der Eignung von Modellen
+
+
+
+
+---
+name: Meth
+class: left
+
+# Vorgehensweise
+
+1. Erfassung der für die Fragestellung bedeutsamen Elemente der Volkswirtschaft
+
+--
+
+2. Beschreibung der Verhaltensweisen/Handlungen von Wirtschaftsakteuren und der Interaktion mit anderen Akteuren und Elementen des Modells
+
+--
+
+3. Bestimmung der Konsequenzen dieser Handlungen (Gleichgewicht)
+
+--
+
+4. Analysen der Effekte von Veränderungen ökonomischer Größen
+
+
+???
+
+* Warum Modelle?
+* Realität ist zu komplex, sodass Abstraktion (per Annahmen) notwendig ist.
+   * Modelle bieten die Möglichkeit die Realität in vereinfachter Weise darzustellen.
+   * Modelle sind wichtig um reale Fragestellungen beleuchten und diese besser	verstehen zu können.
+   * Es können so Gesetzmäßigkeiten und Wirkungszusammenhänge identifiziert werden.
+* Abnehmende Abstration:
+   * zuerst maximale Abstraktion, um möglichst einfaches Modell zu bekommen, das wir leicht verstehen können.
+   * dann Schritt für Schritt "Details" hinzufügen, um uns an die Realität anzunähern.
+
+
+
+
+
+
+---
+name: Gleichgewicht
+class: left
+
+# Modelle und Gleichgewichte
+
+```{r, echo=FALSE,out.width = "100%"}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-02.svg",height = "550px")
+```
+
+???
+
+* Modelle und Gleichgewichte: Apparat Irving Fisher
+* kommunizierende Röhren, Ausgleichstendenz
+* Wirtschaftskreislauf
+
+* How models are used in economics: Fisher’s study of the economy illustrates how all models are used:
+  * First he built a model to **capture the elements of the economy** that he thought mattered for the determination of prices.
+  * Then he used the **model to show how interactions** between these elements could result in a set of prices that did not change.
+  * Finally he conducted **experiments** with the model **to discover the effects** of changes in economic conditions: for example, if the supply of one of the goods increased, what would happen to its price? What would happen to the prices of all of the other goods? 
+  
+* ceteris paribus vs. allg. Ggw.
+
+
+
+---
+name: Sozialphysik
+class: left
+
+# Ökonomik als Sozialphysik?
+
+.panelset[
+.panel[.panel-name[Interview]
+```{r, echo=FALSE,out.width = "100%"}
+knitr::include_url("https://www.faz.net/aktuell/gesellschaft/oekonomie-ist-eigentlich-keine-wissenschaft-11418489.html",height = "480px")
+```
+]
+.panel[.panel-name[Zitat]
+.blockquote[
+"Wie gesagt, **ohne die Möglichkeit des Experiments** funktioniert das nicht so ohne weiteres. Darauf scheint es heute aber gar nicht mehr anzukommen. Das hat wohl damit zu tun, dass Wirtschaftswissenschaftler als Politikberater und in den Medien höchst präsent sind und dort vor allem **Eindruck schinden** müssen. Und **dabei hilft die Mathematik**. Ihre Verwendung gilt an sich schon als Qualitätsmerkmal. Mit ihr wird eine Exaktheit und Wissenschaftlichkeit vorgespiegelt, die überhaupt nicht vorhanden ist. **Wenn die ökonomischen Modelle von ihren Annahmen her nicht zutreffen** und sich an der Realität gar nicht überprüfen lassen, **hilft** für den Wahrheitsgehalt der Resultate **noch so viel Mathematik nicht weiter**."
+.tr[
+— (Ortlieb 2010)]
+]
+]
+]
+
+
+???
+
+* Die mathematische Naturwissenschaft hat aufgrund ihres unbestreitbaren Erfolges die Funktion einer **Leitwissenschaft übernommen, so dass in der Zeit um 1900 herum in vielen
+	anderen Wissenschaften versucht wurde, ihre Methoden zu adaptieren, auch in der Ökonomie.\newline * Idee: Übertragung der Exaktheit der Mathematik auf die eigene Wissenschaft...
+
+
+
+---
+name: Experimente
+class: left
+
+# Exkurs: Experimente in den Wirtschaftswissenschaften
+
+
+.panelset[
+.panel[.panel-name["Nobelpreis" 2019]
+```{r, echo=FALSE,out.width = "100%"}
+knitr::include_url("../images/unit02/Nobel_2019.PNG",height = "480px")
+```
+]
+
+.panel[.panel-name["Nobelpreis" 2021]
+```{r, echo=FALSE,out.width = "100%"}
+knitr::include_url("https://www.deutschlandfunk.de/wirtschafts-nobelpreis-2021-arbeiten-in-direktem-bezug-zum-100.html",height = "480px")
+```
+
+.quellePanURL[Quelle: [deutschlandfunkt.de](https://www.deutschlandfunk.de/wirtschafts-nobelpreis-2021-arbeiten-in-direktem-bezug-zum-100.html)]
+]
+.panel[.panel-name[Experimente]
+* **Labor-Experimente**
+
+  `r fa("circle-right")` Beispiel: Ultimatum-Spiel
+
+```{r ClassEx1,echo=FALSE, message=FALSE,out.width='15%',fig.align='center'}
+knitr::include_graphics('../images/ClassEx-link.svg')
+```
+
+* **Feld-Experimente**
+
+  `r fa("circle-right")` Freakonommics Radio Podcast: [Are the        Rich Really Less Generous Than the Poor?](https://freakonomics.com/podcast/rich-really-less-generous-poor/) 
+
+* **Natürliche Experimente**
+
+    `r fa("circle-right")` Freakonommics Radio Podcast: [You Make Me Feel Like a Natural Experiment](https://freakonomics.com/podcast/you-make-me-feel-like-a-natural-experiment/) 
+
+]
+.panel[.panel-name[Nobel-Liste]
+```{r, echo=FALSE,out.width = "100%"}
+knitr::include_url("../images/unit02/Nobelpreise_(nobelprize.org)_small.PNG",height="480px")
+```
+.quellePanURL[[nobelprize.org](https://www.nobelprize.org/prizes/lists/all-prizes-in-economic-sciences/)]
+]
+]
+
+
+???
+
+* Laborexperiment bspw. mit Ultimatumspiel
+
+* Nobelpreis 2019 an Banerjee, Duflo und Kremer
+
+* **Exkurs:** Im allgemeinen Sprachgebrauch als Nobelpreis für Wirtschaftswissenschaften oder Wirtschaftsnobelpreis bezeichnet; eine offizielle deutsche Bezeichnung existiert nicht.
+		* Der Preis ist aus verschiedenen Gründen umstritten. 
+		    * Insbesondere die annähernde Gleichstellung mit den Nobelpreisen wirft die Frage auf, ob
+		      der Preis im Sinne Nobels ist und 
+		    * ob es angemessen ist, den Wirtschaftswissenschaften eine solche herausragende Stellung zu geben.
+		    * Ein vorgebrachtes Argument ist, der Preis sei nicht im Sinne Nobels, da dieser eine Abneigung gegen die                   Wirtschaftswissenschaft gehegt habe
+
+
+
+
+
+
+
+
+---
+name: EX-ModelDesign
+class: left
+
+# Diskussion: Modelle in den Wirtschaftswissenschaften
+
+.panelset[
+.panel[.panel-name[Aufgabe 2.1]
+```{r EX-2-1,echo=FALSE, message=FALSE}
+knitr::include_url("https://www.core-econ.org/the-economy/book/text/02.html#economic-models")
+```
+]
+.panel[.panel-name[S-Bahn-Karte]
+```{r, echo=FALSE,fig.cap="S-Bahn-Netz Berlin",fig.align='center', out.width = '100%'}
+knitr::include_url("https://sbahn.berlin/interaktives-liniennetz/")
+```
+]
+]
+
+
+???
+
+**Introduction**
+The aim of this question is to encourage students to reflect on why we use models and other cognitive simplifications, and what their strengths and weaknesses are. Students should appreciate that a model is always a reduction of reality and that the choices made in terms of what to include in a model should be guided by the model’s purpose. The models we use in economics are never a perfect representation of reality, and often designed to answer very specific questions.
+
+This means that while a model may be useful* to answer **one question**, it *may not be the right tool* to answer **other questions**. To decide how to use economic models in a meaningful way, we **need to precisely know the assumptions** a model is based on.
+
+**Answer**
+A map is not like an economic model. It is a simplification, but it is not used to make predictions. When designing the model, we **focus on the most essential information** to describe the transportation system. This may include: Names of the stops, the names of the bus/metro/train lines and the points at which there are interchanges between the lines.
+
+The model will **need to be a simplification of reality**, and may also not be in true scale. The inaccuracies (for example, difference in scaling) will cause some aspects of the model to be an approximation only. For instance, the geographical relation between stations/stops may only be roughly correct. Also, the connections between stations may not exactly match the actual routes (the correct route might be more of a curve and the modeller may use a straight line instead). Other geographical and demographic details such as information on
+altitudes, location of amenities or information on the population may be left out to improve readability.
+
+**More generally:**
+* All models must be a **reduction of the complex realities** we live in to
+make them usable.
+* Models are **designed for the questions one would like to answer**.
+Irrelevant information is left out.
+* The **purpose of the public transport and railway model** is to answer the question: what is the **best way to get from A to B using public transport services**? Hence information that does not improve the quality of the answer to this specific question is left out.
+
+
+
+---
+name: ModelEval
+class: left
+
+# Bewertung von Modellen
+
+.blockquote["Ein Modell, das die ganze Buntheit der Wirklichkeit berücksichtigt, würde nicht nützlicher sein als eine Landkarte im Maßstab Eins zu Eins" 
+.tr[
+— (Joan Robinson zitiert nach Felderer/Homburg 2003, S. 10).
+]]
+
+<br>
+
+--
+.blockquote["The validity of a theory depends upon whether its implications are refuted, not upon the reality or unreality of its assumptions. [..]  My argument was that the assumptions are utterly irrelevant. What matters is whether businessmen behave as if the assumptions are valid. The only way you can test that is by seeing whether the predictions you make are refuted."
+.tr[
+— (Milton Friedman zitiert nach [Hetzel 2007, S. 8](https://www.richmondfed.org/-/media/richmondfedorg/publications/research/economic_quarterly/2007/winter/pdf/hetzel.pdf)).
+]]
+
+
+
+
+
+---
+name: KeyConcepts
+class: left
+
+# Zentrale Konzepte ökonomischer Modellbildung
+
+
+* Vereinfachung durch Partialanalyse (Ceteris paribus)
+
+--
+
+
+* Relative Preise ermöglichen den Vergleich von Alternativen (Opportunitätskosten)
+
+
+--
+
+* Anreize: wirtschaftliche Belohnung/Bestrafung, die Kosten und Nutzen alternativer Handlungsoptionen beeinflussen
+
+
+--
+
+* Ökonomische Renten
+
+    * Definition: Vorteil bzw. Nutzen einer wirtschaftlichen Entscheidung im Vergleich zur nächstbesten Alternative (engl.: fallback option)
+
+    * sind in der ökonomischen Theorie die Grundlage von Entscheidungen
+
+
+
+---
+name: EX-CetPar
+class: left
+
+# Diskussion: Partialanalyse (EX 2.2)
+
+
+```{r, echo=FALSE,out.width = "100%"}
+knitr::include_url("https://www.core-econ.org/the-economy/book/text/02.html#exercise-22-using-ceteris-paribus",height = "550px")
+```
+
+???
+
+Diskussion: Partialanalyse (EX 2.2)
+
+**Introduction**
+The aim of the question is for students to **reflect on what a ceteris paribus decision means**, when it is safe to make ceteris paribus assumptions and when it may be important to relax such assumptions. On a more general level, this question will train students to **think carefully about assumptions in models.**
+
+**Answer**
+1. In the example in this exercise, all variables apart from colour and
+price are held constant. For example weather, location, quality are
+held constant.
+2. It depends. It seems unlikely that differences in price will provide a full explanation. It will also be necessary to include other factors such as the population in the regional area, regional weather, average regional income, and so on.
+3. As above, only in so far as differences in sales are due to differences in price and colour. Ideally, we would want to include a range of seller characteristics to better understand the differences between shops.
+4. As above. The key factors to include here are time-varying, such as
+weekly rainfall. Marking guidance Good answers need to define the ceteris paribus assumption and correctly apply it to the market for umbrellas.
+
+**Teaching ideas**
+This relatively straightforward question could be asked in a lecture as a thinkpair-share task. 
+
+For 2-4, one could use **audience response software** to let
+students vote on the answer and then **discuss the intuition**.
+
+
+
+
+---
+name: Teil2
+class: inverse, center, middle
+
+# Teil 3 
+
+## Ökonomische Erklärung des Wirtschaftswachstums seit dem 18. Jahrhundert
+
+.blockquote[Warum im 18. Jahrhundert?]
+
+.blockquote[Warum in England]
+
+
+
+---
+class: left
+
+# Erklärungen der Industriellen Revolution
+
+* Aufklärung und wissenschaftliche/technische Revolution
+    
+--
+* Politische und kulturelle Charakteristika von Völkern/Nationen
+
+    * Liberalismus
+    
+    * Max Weber: Die protestantische Ethik und der Geist des Kapitalismus
+
+--
+* Reichtum an Ressourcen (Kohle) und Zugang zu Kolonien
+
+--
+* Koinzidenz vergleichsweise hoher Arbeitskosten und lokal günstiger Energiequellen
+
+
+???
+
+wissenschaftliche/technische Revolution: Invention vs. Innovation
+
+
+
+
+
+
+---
+name: EconMod
+class: left
+
+# Ökonomische Erklärung der industriellen Revolution
+
+## Baustein 1: Technologie
+
+* Technologie bestimmt über Produktionsmöglichkeiten
+* technologische Fortschritte und Produktivitätsgewinne
+
+
+## Baustein 2: relative Preise
+
+* relativen Preisen und Opportunitätskosten
+* Innovationsrenten (als Form ökonomischer Renten) und Anreize
+
+
+???
+
+Economic rent gives us a simple decision rule:
+
+If action A would give you an economic rent (and nobody else would suffer): Do it!
+If you are already doing action A, and it earns you an economic rent: Carry on doing it!
+This decision rule motivates our explanation of why a firm may innovate by switching from one technology to another. We start in the next section by comparing technologies.
+
+
+---
+name: Tech
+class: left
+
+# Modellierung von Technologie und technischer Effizienz
+
+
+.panelset[
+.panel[.panel-name[Produktionspläne]
+```{r, echo=FALSE,out.width = "100%"}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-03-f.svg",height = "480px")
+```   
+]
+.panel[.panel-name[Dominanz]
+```{r, echo=FALSE,out.width = "100%"}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-04-d.svg",height = "480px")
+```   
+]
+]
+
+
+???
+
+* Produktionspläne
+
+* Herstellung von 100m Tuch mit unterschiedlichen Kombinationen von Arbeit und Kohle möglich
+
+* Dominanz
+
+  * **A dominates C**:  Clearly, technology A dominates the C-technology: the same amount of cloth can be produced using A with fewer inputs of labour and energy. This means that, whenever A is available, you would never use C.
+  * **B dominates D**: Technology B dominates the D-technology: the same amount of cloth can be produced using B with fewer inputs of labour and energy. Note that B would dominate any other technology that is in the shaded area above and to the right of point B.
+  * **E does not dominate**: Technology A dominates C; technology B dominates D. The E-technology does not dominate any of the other available technologies. We know this because none of the other four technologies are in the area above and to the right of E.
+
+
+
+
+---
+name: Isokosten
+class: left
+
+# Kosten und ökonomische Effizienz
+
+```{r, echo=FALSE,out.width = "100%"}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-05-g.svg",height = "550px")
+```   
+
+
+???
+
+* Firms aim to maximise their profit, which means producing cloth at the least possible cost.
+
+* Ausgangssituation: Arbeitskosten: 10, Kohle 20
+
+* Herleitung Isokostenlinie
+
+* This is why the firms’ choice of technology depends on economic information about relative prices of inputs.
+
+
+
+
+---
+name: EXIsokostenAlternativ
+class: left
+
+# Aufgabe 2.3
+
+.panelset[
+.panel[.panel-name[Aufgabe]
+```{r Ex-2-3code,echo=FALSE, message=FALSE, fig.show='hide'}
+knitr::include_url("https://www.core-econ.org/the-economy/book/text/02.html#exercise-23-isocost-lines",height = "450px")
+```
+]
+.panel[.panel-name[Lösungsansatz]
+1. Relativer Preis der Arbeit?
+2. Gleichung der Isokostenlinie (c=60)?
+3. Alternative Werte
+]
+.panel[.panel-name[R Code]
+```{r Ex-2-3,echo=TRUE, message=FALSE, fig.show='hide'}
+labor<-0:9 #Arbeit
+#Gleichungen der Isokostenlinien
+fun_1<-function(labor) {12-2*labor}
+fun_2<-function(labor) {16-2*labor}
+fun_3<-function(labor) {6-2*labor}
+fun_4<-function(labor) {4-.5*labor}
+#Spezifikation ggplot
+p<-ggplot(data.frame(x = labor), aes(x=labor))
+p<-p+stat_function(fun= fun_1, aes(color=  "C=60"),geom = 'line')
+p<-p+stat_function(fun= fun_2, aes(color = "C=90"),geom = 'line')
+p<-p+stat_function(fun= fun_3, aes(color = "C=30"),geom = 'line')
+p<-p+stat_function(fun= fun_4, aes(color = "C=80,p=20"),geom='line')
+p<-p+labs(color = "Isokostenlinie")
+p<-p+theme_classic() 
+p<-p+theme(legend.position = c(.95, .95),
+            legend.justification=c("right","top"),
+            legend.box.just="right",legend.margin=margin(6,6,6,6),
+                axis.line=element_line(arrow = arrow(type='closed',
+                length = unit(10,'pt')),lineend='square'))
+p<-p+scale_x_continuous(name="Arbeit (L)",breaks=c(seq(0,10,2)),limits=c(0,12),expand=c(0,0)) 
+p<-p+scale_y_continuous(name="Kohle (K)",limits=c(0,20),breaks = c(seq(-14,19,2)),expand=c(0,0)) +
+     scale_color_manual(values = c('red','blue','green','black'))
+```
+]
+.panel[.panel-name[Plot]
+```{r, echo=FALSE,warning=FALSE,fig.cap="",fig.align='center', out.width = '50%'}
+p
+```
+]
+]
+
+???
+
+* Students should note, that only positive values of L are economically sensible, and that the new isocost lines are much steeper than under the previous relative prices.
+
+* If this more technical material is discussed in the lecture, this is a very good exercise for an in-class "think and compare with your neighbour" exercise. This way one can break up a long front-led lecture.
+
+
+
+---
+name: Anreize
+class: left
+
+# Anreize
+
+.blockquote[
+Anreize (engl. incentives) veranlassen Menschen zu Handlungen. Positive
+(Negative) Anreize entstehen durch die Aussicht auf Belohnung
+(Bestrafung) für ein bestimmtes Verhalten bzw. bestimmte Handlungen.
+]
+
+.center[
+```{r, echo=FALSE,out.width = "80%",fig.align="center"}
+knitr::include_url("../images/unit02/karotte_(wiwo).jpg",height = "350px")
+``` 
+.quelle[Bildquelle: wiwo.de]
+]
+
+Bei politischen Entscheidungen müssen Anreizeffekte mitbedacht werden,
+um Fehlentwicklungen zu vermeiden (Gut gemeint vs. schlecht gemacht).
+
+
+???
+
+
+* Extrinsische vs. intrinsische Motivation diskutieren
+* P4 von Mankiw
+
+
+---
+name: Innovationsrente
+class: left
+
+# Innovation und Innovationsrente (J. Schumpeter)
+
+```{r, echo=FALSE,out.width = "100%"}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-08-c.svg",height = "550px")
+```   
+
+???
+
+* Veränderung der Kosten: Kohle 10, Arbeit 5
+
+* **B now costs more than A**  
+
+  * Technology was labour-intensive before the Industrial Revolution (technology B).
+
+  * Increase in wages relative to price of coal in Britain create the incentive to innovate more capital-intensive technologies (technology A).
+
+At the new relative prices, the B-technology is on the isocost line MN, where the cost is 50 pound. Switching to technology A will be cheaper.
+
+One of the first sectors to undergo technological change was textiles
+    Before the Industrial Revolution, making clothes for the household were time-consuming tasks
+    By the late 19th century, a single spinning mule operated by a very small number of people could replace more than 1,000 spinsters
+    These machines were powered by water wheels and later coal-powered steam engines instead of using human labour
+
+
+
+---
+class: left
+
+# Invention vs. Innovation: ein aktuelles Beispiel
+
+.pull-left[
+**tagesschau.de**: [..] Wieso dauert es so lange - der Umstieg auf Elektroantrieb oder Wasserstoff?
+
+**Daum**: Es braucht **drei Voraussetzungen**, damit das erfolgreich wird: [..] **Und das Dritte ist natürlich die Kostenparität**: Keiner fährt einen Lkw zur Gaudi, sondern möchte Geld damit verdienen. Und dann muss eben der elektrische, der Wasserstoff-Lkw im Betrieb günstiger sein - inklusive des Kaufpreises - als der konventionelle. Und das ist noch nicht so weit. Alle, die das behaupten, sind falsch. Es geht nur mit heftigen Subventionen, und da kann ich keine Tausende subventionieren. Das heißt, wir müssen die Kosten des Lkws Wunder bringen. Und es muss am Ende natürlich auch letztlich die CO2-Bepreisung der Lkw-Fahrten nach oben gehen.
+
+]
+
+.pull-right[
+```{r, echo=FALSE,out.width = "100%"}
+knitr::include_graphics("../images/unit02/DaimlerTrucks_(tagesschau_20220414).PNG")
+```
+
+]
+.quelle[Quelle: [tagesschau.de.](https://www.tagesschau.de/wirtschaft/technologie/interview-daum-101.html)]
+
+
+
+???
+
+CEO von DaimlerTrucks zu Wasserstofftrucks: Es braucht **drei Voraussetzungen**, damit das erfolgreich wird
+  * ein gutes Angebot von der Industrie
+  * eine Infrastruktur (Ladesäulen bzw. Wasserstofferzeugung)
+  * "und das dritte ist natürlich die Kostenparität"
+
+
+
+
+---
+class: left
+name: Schumpeter
+
+# Schöpferische Kraft der Zerstörung (Schumpeter)
+
+
+<iframe width="900" height="580" src="https://player.vimeo.com/video/75421736" title="Vimeo player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+---
+class: left 
+
+# Vorhersagequalität des Modells
+
+.panelset[
+.panel[.panel-name[Video]
+<iframe width="800" height="450" src="https://www.youtube.com/embed/-vyNOWxprt4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+.panel[.panel-name[Daten]
+```{r, echo=FALSE,out.width = "100%"}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-11.svg",height = "450px")
+```
+]
+.panel[.panel-name[Modell]
+```{r, echo=FALSE,out.width = "100%"}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-12-c.svg",height = "450px")
+```
+]
+]  
+
+???
+
+English wages were higher than wages elsewhere, and coal was cheaper in Britain than in the other countries in the chart (Fig.2.10)
+
+Shift to a lower-cost technology
+
+The combination of capacity to innovate and changing relative prices of inputs led to a switch to energy-intensive technology.
+
+Zurück zu Folie Innovationsrente
+
+
+---
+name: MalthusTech
+class: left
+
+# Technologischer Fortschritt im Malthusianischen Modell
+
+```{r, echo=FALSE,out.width = "100%"}
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-17-e.svg",height = "550px")
+```
+
+---
+name: Milch
+class: left
+
+# Ausweg aus der Malthusianischen Falle
+
+.panelset[
+.panel[.panel-name[Milchproduktion]
+```{r, echo=FALSE,fig.align='center',out.width = "60%"}
+knitr::include_graphics("../images/unit03/Milchproduktion.png")
+```
+<br>
+.quellePan[Quelle: [Bundesinformationszentrum Landwirtschaft](https://www.landwirtschaft.de/landwirtschaft-verstehen/haetten-sies-gewusst/tierhaltung/wie-viel-milch-geben-schafe-und-ziegen).]
+]
+.panel[.panel-name[Stromproduktion]
+```{r, echo=FALSE,fig.align='center',out.width = "60%"}
+knitr::include_graphics("../images/unit03/Stromproduktion.png")
+```
+<br>
+.quellePan[Quelle: [Statista](https://de.statista.com/infografik/25321/verhaeltnis-von-beschaeftigten-und-bruttostromerzeugung-im-bereich-der-erneuerbaren-energien/?utm_source=Statista+Newsletters&utm_campaign=811bba16b4-All_InfographTicker_daily_DE_AM_KW28_2021_Mi_COPY_&utm_medium=email&utm_term=0_662f7ed75e-811bba16b4-314535141).]
+]
+]
+
+
+???
+
+**Permanenter** technologischer Fortschritt
+
+
+---
+name: FazAus
+class: inverse, center, middle
+
+
+# Zusammenfassung und Ausblick
+
+
+---
+name: Fazit
+class: left
+
+# Zusammenfassung
+
+1. Erkenntnisse zur technologischen Revolution
+
+  * Permanente technologische Fortschritte erlauben es, der Malthusianischen Falle zu entkommen.
+  * Potenzial arbeitssparender technologischer Innovationen zur Kostenreduktion
+  * Invention vs. Innovation: Relativ Faktorkosten und ökonomische Renten
+
+2. Zentrale ökonomische Konzepte
+
+  * Ökonomische Modelle und Abstraktion (weniger ist mehr)
+  * Partialanalyse (ceteris paribus) und weitere Annahmen
+  * Innovationsrente als Beispiel einer Ökonomischen Rente
+  * Dominierende und dominierte Technologien
+  * Isokostenlinien
+
+
+
+
+---
+name: Weiter
+class: left
+
+# Grenzen des Wachstums?
+
+* Weltmodell des Club of Rome (1972): Die Grenzen des Wachstums. Bericht des Club of Rome zur Lage der Menschheit (englischer Originaltitel: The Limits to Growth. A Report for the Club of Rome’s Project on the Predicament of Mankind)
+
+```{r,echo=FALSE,fig.align='center'}
+knitr::include_graphics("../images/unit02/Weltmodell_small.png")
+```
+
+.quelle[Bildquelle: [Wikipedia.](https://upload.wikimedia.org/wikipedia/de/thumb/7/7c/Meadows_ltg_page124_fig35_world_model_standard.svg/480px-Meadows_ltg_page124_fig35_world_model_standard.svg.png)]
+
+* Diskussion: [50 Jahre Club of Rome](https://www.volkswagenstiftung.de/veranstaltungen/veranstaltungsberichte/audio-zukunft-denken-welt-erhalten-50-jahre-club-of-rome)
+
+* Buchtipp für Interessierte: [Giorgos Kallis (2019): Limits. Why Malthus was wrong and why Environmentalists should care.](https://www.sup.org/books/title/?id=29999)
+
+???
+
+Club of Rome
+
+
+
+---
+name: Podcast
+class: left
+
+# Grünes Wachstum? 
+
+## [Podcast](https://cepr.org/multimedia/philippe-aghion-green-growth-possible) mit Philippe Aghion
+
+```{r,echo=FALSE,fig.align='center'}
+knitr::include_graphics("../images/unit02/Podcast_Aghion_(voxtalks_2023).png")
+```
+
+.quelle[Bildquelle: [cepr.org](https://cepr.org/multimedia/philippe-aghion-green-growth-possible)]
+
+
+???
+
+Tomaten, die nie Erde gesehen haben
+
+
+
+---
+name: Ausblick
+class: left
+
+# Ausblick
+
+**In Unit 3 erwartet uns:**
+
+  * Ökonomische Entscheidungen unter Berücksichtigung von Nebenbedingungen
+
+  * Technologischer Wandel und (historische) Veränderungen der Arbeitszeit
+
