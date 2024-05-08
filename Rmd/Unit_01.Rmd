@@ -1,6 +1,5 @@
 ---
 title: "Modul Volkswirtschaftslehre"
-subtitle: "Teilmodul: Einführung in die Volkswirtschaftslehre"
 author: "Prof. Dr. Jörg Schoder"
 institute: "ISBA" 
 date: "`r Sys.Date()`"

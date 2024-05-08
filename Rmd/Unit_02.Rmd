@@ -403,7 +403,7 @@ class: left
 
 .pull-left[
 ```{r, echo=FALSE}
-knitr::include_graphics("../images/unit02/Keynes_(wiwo).png")
+knitr::include_graphics(xfun::from_root("images","unit02","Keynes_(wiwo).png"))
 ```
 
 .quelle[Bildquelle: [wiwo.de](https://www.wiwo.de/images/john-maynard-keynes-der-brite-forderte-eine-aktive-rolle-des-staates-in-wirtschaftskrisen/4881664/1-format7001.jpg)]
@@ -484,8 +484,11 @@ class: left
 
 Von einer "normalen" Aktie zur [Meme-Aktie](https://www.morningstar.de/de/news/213095/was-ist-eine-meme-aktie.aspx)
 
-```{r, echo=FALSE,out.width = "90%"}
-knitr::include_url("../images/unit02/ModelsGamestop_small.png",height = "500px")
+```{r}
+#| echo: false
+#| out-width: "75%"
+#| fig-align: "center"
+knitr::include_graphics(xfun::from_root("images","unit02","ModelsGamestop_small.png"))
 ```
 
 
@@ -599,8 +602,11 @@ class: left
 
 .panelset[
 .panel[.panel-name[Interview]
-```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.faz.net/aktuell/gesellschaft/oekonomie-ist-eigentlich-keine-wissenschaft-11418489.html",height = "480px")
+```{r}
+#| echo: false
+#| out-width: '100%'
+#| fig-align: 'center'
+knitr::include_graphics(xfun::from_root("images","unit02","Sozialphysik_Ortlieb_Interview_(FAZ_20100508).png"))
 ```
 ]
 .panel[.panel-name[Zitat]
@@ -629,8 +635,11 @@ class: left
 
 .panelset[
 .panel[.panel-name["Nobelpreis" 2019]
-```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("../images/unit02/Nobel_2019.PNG",height = "480px")
+```{r}
+#| echo: false
+#| out-width: "70%"
+#| fig-align: "center"
+knitr::include_graphics(xfun::from_root("images","unit02","Nobel_2019.png"))
 ```
 ]
 
@@ -647,7 +656,7 @@ knitr::include_url("https://www.deutschlandfunk.de/wirtschafts-nobelpreis-2021-a
   `r fa("circle-right")` Beispiel: Ultimatum-Spiel
 
 ```{r ClassEx1,echo=FALSE, message=FALSE,out.width='15%',fig.align='center'}
-knitr::include_graphics('../images/ClassEx-link.svg')
+knitr::include_graphics(xfun::from_root("images","ClassEx-link.svg"))
 ```
 
 * **Feld-Experimente**
@@ -660,8 +669,11 @@ knitr::include_graphics('../images/ClassEx-link.svg')
 
 ]
 .panel[.panel-name[Nobel-Liste]
-```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("../images/unit02/Nobelpreise_(nobelprize.org)_small.PNG",height="480px")
+```{r}
+#| echo: false
+#| out-width: "70%"
+#| fig-align: "center"
+knitr::include_graphics(xfun::from_root("images","unit02","Nobelpreise_(nobelprize.org)_small.PNG"))
 ```
 .quellePanURL[[nobelprize.org](https://www.nobelprize.org/prizes/lists/all-prizes-in-economic-sciences/)]
 ]
@@ -697,12 +709,12 @@ class: left
 .panelset[
 .panel[.panel-name[Aufgabe 2.1]
 ```{r EX-2-1,echo=FALSE, message=FALSE}
-knitr::include_url("https://www.core-econ.org/the-economy/book/text/02.html#economic-models")
+knitr::include_url("https://www.core-econ.org/the-economy/book/text/02.html#economic-models",height="480px")
 ```
 ]
 .panel[.panel-name[S-Bahn-Karte]
-```{r, echo=FALSE,fig.cap="S-Bahn-Netz Berlin",fig.align='center', out.width = '100%'}
-knitr::include_url("https://sbahn.berlin/interaktives-liniennetz/")
+```{r, echo=FALSE,fig.align='center', out.width = '100%'}
+knitr::include_url("https://sbahn.berlin/interaktives-liniennetz/",height="480px")
 ```
 ]
 ]
@@ -1021,8 +1033,11 @@ Anreize (engl. incentives) veranlassen Menschen zu Handlungen. Positive
 ]
 
 .center[
-```{r, echo=FALSE,out.width = "80%",fig.align="center"}
-knitr::include_url("../images/unit02/karotte_(wiwo).jpg",height = "350px")
+```{r}
+#| echo: false
+#| out-width: "80%"
+#| fig-align: "center"
+knitr::include_graphics(xfun::from_root("images","unit02","karotte_(wiwo).jpg"))
 ``` 
 .quelle[Bildquelle: wiwo.de]
 ]
@@ -1072,16 +1087,24 @@ class: left
 
 # Invention vs. Innovation: ein aktuelles Beispiel
 
-.pull-left[
+.pull-left[.small[
 **tagesschau.de**: [..] Wieso dauert es so lange - der Umstieg auf Elektroantrieb oder Wasserstoff?
 
 **Daum**: Es braucht **drei Voraussetzungen**, damit das erfolgreich wird: [..] **Und das Dritte ist natürlich die Kostenparität**: Keiner fährt einen Lkw zur Gaudi, sondern möchte Geld damit verdienen. Und dann muss eben der elektrische, der Wasserstoff-Lkw im Betrieb günstiger sein - inklusive des Kaufpreises - als der konventionelle. Und das ist noch nicht so weit. Alle, die das behaupten, sind falsch. Es geht nur mit heftigen Subventionen, und da kann ich keine Tausende subventionieren. Das heißt, wir müssen die Kosten des Lkws Wunder bringen. Und es muss am Ende natürlich auch letztlich die CO2-Bepreisung der Lkw-Fahrten nach oben gehen.
-
+]
 ]
 
 .pull-right[
-```{r, echo=FALSE,out.width = "100%"}
-knitr::include_graphics("../images/unit02/DaimlerTrucks_(tagesschau_20220414).PNG")
+
+<br>
+<br>
+<br>
+
+```{r}
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics(xfun::from_root("images","unit02","DaimlerTrucks_(tagesschau_20220414).PNG"))
 ```
 
 ]
@@ -1159,15 +1182,21 @@ class: left
 
 .panelset[
 .panel[.panel-name[Milchproduktion]
-```{r, echo=FALSE,fig.align='center',out.width = "60%"}
-knitr::include_graphics("../images/unit03/Milchproduktion.png")
+```{r}
+#| echo: false
+#| out-width: "60%"
+#| fig-align: "center"
+knitr::include_graphics(xfun::from_root("images","unit03","Milchproduktion.png"))
 ```
 <br>
 .quellePan[Quelle: [Bundesinformationszentrum Landwirtschaft](https://www.landwirtschaft.de/landwirtschaft-verstehen/haetten-sies-gewusst/tierhaltung/wie-viel-milch-geben-schafe-und-ziegen).]
 ]
 .panel[.panel-name[Stromproduktion]
-```{r, echo=FALSE,fig.align='center',out.width = "60%"}
-knitr::include_graphics("../images/unit03/Stromproduktion.png")
+```{r}
+#| echo: false
+#| out-width: "60%"
+#| fig-align: "center"
+knitr::include_graphics(xfun::from_root("images","unit03","Stromproduktion.png"))
 ```
 <br>
 .quellePan[Quelle: [Statista](https://de.statista.com/infografik/25321/verhaeltnis-von-beschaeftigten-und-bruttostromerzeugung-im-bereich-der-erneuerbaren-energien/?utm_source=Statista+Newsletters&utm_campaign=811bba16b4-All_InfographTicker_daily_DE_AM_KW28_2021_Mi_COPY_&utm_medium=email&utm_term=0_662f7ed75e-811bba16b4-314535141).]
@@ -1219,8 +1248,11 @@ class: left
 
 * Weltmodell des Club of Rome (1972): Die Grenzen des Wachstums. Bericht des Club of Rome zur Lage der Menschheit (englischer Originaltitel: The Limits to Growth. A Report for the Club of Rome’s Project on the Predicament of Mankind)
 
-```{r,echo=FALSE,fig.align='center'}
-knitr::include_graphics("../images/unit02/Weltmodell_small.png")
+```{r}
+#| echo: false
+#| out-width: "40%"
+#| fig-align: "center"
+knitr::include_graphics(xfun::from_root("images","unit02","Weltmodell_small.png"))
 ```
 
 .quelle[Bildquelle: [Wikipedia.](https://upload.wikimedia.org/wikipedia/de/thumb/7/7c/Meadows_ltg_page124_fig35_world_model_standard.svg/480px-Meadows_ltg_page124_fig35_world_model_standard.svg.png)]
@@ -1243,8 +1275,11 @@ class: left
 
 ## [Podcast](https://cepr.org/multimedia/philippe-aghion-green-growth-possible) mit Philippe Aghion
 
-```{r,echo=FALSE,fig.align='center'}
-knitr::include_graphics("../images/unit02/Podcast_Aghion_(voxtalks_2023).png")
+```{r}
+#| echo: false
+#| out-width: "95%"
+#| fig-align: "center"
+knitr::include_graphics(xfun::from_root("images","unit02","Podcast_Aghion_(voxtalks_2023).png"))
 ```
 
 .quelle[Bildquelle: [cepr.org](https://cepr.org/multimedia/philippe-aghion-green-growth-possible)]
