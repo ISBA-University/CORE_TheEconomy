@@ -1,6 +1,5 @@
 ---
 title: "VO Volkswirtschaftslehre"
-subtitle: "Intake 2022 B"
 author: "Prof. Dr. Jörg Schoder"
 institute: "ISBA" 
 date: "`r Sys.Date()`"
@@ -52,9 +51,9 @@ library(fontawesome)
 
 # Volkswirtschaftslehre
 
-## Intake 2022B
+## CORE - The Economy
 
-### CORE - The Economy: Unit 13 (Schwankungen der wirtschaftlichen Aktivität und des Preisniveaus)
+### Unit 13: Schwankungen der wirtschaftlichen Aktivität und des Preisniveaus
 
 
 <br>
@@ -64,7 +63,7 @@ library(fontawesome)
 <br>
 <br>
 <br>
-### Sommersemester 2023 
+### Sommersemester 2024 
 <br>
 ### Prof. Dr. Jörg Schoder
 .mycontacts[
@@ -79,6 +78,9 @@ layout: true
 <div class="my-footer"></div>       
 
 <div style="position: absolute;left:400px;bottom:10px;color:ISBAblue;font-size:9px">`r r2symbols::sym('copyright')``r rmarkdown::metadata$author`</div>
+
+
+
 
 
 
@@ -152,10 +154,10 @@ class: left
 
 
 
-
 ---
 name: Lernziele
 class: inverse, left, middle
+
 # Was lernen wir?
 
 .small[In Einheit 1 und 2 haben wir uns mit der langfristigen Entwicklung des Wohlstands befasst. Das BIP misst dabei die Produktion (Gütermarkt), welche historisch gerade in dezentralen Wirtschaftssystemen durchaus deutlichen Schwankungen unterliegt. Aber nicht nur die produzierten Gütermengen schwanken, sondern auch die Preise für diese Güter. Über den Wirtschaftskreislauf sind auch andere makroökonomische Aggregate von den Schwankungen am Gütermarkt betroffen.]
@@ -205,7 +207,7 @@ class: left
 .panelset[
 .panel[.panel-name[Wirtschaftskreislauf]
 ```{r, echo=FALSE,fig.align='center'}
-knitr::include_graphics('../images/unit13/Wirtschaftskreislauf_500.png')
+knitr::include_graphics(xfun::from_root("images","unit13","Wirtschaftskreislauf_500.png"))
 ```
 ]
 .panel[.panel-name[Märkte der Makroökonomik]
@@ -228,6 +230,7 @@ knitr::include_graphics('../images/unit13/Wirtschaftskreislauf_500.png')
              {\huge\textbf{\textsf{Kapitalmarkt}}}
         };
 \end{tikzpicture}
+
 ```
 ]
 ]
@@ -265,7 +268,7 @@ class: left
 .panelset[
 .panel[.panel-name[Etymologie]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('../images/unit13/Vieh.png',height='480px')
+knitr::include_graphics(xfun::from_root("images","unit13","Vieh.png"))
 ```
 .quellePanURL[Bildquelle: [Pixabay.com](pixabay.com)]
 ]
@@ -335,19 +338,19 @@ class: left
 .panelset[
 .panel[.panel-name[Finanzsystem]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_graphics('../images/unit13/FinMarkets.png')
+knitr::include_graphics(xfun::from_root("images","unit13","FinMarkets.png"))
 ```
 .quellePan[Eigene Darstellung.]
 ]
 .panel[.panel-name[Finanzmärkte]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_graphics('../images/unit13/FinMarkets2.png')
+knitr::include_graphics(xfun::from_root("images","unit13","FinMarkets2.png"))
 ```
 .quellePan[Eigene Darstellung.]
 ]
 .panel[.panel-name[Zinsen]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_graphics('../images/unit13/zinsen_(BpB_S221)_small.png')
+knitr::include_graphics(xfun::from_root("images","unit13","zinsen_(BpB_S221)_small.png"))
 ```
 .quellePan[Quelle: [Bundeszentrale für Politische Bildung (2015)](https://www.bpb.de/system/files/dokument_pdf/4938_zb_dtindaten_gesamt.pdf)]
 ]
@@ -379,7 +382,7 @@ class: left
 # Bruttoinlandsprodukt 2021
 
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('../images/unit13/BIP_2022.PNG',height='550px')
+knitr::include_url(xfun::from_root("images","unit13","BIP_2022.PNG",height="550px"))
 ```
 .quelle[Quelle: [Destatis (2023)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/zusammenhaenge-pdf-0310100.pdf).]
 
@@ -393,7 +396,7 @@ class: left
 # Destatis VGR-Monitor
 
 ```{r, echo=FALSE,fig.align='center'}
-knitr::include_url('https://service.destatis.de/DE/vgr-monitor-deutschland/investitionen.html',height='550px')
+knitr::include_url("https://service.destatis.de/DE/vgr-monitor-deutschland/investitionen.html",height="550px")
 ```
 
 
@@ -447,13 +450,13 @@ class: left
 .panelset[
 .panel[.panel-name[Stagflation]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.boersen-zeitung.de/img/pdf/91d/91da2e80-1483-11ec-9992-c879d4511d99/ff85530beff72d2f81ad487c4657a0a1/wusinflationarbeitslosenquotems2sp.webp',height='480px')
+knitr::include_url('https://www.cnbc.com/2024/05/23/jpm-jamie-dimon-us-could-see-hard-landing-stagflation-is-worst-outcome.html',height='480px')
 ```
-.quellePanURL[Quelle: [Börsen-Zeitung (14.09.2021).](https://www.boersen-zeitung.de/konjunktur-politik/debatte-ueber-drohende-stagflation-91da2e80-1483-11ec-9992-c879d4511d99).]
+.quellePanURL[Quelle: [cnbc.com.](https://www.cnbc.com/2024/05/23/jpm-jamie-dimon-us-could-see-hard-landing-stagflation-is-worst-outcome.html).]
 ]
 .panel[.panel-name[Deflation]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('../images/unit13/comic_deflation_(Bauman_S55).png',height='480px')
+knitr::include_graphics(xfun::from_root("images","unit13","comic_deflation_(Bauman_S55).png"))
 ```
 
 .quellePanURL[Quelle: [Bauman (2011, S. 48)](https://www.amazon.de/dp/0809033615/ref=cm_sw_em_r_mt_dp_5WNEX8X23YD4AVNFM9Y9).]
@@ -508,13 +511,13 @@ $$P_t=\frac{\mbox{nominales BIP in Periode t}}{\mbox{reales BIP in Periode t}}=\
 ]
 .panel[.panel-name[VPI]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://service.destatis.de/Voronoi/PreisKaleidoskop.svg',height='480px')
+knitr::include_url("https://service.destatis.de/Voronoi/PreisKaleidoskop.svg",height="480px")
 ```
 ]
 
 .panel[.panel-name[Vergleich]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.wirtschaftsdienst.eu/files/journal-issues/wirtschaftsdienst/10.1007/s10273-020-2778-0/ZG-Weichen-abb-1.png',height='480px')
+knitr::include_url("https://www.wirtschaftsdienst.eu/files/journal-issues/wirtschaftsdienst/10.1007/s10273-020-2778-0/ZG-Weichen-abb-1.png",height="480px")
 ```
 
 .quellePanURL[Quelle: [Weichenrieder/Gürer (2020)](https://www.wirtschaftsdienst.eu/inhalt/jahr/2020/heft/11/beitrag/inflation-inflationsmessung-und-zentralbankpolitik.html).]
@@ -524,6 +527,7 @@ knitr::include_url('https://www.wirtschaftsdienst.eu/files/journal-issues/wirtsc
 
 
 ???
+
 * Deflator (Verwendungsseite, Seite 122): 112,06 (2021; 2015=100)
 * VPI (Dashboard): 111,1 (Dez 2021; 2015=100)
 
@@ -558,7 +562,7 @@ class: left
 .panelset[
 .panel[.panel-name[Deutschland]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_graphics('../images/unit13/verbraucherpreise_(BpB_S209)_small.png')
+knitr::include_graphics(xfun::from_root("images","unit13","verbraucherpreise_(BpB_S209)_small.png"))
 ```
 .quellePan[Quelle: [Bundeszentrale für Politische Bildung (2015)](https://www.bpb.de/system/files/dokument_pdf/4938_zb_dtindaten_gesamt.pdf)]
 ]
@@ -584,7 +588,7 @@ class: left
 # Persönliche Inflationsrate
 
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://service.destatis.de/inflationsrechner/',height='550px')
+knitr::include_url("https://service.destatis.de/inflationsrechner/",height="550px")
 ```
 
 
@@ -627,14 +631,14 @@ class: left
 .panelset[
 .panel[.panel-name[Übersicht]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_graphics('../images/unit13/Ursachen_Inflation_small.png')
+knitr::include_graphics(xfun::from_root("images","unit13","Ursachen_Inflation_small.png"))
 ```
 
 .quellePanURL[Eigene Darstellung.]
 ]
 .panel[.panel-name[Quantitätstheorie]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_graphics('../images/unit13/QTheory.png')
+knitr::include_graphics(xfun::from_root("images","unit13","QTheory.png"))
 ```
 
 .quellePan[Quelle: [Bauman (2011, S. 48)](https://www.amazon.de/dp/0809033615/ref=cm_sw_em_r_mt_dp_5WNEX8X23YD4AVNFM9Y9).]
@@ -673,12 +677,12 @@ class: left
 .panelset[
 .panel[.panel-name[BIP pro Kopf]
 ```{r, echo=FALSE,fig.align='center'}
-knitr::include_graphics('../images/unit13/bpb_langeReihe_BIP_(Metz_2015)_small.png')
+knitr::include_graphics(xfun::from_root("images","unit13","bpb_langeReihe_BIP_(Metz_2015)_small.png"))
 ```
 ]
 .panel[.panel-name[Wachstumsraten]
 ```{r, echo=FALSE,fig.align='center'}
-knitr::include_graphics('../images/unit13/BIP-Wachstum_langeReihe_(BpB)_small.png')
+knitr::include_graphics(xfun::from_root("images","unit13","BIP-Wachstum_langeReihe_(BpB)_small.png"))
 ```
 ]
 ]
@@ -688,6 +692,7 @@ knitr::include_graphics('../images/unit13/BIP-Wachstum_langeReihe_(BpB)_small.pn
 
 
 ???
+
 * Langfristige Betrachtung des realen BIP
 * Anstieg des Index von 3,6 (1850) auf 2643,9 (2012), das entspricht einer jährlichen Wachstumsrate von
 durchschnittlich 4,18 Prozent.
@@ -717,7 +722,7 @@ class: left
 # Wachstumsraten seit 1970
 
 ```{r, echo=FALSE,fig.align='center'}
-knitr::include_graphics('../images/unit13/Wachstumsraten_(destatis_2023_S10).png')
+knitr::include_graphics(xfun::from_root("images","unit13","Wachstumsraten_(destatis_2023_S10).png"))
 ```
 
 
@@ -807,7 +812,7 @@ class: left
 ]
 .panel[.panel-name[Outputlücke]
 ```{r, echo=FALSE,fig.align='center'}
-knitr::include_graphics('../images/unit13/Outputgap_(SVR_2017_S131)_small.png')
+knitr::include_graphics(xfun::from_root("images","unit13","Outputgap_(SVR_2017_S131)_small.png"))
 ```
 
 .quellePanURL[Quelle: [Sachverständigenrat (2017, S. 131)](https://www.sachverstaendigenrat-wirtschaft.de/fileadmin/dateiablage/gutachten/jg201718/jg2017_06_de_konjunktur.pdf)]]
@@ -851,7 +856,7 @@ organisierten Volkswirtschaften bezeichnet, wobei die Schwankungen eine *gewisse
 ]
 .panel[.panel-name[Phasen]
 ```{r, echo=FALSE,fig.align='center'}
-knitr::include_graphics('../images/unit13/Konjunkturzyklus_(Perret_Welfens_2016_S335).png')
+knitr::include_graphics(xfun::from_root("images","unit13","Konjunkturzyklus_(Perret_Welfens_2016_S335).png"))
 ```
 
 <br> 
@@ -903,6 +908,7 @@ Vierteljahre in Folge rückläufig** sind (technische Rezession).
 
 
 
+
 ---
 name: Zyklen
 class: left
@@ -912,7 +918,7 @@ class: left
 
 .panelset[.panel[.panel-name[Statistik]
 ```{r, echo=FALSE,fig.align='center',out.width='67%'}
-knitr::include_graphics('../images/unit13/Zyklen.png')
+knitr::include_graphics(xfun::from_root("images","unit13","Zyklen.png"))
 ```
 
 
@@ -921,7 +927,7 @@ knitr::include_graphics('../images/unit13/Zyklen.png')
 ]
 .panel[.panel-name[Kondratieff]
 ```{r, echo=FALSE,fig.align='center',out.width='80%'}
-knitr::include_graphics('https://www.researchgate.net/profile/Gerhard-Posch/publication/318360851/figure/fig2/AS:515180092026881@1499839913439/Kondratieff-Zyklen-Technische-Innovationen_W640.jpg')
+knitr::include_graphics(xfun::from_root("images","unit13","Kondratieff-Zyklen-Technische-Innovationen_W640.jpg"))
 ```
 
 <br>
@@ -942,6 +948,7 @@ knitr::include_graphics('https://www.researchgate.net/profile/Gerhard-Posch/publ
 * Kondratieffzyklus (50 bis 60 Jahre); 
   * 1926 von N.D. Kondratieff festgestellt. 
   * Interpretation als Basisinnovationen
+
 
 
 
@@ -971,7 +978,7 @@ class: left
 .panelset[
 .panel[.panel-name[Kreislaufbetrachtung]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_graphics('../images/unit13/Covid_Kreislauf_(Baldwin_2020).png')
+knitr::include_graphics(xfun::from_root("images","unit13","Covid_Kreislauf_(Baldwin_2020).png"))
 ```
 .quellePanURL[Quelle: [Baldwin (2020)](https://voxeu.org/article/how-should-we-think-about-containing-covid-19-economic-crisis).]
 ]
@@ -1010,7 +1017,6 @@ Good or bad fortune strikes the entire economy
 
 
 
-
 ---
 name: Wachstumsbeitrag
 class:
@@ -1021,17 +1027,17 @@ class:
 .panelset[
 .panel[.panel-name[2020]
 ```{r, echo=FALSE,fig.align='center'}
-knitr::include_graphics('../images/unit13/Wachstumsbeitraege_Nachfragekomponenten_(destatis_2021_S12).png')
+knitr::include_graphics(xfun::from_root("images","unit13","Wachstumsbeitraege_Nachfragekomponenten_(destatis_2021_S12).png"))
 ```
 ]
 .panel[.panel-name[2021]
 ```{r, echo=FALSE,fig.align='center'}
-knitr::include_graphics('../images/unit13/Wachstumsbeitraege_Nachfragekomponenten_(destatis_2022_S12)_small.png')
+knitr::include_graphics(xfun::from_root("images","unit13","Wachstumsbeitraege_Nachfragekomponenten_(destatis_2022_S12)_small.png"))
 ```
 ]
 .panel[.panel-name[2022]
 ```{r, echo=FALSE,fig.align='center'}
-knitr::include_graphics('../images/unit13/Wachstumsbeitraege_Nachfragekomponenten_(destatis_2023_S12)_small.png')
+knitr::include_graphics(xfun::from_root("images","unit13","Wachstumsbeitraege_Nachfragekomponenten_(destatis_2023_S12)_small.png"))
 ```
 ]
 ]
@@ -1062,17 +1068,17 @@ class: left
 .panelset[
 .panel[.panel-name[RCT-Modell]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-10-04-a.svg',height='480px')
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-10-04-a.svg",height="480px")
 ```
 ]
 .panel[.panel-name[Lebenszyklusprofil]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-13-10-c.svg',height='480px')
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-13-10-c.svg",height="480px")
 ```
 ]
 .panel[.panel-name[Schock]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-13-12-f.svg',height='480px')
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-13-12-f.svg",height="480px")
 ```
 ]
 ]
@@ -1169,12 +1175,12 @@ class: left
 .panelset[
 .panel[.panel-name[Kreditbeschränkungen]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-13-11-c.svg',height='480px')
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-13-11-c.svg",height="480px")
 ```
 ]
 .panel[.panel-name[Disziplin]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-13-13-c.svg',height='480px')
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-13-13-c.svg",height="480px")
 ```
 ]
 ]
@@ -1204,7 +1210,7 @@ class: left
 # Konsumglättung in der EU-Schuldenkrise
 
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('../images/unit13/Konsumglaettung_Schuldenkrise_(VoxEU).png',height='550px')
+knitr::include_graphics(xfun::from_root("images","unit13","Konsumglaettung_Schuldenkrise_(VoxEU).png"))
 ```
 
 .quelle[Quelle: [VoxEU.org](https://voxeu.org/article/consumption-and-credit-constraints-during-financial-crises)]
@@ -1219,12 +1225,12 @@ class: left
 .panelset[
 .panel[.panel-name[Abwärtsspirale]
 ```{r, echo=FALSE,out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-13-15.svg', height='480px')
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-13-15.svg", height="480px")
 ```
 ]
 .panel[.panel-name[Aufwärtsspirale]
 ```{r, echo=FALSE,out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-13-16.svg', height='480px')
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-13-16.svg", height="480px")
 ```
 ]
 ]
@@ -1252,7 +1258,7 @@ class: left
 
 
 ```{r, echo=FALSE,out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-13-17.svg', height='550px')
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-13-17.svg", height="550px")
 ``` 
 
 
@@ -1298,7 +1304,7 @@ class: left
 ]
 .panel[.panel-name[Vorlaufeigenschaften]
 ```{r, echo=FALSE,fig.align='center'}
-knitr::include_graphics('../images/unit13/Konjunkturindikatoren_(Breitung&Jag_2002).png')
+knitr::include_graphics(xfun::from_root("images","unit13","Konjunkturindikatoren_(Breitung&Jag_2002).png"))
 ```
 
 <br>
@@ -1318,7 +1324,7 @@ class: left
 # Investitionen und Erwartungen: Die Rolle der Psychologie
 
 ```{r ShillerVOX, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_graphics('../images/unit13/Shiller_voxEU.png')
+knitr::include_graphics(xfun::from_root("images","unit13","Shiller_voxEU.png"))
 ```
 
 .quelle[[Podcast mit Robert Shiller](https://voxeu.org/vox-talks/animal-spirits)]
@@ -1378,24 +1384,24 @@ class: left
 .panelset[
 .panel[.panel-name[ILO (Unit 9)]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-09-02.svg',height='480px')
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-09-02.svg",height="480px")
 ```
 ]
 .panel[.panel-name[D (2019)]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_graphics('../images/unit13/Arbeitskraeftepotenzial_(Destatis_2019)_small.png')
+knitr::include_graphics(xfun::from_root("images","unit13","Arbeitskraeftepotenzial_(Destatis_2019)_small.png"))
 ```
 .quellePan[Quelle: Destatis (2019).]
 ]
 .panel[.panel-name[Historisch]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_graphics('../images/unit13/arbeitslosenquote_(BpB_S146)_small.png')
+knitr::include_graphics(xfun::from_root("images","unit13","arbeitslosenquote_(BpB_S146)_small.png"))
 ```
 .quellePan[Quelle: [Bundeszentrale für Politische Bildung (2015)](https://www.bpb.de/system/files/dokument_pdf/4938_zb_dtindaten_gesamt.pdf)]
 ]
 .panel[.panel-name[Aktuell]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('../images/unit13/Eckwerte_Arbeitsmarkt_(Destatis_2022).png',height='475px')
+knitr::include_url(xfun::from_root("images","unit13","Eckwerte_Arbeitsmarkt_(Destatis_2022).png",height='475px'))
 ```
 .quellePanURL[Quelle: [Destatis (2023)](https://www.destatis.de/DE/Themen/Arbeit/Arbeitsmarkt/Erwerbstaetigkeit/Tabellen/eckwerttabelle.html).]
 ]
@@ -1478,12 +1484,12 @@ class: left
 .panelset[
 .panel[.panel-name[Entwicklung]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-13-03-d.svg',height='480px')
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-13-03-d.svg",height="480px")
 ```
 ]
 .panel[.panel-name[Okun's Gesetz]
 ```{r, echo=FALSE,fig.align='center'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-13-05.svg',height='480px')
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-13-05.svg",height="480px")
 ```
 ]
 ]
@@ -1518,19 +1524,19 @@ class: left
 .panelset[
 .panel[.panel-name[Original]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('../images/unit13/phillips_mod_(Issing_S229).png',height='480px')
+knitr::include_url(xfun::from_root("images","unit13","phillips_mod_(Issing_S229).png",height="480px"))
 ```
 .quellePanURL[Quelle: Issing (2011, S. 227).]
 ]
 .panel[.panel-name[Modell]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-15-04-a.svg',height='480px')
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-15-04-a.svg",height="480px")
 ```
 .quellePanURL[[CORE - The Economy (Unit 15)](https://www.core-econ.org/the-economy/book/text/15.html#153-inflation-the-business-cycle-and-the-phillips-curve).]
 ]
 .panel[.panel-name[Modifikation]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('../images/unit13/phillips_mod_(Issing_S229).png',height='480px')
+knitr::include_url(xfun::from_root("images","unit13","phillips_mod_(Issing_S229).png",height="480px"))
 ```
 .quellePanURL[Quelle: Issing (2011, S. 229).]
 ]
@@ -1539,7 +1545,7 @@ knitr::include_url('../images/unit13/phillips_mod_(Issing_S229).png',height='480
 ]
 .panel[.panel-name[Zusammenfassung]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-15-box-a.svg',height='480px')
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-15-box-a.svg",height="480px")
 ```
 .quellePanURL[[CORE - The Economy (Unit 15)](https://www.core-econ.org/the-economy/book/text/15.html#153-inflation-the-business-cycle-and-the-phillips-curve).]
 ]
@@ -1617,7 +1623,7 @@ class: left
 # Ausblick
 
 ```{r, echo=FALSE,fig.align='center',out.width='80%'}
-knitr::include_graphics('../images/unit13/Flattening_Recession_Curve_(Baldwin_2020).PNG')
+knitr::include_graphics(xfun::from_root("images","unit13","Flattening_Recession_Curve_(Baldwin_2020).PNG"))
 ```
 
 

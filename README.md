@@ -9,3 +9,7 @@ Folien zum Lehrbuch "The Economy" des CORE-Projekts
 [Folien Unit 3](https://isba-university.github.io/CORE_TheEconomy/Rmd/Unit_03.html#1)
 
 [Folien Unit 4](https://isba-university.github.io/CORE_TheEconomy/Rmd/Unit_04.html#1)
+
+[Folien Unit 13](https://isba-university.github.io/CORE_TheEconomy/Rmd/Unit_13.html#1)
+
+[Folien Unit 14](https://isba-university.github.io/CORE_TheEconomy/Rmd/Unit_14.html#1)

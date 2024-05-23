@@ -1,6 +1,5 @@
 ---
 title: "VO Volkswirtschaftslehre"
-subtitle: "Intake 2022 B"
 author: "Prof. Dr. Jörg Schoder"
 institute: "ISBA" 
 date: "`r Sys.Date()`"
@@ -51,9 +50,9 @@ library(fontawesome)
 
 # Volkswirtschaftslehre
 
-## Intake 2022B
+## CORE - The Economy
 
-### CORE - The Economy: Unit 7 (Unternehmen und Kunden)
+### Unit 7: Unternehmen und Kunden
 
 
 <br>
@@ -63,7 +62,7 @@ library(fontawesome)
 <br>
 <br>
 <br>
-### Sommersemester 2023 
+### Sommersemester 2024 
 <br>
 ### Prof. Dr. Jörg Schoder
 .mycontacts[
