@@ -267,9 +267,10 @@ class: left
 
 .panelset[
 .panel[.panel-name[Etymologie]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
+```{r, echo=FALSE,fig.align='center',out.width='90%'}
 knitr::include_graphics(xfun::from_root("images","unit13","Vieh.png"))
 ```
+
 .quellePanURL[Bildquelle: [Pixabay.com](pixabay.com)]
 ]
 .panel[.panel-name[Definition]
@@ -379,10 +380,10 @@ class: inverse, center, middle
 name: BIPaktuell
 class: left
 
-# Bruttoinlandsprodukt 2021
+# Bruttoinlandsprodukt 2023
 
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url(xfun::from_root("images","unit13","BIP_2022.PNG",height="550px"))
+```{r, echo=FALSE,fig.align='center',out.width='55%'}
+knitr::include_graphics(xfun::from_root("images","unit13","BIP_2023.PNG"))
 ```
 .quelle[Quelle: [Destatis (2023)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/zusammenhaenge-pdf-0310100.pdf).]
 
@@ -449,13 +450,13 @@ class: left
 
 .panelset[
 .panel[.panel-name[Stagflation]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.cnbc.com/2024/05/23/jpm-jamie-dimon-us-could-see-hard-landing-stagflation-is-worst-outcome.html',height='480px')
+```{r, echo=FALSE,fig.align='center',out.width='70%'}
+knitr::include_graphics(xfun::from_root("images","unit13","Stagflation_Dimon_(cnbc_2024).png"))
 ```
-.quellePanURL[Quelle: [cnbc.com.](https://www.cnbc.com/2024/05/23/jpm-jamie-dimon-us-could-see-hard-landing-stagflation-is-worst-outcome.html).]
+.quellePanURL[Quelle: [cnbc.com.](https://www.cnbc.com/2024/05/23/jpm-jamie-dimon-us-could-see-hard-landing-stagflation-is-worst-outcome.html)]
 ]
 .panel[.panel-name[Deflation]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
+```{r, echo=FALSE,fig.align='center',out.width='60%'}
 knitr::include_graphics(xfun::from_root("images","unit13","comic_deflation_(Bauman_S55).png"))
 ```
 
@@ -722,7 +723,7 @@ class: left
 # Wachstumsraten seit 1970
 
 ```{r, echo=FALSE,fig.align='center'}
-knitr::include_graphics(xfun::from_root("images","unit13","Wachstumsraten_(destatis_2023_S10).png"))
+knitr::include_graphics(xfun::from_root("images","unit13","Wachstumsraten_(destatis_2024_S10).png"))
 ```
 
 
@@ -1040,6 +1041,11 @@ knitr::include_graphics(xfun::from_root("images","unit13","Wachstumsbeitraege_Na
 knitr::include_graphics(xfun::from_root("images","unit13","Wachstumsbeitraege_Nachfragekomponenten_(destatis_2023_S12)_small.png"))
 ```
 ]
+.panel[.panel-name[2023]
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_graphics(xfun::from_root("images","unit13","Wachstumsbeitraege_Nachfragekomponenten_(destatis_2024_S12)_small.png"))
+```
+]
 ]
 
 .quelle[[Statistisches Bundesamt (2021/2022/2023, S. 12)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/zusammenhaenge-pdf-0310100.pdf?__blob=publicationFile)]
@@ -1209,7 +1215,7 @@ class: left
 
 # Konsumglättung in der EU-Schuldenkrise
 
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
+```{r, echo=FALSE,fig.align='center',out.width='70%'}
 knitr::include_graphics(xfun::from_root("images","unit13","Konsumglaettung_Schuldenkrise_(VoxEU).png"))
 ```
 
@@ -1401,7 +1407,7 @@ knitr::include_graphics(xfun::from_root("images","unit13","arbeitslosenquote_(Bp
 ]
 .panel[.panel-name[Aktuell]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url(xfun::from_root("images","unit13","Eckwerte_Arbeitsmarkt_(Destatis_2022).png",height='475px'))
+knitr::include_url(xfun::from_root("images","unit13","Eckwerte_Arbeitsmarkt_(Destatis_2023).png"),height='475px')
 ```
 .quellePanURL[Quelle: [Destatis (2023)](https://www.destatis.de/DE/Themen/Arbeit/Arbeitsmarkt/Erwerbstaetigkeit/Tabellen/eckwerttabelle.html).]
 ]
@@ -1524,7 +1530,7 @@ class: left
 .panelset[
 .panel[.panel-name[Original]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url(xfun::from_root("images","unit13","phillips_mod_(Issing_S229).png",height="480px"))
+knitr::include_url(xfun::from_root("images","unit13","phillips_mod_(Issing_S229).png"),height="480px")
 ```
 .quellePanURL[Quelle: Issing (2011, S. 227).]
 ]
@@ -1536,7 +1542,7 @@ knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure
 ]
 .panel[.panel-name[Modifikation]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url(xfun::from_root("images","unit13","phillips_mod_(Issing_S229).png",height="480px"))
+knitr::include_url(xfun::from_root("images","unit13","phillips_mod_(Issing_S229).png"),height="480px")
 ```
 .quellePanURL[Quelle: Issing (2011, S. 229).]
 ]
