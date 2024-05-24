@@ -420,7 +420,7 @@ Eine über einen längeren Zeitraum anhaltende Zunahme des Preisniveaus bzw. sin
       * Preis als objektiver Tauschwert eines Gutes in Marktwirtschaften.
       * Preisniveau als durschnittlicher Preis aller (produzierten) Güter.
 
-* Inflation vs. Disinflation vs. [Deflation vs. Stagflation](#Deflation)
+* [Inflation](https://www.dashboard-deutschland.de/) vs. Disinflation vs. [Deflation vs. Stagflation](#Deflation)
 
 
 .blockquote[
@@ -468,6 +468,7 @@ knitr::include_graphics(xfun::from_root("images","unit13","comic_deflation_(Baum
 ???
 
 * Inflation im Boom vs. Stagflation
+
 
 
 
