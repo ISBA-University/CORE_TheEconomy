@@ -46,6 +46,7 @@ xaringanExtra::use_freezeframe(trigger = "hover")
 options(htmltools.dir.version = FALSE)
 library(latex2exp)
 library(fontawesome)
+library(tidyverse)
 ```
 
 
@@ -293,7 +294,7 @@ class: left
 Horizontale Aggregation
 
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('../images/unit07/NE_agg.png',height='430px')
+knitr::include_url(xfun::from_root("images","unit07","NE_agg.png"),height="430px")
 ```
 ]
 .panel[.panel-name[Beispiel]
@@ -470,24 +471,24 @@ class: left
 .panelset[
 .panel[.panel-name[Auktion]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('../images/unit08/xetra_auktionsplan.png',height='480px')
+knitr::include_url(xfun::from_root("images","unit08","xetra_auktionsplan.png"),height="480px")
 ```
 .quellePanURL[[Börse Frankfurt](https://www.xetra.com/xetra-de/handel/handelsmodelle/auktionsplan)]
 ]
 .panel[.panel-name[Individuell]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('../images/unit08/inlandsorder_comdirect.png',height='480px')
+knitr::include_url(xfun::from_root("images","unit08","inlandsorder_comdirect.png"),height="480px")
 ```
 ]
 .panel[.panel-name[Orderbuch]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('../images/unit08/offenes_Orderbuch_(20200420).png',height='480px')
+knitr::include_url(xfun::from_root("images","unit08","offenes_Orderbuch_(20200420).png"),height="480px")
 ```
 .quellePanURL[[Börse Frankfurt](https://www.boerse-frankfurt.de/aktien/offenes-orderbuch/DE0008469008)]
 ]
 .panel[.panel-name[Diagramm]
 ```{r, echo=FALSE,message=FALSE,warning=FALSE,fig.align='center',out.height='75%'}
-source(xfun::from_root("R/Orderbuch.R"))
+source(xfun::from_root("R","Orderbuch.R"))
 library(plotly)
 ggplotly(p)
 ```

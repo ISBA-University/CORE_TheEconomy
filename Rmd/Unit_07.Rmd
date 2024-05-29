@@ -46,6 +46,8 @@ xaringanExtra::use_freezeframe(trigger = "hover")
 options(htmltools.dir.version = FALSE)
 library(latex2exp)
 library(fontawesome)
+library(tidyverse)
+library(kableExtra)
 ```
 
 # Volkswirtschaftslehre
@@ -65,26 +67,6 @@ library(fontawesome)
 ### Sommersemester 2024 
 <br>
 ### Prof. Dr. Jörg Schoder
-.mycontacts[
-`r fa('github')` @ISBA-University
-`r fa('linkedin')` @jfschoder
-]
-# Volkswirtschaftslehre
-
-
-
-### Sommersemester 2023 - Intake 2022B
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-### Prof. Dr. Jörg Schoder
-<br>
 .mycontacts[
 `r fa('github')` @ISBA-University
 `r fa('linkedin')` @jfschoder
@@ -134,7 +116,7 @@ class: left
 .panelset[
 .panel[.panel-name[5 Forces]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('../images/unit07/Branchenstruktur_5forces.svg',height='470px')
+knitr::include_url(xfun::from_root("images","unit07","Branchenstruktur_5forces.svg"),height="470px")
 ```
 
 .quellePanURL[Bildquelle: [Wikipedia](https://de.wikipedia.org/wiki/Wettbewerbsstrategie#/media/Datei:Wettbewerbsstrategien_Michael_E._Porter.svg).]
@@ -142,7 +124,7 @@ knitr::include_url('../images/unit07/Branchenstruktur_5forces.svg',height='470px
 .panel[.panel-name[Strategien]
 .center[
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('../images/unit07/Wettbewerbsstrategien_Porter.svg',height='470px')
+knitr::include_url(xfun::from_root("images","unit07","Wettbewerbsstrategien_Porter.svg"),height="470px")
 ```
 ]
 .quellePanURL[Bildquelle: [Wikipedia](https://de.wikipedia.org/wiki/Wettbewerbsstrategie#/media/Datei:Wettbewerbsstrategien_Michael_E._Porter.svg).]
@@ -295,7 +277,7 @@ class: left
 Horizontale Aggregation
 
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('../images/unit07/NE_agg.png',height='550px')
+knitr::include_url(xfun::from_root("images","unit07","NE_agg.png"),height="550px")
 ```
 ]
 .panel[.panel-name[Gesetz?]
@@ -373,7 +355,7 @@ knitr::include_url('http://www2.hawaii.edu/~fuleky/anatomy/anatomy.html',height=
 ]
 .panel[.panel-name[Isoquanten]
 ```{r, echo=FALSE}
-knitr::include_url('../images/unit07/Isoquanten.png',height = '490px')
+knitr::include_url(xfun::from_root("images","unit07","Isoquanten.png"),height = "490px")
 ```
 ]
 ]
@@ -573,14 +555,14 @@ class: left
 .panelset[
 .panel[.panel-name[Expansionspfade]
 ```{r, echo=FALSE}
-knitr::include_url('../images/unit07/Expansion_SR_LR_(Goolsbee_S267).PNG',height = '490px')
+knitr::include_url(xfun::from_root("images","unit07","Expansion_SR_LR_(Goolsbee_S267).PNG"),height = "490px")
 ```
 
 .quellePanURL[Quelle: Goolsbee et al (2016, S. 267).]
 ]
 .panel[.panel-name[Kostenfunktionen]
 ```{r, echo=FALSE}
-knitr::include_url('../images/unit07/TC_SR_LR_(Goolsbee_S268).PNG',height = '490px')
+knitr::include_url(xfun::from_root("images","unit07","TC_SR_LR_(Goolsbee_S268).PNG"),height ="490px")
 ```
 
 .quellePanURL[Quelle: Goolsbee et al (2016, S. 268).]
@@ -597,12 +579,12 @@ class: left
 .panelset[
 .panel[.panel-name[AC]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-06-g.svg',height='470px')
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-07-06-g.svg",height="470px")
 ```
 ]
 .panel[.panel-name[MC]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-07-h.svg',height='470px')
+knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-07-07-h.svg",height="470px")
 ```
 ]
 ]
@@ -732,7 +714,7 @@ class: left
 * Verteidigung (defensibility) und Netzwerkeffekte
 
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('../images/unit07/ViralNFX-Chart.png',height='470px')
+knitr::include_url(xfun::from_root("images","unit07","ViralNFX-Chart.png"),height="470px")
 ```
 
 
@@ -757,7 +739,7 @@ class: left
 .panelset[
 .panel[.panel-name[Gewinne]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('../images/unit07/Gewinne_(Stocker).PNG',height='470px')
+knitr::include_url(xfun::from_root("images","unit07","Gewinne_(Stocker).PNG"),height="470px")
 ```
 .quellePanURL[Quelle: Stocker (2007, S. 7).]
 ]
@@ -972,7 +954,7 @@ class: left
 # Realitätscheck zur Preisdiskriminierung
 
 ```{r, echo=FALSE,fig.align='center',out.width='80%'}
-knitr::include_graphics('../images/unit07/dm_Preispolitik_(wiwo_20190830).png')
+knitr::include_graphics(xfun::from_root("images","unit07","dm_Preispolitik_(wiwo_20190830).png"))
 ```
 
 .quelle[Quelle: [Wirtschaftswoche (30.08.2019)](https://www.wiwo.de/unternehmen/handel/neue-strategie-dm-verabschiedet-sich-vom-einheitspreis/24960714.html)].
