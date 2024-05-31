@@ -87,7 +87,7 @@ class: left
 # Arbitrage und die Bedeutung von Transaktionskosten
 
 ```{r, echo=FALSE,fig.align='center',out.width='80%'}
-knitr::include_graphics('../images/unit06/Profite_LNG_(BerlinerZeitung).png')
+knitr::include_graphics(xfun::from_root("images","unit06","Profite_LNG_(BerlinerZeitung).png"))
 ```
 
 
@@ -99,7 +99,7 @@ class: left
 
 .pull-left[
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_graphics('../images/unit06/simon_(nobel.org).jpg')
+knitr::include_graphics(xfun::from_root("images","unit06","simon_(nobel.org).jpg"))
 ```
 ]
 
@@ -182,7 +182,7 @@ class: left
 
 .pull-left[
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_graphics('../images/unit06/coase_(nobel.org).jpg')
+knitr::include_graphics(xfun::from_root("images","unit06","coase_(nobel.org).jpg"))
 ```
 ]
 
@@ -229,14 +229,14 @@ class: left
 .panelset[
 .panel[.panel-name[Entstehung]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_graphics('../images/unit06/T-kosten_Phasen_(Felden_Hack_S111).PNG')
+knitr::include_graphics(xfun::from_root("images","unit06","T-kosten_Phasen_(Felden_Hack_S111).PNG"))
 ```
 
 .quellePanURL[Quelle: Felden/Hack (2019, S. 111).]
 ]
 .panel[.panel-name[Einflussfaktoren]
 ```{r, echo=FALSE,fig.align='center'}
-knitr::include_graphics('../images/unit06/T-kosten_Faktoren_(Felden_Hack_S112).PNG')
+knitr::include_graphics(xfun::from_root("images","unit06","T-kosten_Faktoren_(Felden_Hack_S112).PNG"))
 ```
 
 .quellePanURL[Quelle: Felden/Hack (2019, S. 112).]
@@ -325,7 +325,7 @@ class: left
 # Neue Insitutionenökonomik
 
 ```{r, echo=FALSE,fig.align='center',out.width='75%'}
-knitr::include_graphics('../images/unit06/NIE_(Williamson_2000)_small.png')
+knitr::include_graphics(xfun::from_root("images","unit06","NIE_(Williamson_2000)_small.png"))
 ```
 
 .quelle[[Williamson (2000, S. 597)](https://www.researchgate.net/publication/4981429_The_New_Institutional_Economics_Take_Stock_Looking_Ahead)]
@@ -493,7 +493,7 @@ class: left
 
 .pull-right[
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_graphics('../images/unit06/gewinnmaximierung.png')
+knitr::include_graphics(xfun::from_root("images","unit06","gewinnmaximierung.png"))
 ```
 
 <br>
@@ -1085,7 +1085,7 @@ class: left
 # Prinzipale und Agenten
 
 ```{r, echo=FALSE,fig.align='center',out.width='65%'}
-knitr::include_graphics('../images/unit06/Prinzipal-Agent_(Felden_Hack_S113).png')
+knitr::include_graphics(xfun::from_root("images","unit06","Prinzipal-Agent_(Felden_Hack_S113).png"))
 ```
 
 Auswahl weiterer Beispiele (neben Arbeitgeber/-nehmer, Eigentümer/Manager)
