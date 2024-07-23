@@ -6,7 +6,7 @@ library(glue)
 # load data ----
 
 ## Dateinamen erzeugen
-date <- date<-'2023-04-03'
+date <- date <- '2024-07-22'
 my_in_file<-glue('bip_verwendung_{date}.rds')
 
 ### Daten importieren
@@ -39,7 +39,7 @@ verw_shares <- bip_tmp %>%
   )
 
 # Dataviz -----
-year_list <- c(1991,1995,2005,2015,2022)
+year_list <- c(1991,2001,2011,2016,2021,2023)
 library(RColorBrewer)
 p <- verw_shares %>%
   filter(Jahr%in%year_list) %>%
@@ -52,5 +52,11 @@ p <- verw_shares %>%
   scale_fill_manual(values =c("violetred4","violetred3",
                               "turquoise4","turquoise2"))
 #p
+#p
+
+#my_img <- glue("bip_verwendung_{date}.svg")
+#ggsave(xfun::from_root("images","unit01",my_img),
+#       width=1250,height = 750,units="px")
 
 p <- plotly::ggplotly(p,tooltip = c("Aggregat", "Anteil"))
+

@@ -335,12 +335,14 @@ $$Y^n=\sum_i q_i\cdot p_i$$
 name: BIPaktuell
 class: left
 
-# Bruttoinlandsprodukt 2021
+# Bruttoinlandsprodukt 2023
 
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('../images/unit01/BIP_2022.PNG',height='550px')
+```{r, echo=FALSE,fig.align='center',out.width='55%'}
+knitr::include_graphics(xfun::from_root("images","unit13","BIP_2023.PNG"))
 ```
-.quelle[Quelle: [Destatis (2023)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/zusammenhaenge-pdf-0310100.pdf).]
+.quelle[Quelle: [Destatis (2024)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/zusammenhaenge-pdf-0310100.pdf).]
+
+
 
 
 
@@ -353,10 +355,10 @@ class: left
 
 .panelset[
 .panel[.panel-name[Aktuell]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_graphics('../images/unit01/Entstehung_2022_(Destatis_S11).png')
+```{r, echo=FALSE,fig.align='center',out.width='70%'}
+knitr::include_graphics('../images/unit01/Entstehung_2023_(Destatis_S11).png')
 ```
-.quellePan[Quelle: [Destatis (2022)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/zusammenhaenge-pdf-0310100.pdf).]
+.quellePan[Quelle: [Destatis (2024)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/zusammenhaenge-pdf-0310100.pdf).]
 ]
 .panel[.panel-name[Historisch]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
@@ -389,7 +391,7 @@ source(xfun::from_root("R/VGR_Verwendung.R"))
 p
 ```
 
-.quellePanURL[Quelle: Eigene Darstellung. Datenbasis: [Destatis (2023)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/inlandsprodukt-erste-ergebnisse-pdf-2180110.pdf?__blob=publicationFile).]
+.quellePanURL[Quelle: Eigene Darstellung. Datenbasis: [Destatis (2024)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/inlandsprodukt-erste-ergebnisse-pdf-2180110.pdf?__blob=publicationFile).]
 
 ]
 .panel[.panel-name[Historisch]
@@ -410,9 +412,9 @@ class: left
 
 # Verteilungsrechnung (Primäreinkommensentwicklung)
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_graphics('../images/unit01/Primaereinkommen_seit1991_(Destatis_2023).png')
+knitr::include_graphics('../images/unit01/Primaereinkommen_seit1991_(Destatis_2024).png')
 ```
-.quelle[Quelle: [Destatis (2022)](https://www.dashboard-deutschland.de/#/themen/konjunktur_wirtschaft/preise).]
+.quelle[Quelle: [Destatis (2024)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/zusammenhaenge-pdf-0310100.pdf?__blob=publicationFile).]
 
 ---
 name: GDPvsDispInc
@@ -993,7 +995,7 @@ class: left
 ```{r, echo=FALSE,out.width = "100%"}
 knitr::include_url("https://www.researchgate.net/profile/Charles-Edquist-2/publication/271074148/figure/tbl1/AS:668513236709376@1536397384073/Major-features-of-LME-and-CME_W640.jpg",height = "480px")
 ```
-.quellePan[Quelle: [Edquist (2012).](https://www.researchgate.net/publication/271074148_Knowledge-intensive_Entrepreneurship_National_Systems_of_Innovation_and_European_Varieties_of_Capitalism_A_Conceptual_Framework)]
+.quellePanURL[Quelle: [Edquist (2012).](https://www.researchgate.net/publication/271074148_Knowledge-intensive_Entrepreneurship_National_Systems_of_Innovation_and_European_Varieties_of_Capitalism_A_Conceptual_Framework)]
 ]
 .panel[.panel-name[D als Ordnungslabor]
 * Freie kapitalistische Marktwirtschaft bzw. Nachtwächterstaat (19. Jahrhundert)
@@ -1025,34 +1027,6 @@ knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure
 ```
 
 
----
-name: DezentraleOrdnung
-class: left
-
-# Dezentrale und freiheitliche Ordnungen
-
-* Macht und Machtbegrenzung
-
---
-
-* persönliche vs. wirtschaftliche Freiheit
-
---
-
-* Nutzung dezentralen Wissens (F.A. Hayek)
-
---
-
-* Kreativität, Innovation und schöpferische Zerstörung (Schumpeter)
-
---
-
-* Produktivität, Standards und Pfadabhängigkeiten
-
---
-
-* Haftungsfragen (W. Eucken)
-
 
 
 ---
@@ -1063,38 +1037,270 @@ class: left
 
 <iframe width="1100" height="500" src="https://www.youtube.com/embed/z2hj_zfrG6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+
+
+
 ---
 name: Ricardo
 class: inverse, middle, center
 
 # Teil 3
 
-## Ökonomisches Prinzip und Arbeitsteilung
+## Knappheit, Effizienz und Arbeitsteilung
+
+.blockquote[Wirtschaftsbegriff]
 
 .blockquote[Allokation vs. Distribution]
 
 .blockquote[Spezialisierung und Wirtschaftsordnung]
 
 
+---
+name: Wirtschaftsbegriff
+class: left
+
+# Etymologie "Ökonomie/Ökonomik"
+
+* Griechisch: oικoνoμια:
+    * oikos ("Haus", "Haushalt")
+    * nemein ("zuweisen"/"einteilen")
+
+* Xenophon:
+  * Oikonomikós (ca. 385-370 v.Chr.): "Von der Hauswirtschaft"
+  * Póroi (354 v.Chr.): "Über die Staatseinkünfte"
+
+* Ökonomie, Nationalökonomie, Volkswirtschaftslehre.
+
+* Doppeldeutigkeit des Begriffs Wirtschaft (F.A. Hayek):
+
+```{r, echo=FALSE,out.width = "100%"}
+knitr::include_graphics(xfun::from_root("images","unit01","wirtschaftsbegriff.PNG"))
+```
+
+???
+
+* oικoνoμια: beschreibt Tätigkeit des oikonomos, (Haushälters):
+Planvolles Wirtschaften innerhalb eines institutional. Personenverb.,
+meist des HH.
+* Umfirmierung Nationalökonomie `r fa("circle-right")` Volkswirtschaftslehre: Weimarer
+Republik!
+* Auflösung der mittelalterlichen Wirtschaft und Übergang zur
+Großgesellschaft in Nationalstaaten: Ablauf komplexer
+Wirtschaftsprozesse entzieht sich unmittelbarer Anschauung und erfordert
+das Denken in Modellen
+
+* Doppeldeutigkeit und Arten der Ordnung (F.A. Hayek)
+Organisation: Jemand macht einen (!) Plan, Ordnung: Jeder macht
+seinen eigenen Plan.
+
+Prinzipien einer guten Haushaltungskunst und Landwirtschaft (=Mikroökonomie/
+BWL) Staatshaushalt etc (=Makro)
 
 
+---
+name: Knappheit
+class: left
+
+# Warum Wirtschaften?
+
+* Bedürfnisse des Menschen
+
+* Schlaraffenland (freie Güter) vs. Alltagswelt (knappe Güter)
+  * absolute Knappheit
+  * relative Knappheit
+
+.blockquote[
+**Knappheit** bezeichnet einen Zustand, in dem die vorhandenen Güter nicht
+ausreichen um die Bedürfnisse der Menschen vollständig zu befriedigen.
+]
+
+* Bedürfnisse, Bedarf und Nachfrage.
+
+* "Überwindung der Knappheit": Einschränkung der Bedürfnisse oder
+Ausweitung der Güter als philosophische Frage!
+
+* Umgang mit Knappheitsproblem und Funktionen des Wirtschaftens
+  * Existenzfunktion
+  * Sinnfunktion
+  
+???
+
+* Existenzfunktion: nicht verhungern, verdursten, erfrieren
+* Sinnfunktion: Anerkennung, Teilhabe, Kreativität, Kunst
+
+* freie Güter: sind unbegrenzt verfügbar...
+... und Konsument muss nichts tun, um damit seine Bedürfnisse zu befriedigen
+
+* Philosophische Frage: Epikur
+  * Primat der Lust: frühkindliches Empfinden (ohne soziale Konditionierung)
+gibt natürliche Richtung menschlichen Strebens vor. Lust suchen – Unlust
+vermeiden.
+  * katastematische Lust (im Sinne anhaltender Daseinslust) vs. kinetische
+Lust (im Sinne der Lustvariation): Letztere hat dann - und nur dann - ihre
+Berechtigung, wenn sie in der Art der Ausübung oder des
+Ausgelebt-Werdens die Daseinsfreude nicht am Ende beeinträchtigt.
+
+  * drei Kategorien von menschlichen Bedürfnissen
+
+```{r, echo=FALSE,out.width = "100%"}
+knitr::include_graphics(xfun::from_root("images","unit01","beduerfnisse.PNG"))
+```
+
+---
+name: Produktion
+class: left
+
+# Produktion und Produktionsfaktoren
+
+.panelset[
+.panel[.panel-name[Begriff]
+
+.blockquote[
+Produktion als Herstellung von Wirtschaftsgütern durch Kombination von Produktionsfaktoren im Produktionsprozess unter Nutzung einer bestimmten Technologie.
+]
+
+* Produktionsfaktoren?
+
+```{r}
+#| echo: false
+#| outwidth: "100%"
+#| fig-align: "center"
+knitr::include_graphics(xfun::from_root("images","unit01","Produktionsfaktoren_(pixabay).PNG"))
+```
+.quellePanURL[Bildquelle: [pixabay.com](www.pixabay.com).]
+]
+.panel[.panel-name[BWL vs. VWL]
+```{r}
+#| echo: false
+#| outwidth: "100%"
+#| fig-align: "center"
+knitr::include_graphics(xfun::from_root("images","unit01","Produktionsfaktoren_(Altmann_S45).PNG"))
+```
+.quellePanURL[Quelle: Altmann (2009, S. 54).]
+]
+]
+
+
+
+???
+
+* Zusammenhang Angebot,Produktion, Technologie,
+Produktionsfaktoren
+* Produktionsfaktoren:
+  * Boden (Natur, Ressourcen)
+  * Arbeit (Menschliche Arbeitskraft)
+  * (Sach-)Kapital (derivativer Faktor – entsteht durch
+Kombination von Arbeit und Ressourcen)
+  * Humankapital (Wissen)
+  * Sozialkapital (Vertrauen)
+* Preis für die Produktionsfaktoren: Pacht/Miete (Boden), Lohn
+(Arbeit), Zins (Kapital)
+
+
+---
+name: Marshall
+class: left
+
+# "Totem der VWL" ([Bauman, 2016](https://www.youtube.com/watch?v=NF-Rx3wzHgE))
+
+```{tikz, echo=FALSE}
+\usetikzlibrary{angles,quotes,babel,calc,matrix,patterns,math,fit,arrows,arrows.meta,shapes.arrows,shapes,shapes.geometric,positioning,intersections,chains,trees,mindmap,shadows,shadows.blur,shadings,backgrounds,colorbrewer,decorations.markings,decorations.pathreplacing,decorations.text}
+		\tikzset{font=\normalsize\sffamily}
+			\begin{tikzpicture}[yscale=1,scale=.4,thick]
+			% Draw gridline.
+		%	\draw[style=help lines] (0,-10) grid (10,25);
+			% Draw x and f(x) axes.
+			\draw[-stealth] (0,0) -- (10,0) node [below] {{\scriptsize Menge}};
+			\draw[-stealth] (0,0) -- (0,10) node [left] {{\scriptsize Preis}} ;
+			%\foreach \x in {2,4,6,8,10}
+			%\node [below] at (\x,0) {\tiny\x};
+			%\foreach \y in {-10,-5,0,5,10,15,20,25}
+			%\node [left] at (0,\y) {\tiny\y};
+			% Plot 
+			\draw [color=blue][domain=1:9] plot (\x,{10-\x}) node [above right] {{\scriptsize Nachfrage}};
+			\draw [color=green][domain=1:9] plot (\x,{\x}) node [above right] {{\scriptsize Angebot}};
+			%\draw[color=red,style=dashed][domain=0:9] plot (\x,{2*\x+10}) node [below right] {{\scriptsize $K(x)=2x+10$}};
+			\end{tikzpicture}
+```
+
+.quelle[Eigene Darstellung.]
+
+
+???
+
+Angebot und Nachfrage im Marshall Diagramm. Benannt nach Alfred
+Marshall - Begründer der mathematischen Ökonomie im 19. Jahrhundert.
 
 
 ---
 name: EcoPrinciple
 class: left
 
-# Grundidee: Ökonomisches Prinzip und Arbeitsteilung
+# Effizienz und das ökonomische Prinzip
 
-* Arbeitsteilung ermöglicht Spezialisierung
+* Ökonomisches Prinzip:
+  * Minimalprinzip 
+  * Maximalprinzip
 
-```{r, echo=FALSE,fig.align='center',out.width='90%'}
+* Effizienzbegriffe
+  1. Technische Effizienz (TE): Verhältnis Faktoreinsatz- und
+Outputmengen.
+  2. Ökonomische Effizienz (ÖE): Einbeziehung von Kosten und Werten.
+TE ist notwendige, aber nicht hinreichende Bedingung für ÖE.
+  3. Pareto-Effizienz (PE): Effizienz sozialer Systeme.
+ÖE notwendige, aber nicht hinreichende Bedingung für PE.
+
+.blockquote[
+Ein Zustand ist Pareto-effizient (Synonym: Pareto-optimal), wenn es keine Möglichkeit gibt, durch eine Handlung ein Individuum besser zu stellen, ohne ein anderes Individuum schlechter zu stellen.
+]
+
+???
+Wichtiges Kriterium, das wir noch einige Male bemühen, u.a. im Kontext
+des Coase-Theorems, das für das Thema Kriminalität und Strafrecht besonders wichtig ist.
+
+
+---
+name: CCC
+class: left
+
+# "Ökonomie für den Menschen"
+
+<br>
+<br>
+
+```{r}
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics(xfun::from_root("images","unit01","CCC.PNG"))
+```
+
+.quelle[Bildquelle: [Copenhagen Consensus](http://www.copenhagenconsensus.com.).]
+
+???
+
+"Die reinste Form des Wahnsinns ist es, alles beim Alten zu lassen und
+gleichzeitig zu hoffen, dass sich etwas ändert." (Albert Einstein)
+
+
+
+
+---
+name: Arbeitsteilung
+class: left
+
+# Wirtschaften nach dem Rationalprinzip...
+
+* ...erfordert **Arbeitsteilung**
+
+```{r, echo=FALSE,fig.align='center',out.width='80%'}
 knitr::include_graphics('../images/unit01/arbeitsteilung_(Goodwin_S21).png')
 ```
 .quelle[Bildquelle: Goodwin (2012, S. 21).]
 
 
-* Spezialisierung ermöglicht Produktivitätssteigerungen
+* Arbeitsteilung **Spezialisierung** ermöglicht, welche wiederum...
+* die "Ergiebigkeit" (**Produktivität**) steigert
 
 
 ---
@@ -1181,6 +1387,38 @@ knitr::include_graphics('../images/unit01/orga_vs_spontane_Ordnung_(Goodwin_S22)
 <iframe width="900" height="480" src="https://www.youtube.com/embed/IYO3tOqDISE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ]
 ]
+
+
+---
+name: DezentraleOrdnung
+class: left
+
+# Dezentrale und freiheitliche Ordnungen
+
+* Macht und Machtbegrenzung
+
+--
+
+* persönliche vs. wirtschaftliche Freiheit
+
+--
+
+* Nutzung dezentralen Wissens (F.A. Hayek)
+
+--
+
+* Kreativität, Innovation und schöpferische Zerstörung (Schumpeter)
+
+--
+
+* Produktivität, Standards und Pfadabhängigkeiten
+
+--
+
+* Haftungsfragen (W. Eucken)
+
+
+
 
 ---
 name: Ricardo
