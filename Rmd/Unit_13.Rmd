@@ -1214,13 +1214,26 @@ The households unable to adjust to a temporary income shock have lower welfare.
 name: EUDebtCrisis
 class: left
 
-# Konsumglättung in der EU-Schuldenkrise
+# Konsumglättung in der Krisensituation
 
-```{r, echo=FALSE,fig.align='center',out.width='70%'}
+.panelset[
+
+.panel[.panel-name[Covid]
+<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1skll&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:1100px; height:480px;" allowTransparency="true" loading="lazy"></iframe>
+.quellePanURL[Quelle: [Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org/series/VISASMIHNSA).]
+]
+
+.panel[.panel-name[EU-Schuldenkrise]
+```{r, echo=FALSE,fig.align='center',out.width='45%'}
 knitr::include_graphics(xfun::from_root("images","unit13","Konsumglaettung_Schuldenkrise_(VoxEU).png"))
 ```
 
-.quelle[Quelle: [VoxEU.org](https://voxeu.org/article/consumption-and-credit-constraints-during-financial-crises)]
+.quellePanURL[Quelle: [VoxEU.org](https://voxeu.org/article/consumption-and-credit-constraints-during-financial-crises)]
+
+]
+]
+
+
 
 
 ---
