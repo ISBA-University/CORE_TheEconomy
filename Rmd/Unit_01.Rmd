@@ -63,7 +63,7 @@ library(fontawesome)
 <br>
 <br>
 <br>
-### Sommersemester 2024 
+### Sommersemester 2025
 <br>
 ### Prof. Dr. Jörg Schoder
 .mycontacts[
@@ -85,27 +85,23 @@ layout: true
 name: Motivation
 class: left
 
-# Deutschland wird ärmer (?)
+# Deutschland in der Krise (?)
 
-<iframe width="1000" height="550" src="https://www.youtube.com/embed/oOtA82FfaMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1000" height="550" src="https://www.youtube.com/embed/CAJlZcB6eKw?si=hMAJCIF7ld8WXbSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 ???
 
-* Erste 1:23min anschauen
+* Fratzscher: Psychologie
 
-* Im Intro des Videos werden vier aktuelle Schlüsselfragen genannt:
+* ist also alles nur eine Frage der Perspektive?
 
-    * Woher bekommen wir die Energie?
-    * Wieviel ist unser Geld noch wert?
-    * Wo sind die Fachkräfte?
-    * Wie rüsten wir Deutschland für die Zukunft?
+* Obst (IW Köln): Strukturprobleme, Wettbewerbsfähigkeit und Standort
 
-* Ukraine-Krieg und Sanktionen gegen Russland
-  * Rohstoffe
-  * Moralische Dimension
-     * Konsequenzialismus: Sanktionen bringen nix, also lieber weiter heizen
-     * Deontologische Dimension: es zählt die Absicht
+* Angesprochen auch Wirtschaftsstruktur: KMU vs. Großkonzerne
+
+
+
 
 ---
 name: motivation
@@ -295,7 +291,7 @@ class: left
 ]
 .panel[.panel-name[Inlandsproduktrechnungen]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-13-06.svg',height='480px')
+knitr::include_graphics(xfun::from_root("images/unit01","WKL_BIP_fig13-06.png"))
 ```
 ]
 ]
@@ -335,14 +331,35 @@ $$Y^n=\sum_i q_i\cdot p_i$$
 name: BIPaktuell
 class: left
 
-# Bruttoinlandsprodukt 2023
+# Bruttoinlandsprodukt 2024
 
 ```{r, echo=FALSE,fig.align='center',out.width='55%'}
-knitr::include_graphics(xfun::from_root("images","unit13","BIP_2023.PNG"))
+knitr::include_graphics(xfun::from_root("images","unit01","BIP_2024.PNG"))
 ```
-.quelle[Quelle: [Destatis (2024)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/zusammenhaenge-pdf-0310100.pdf).]
+.quelle[Quelle: [Destatis (2025)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/zusammenhaenge-pdf-0310100.pdf).]
 
 
+---
+name: BIP-Wachstum
+class: left
+
+# Niveau vs. Veränderung
+
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_graphics(xfun::from_root("images","unit13","Wachstumsraten_(destatis_2025_S10).PNG"))
+```
+.quelle[Quelle: [Destatis (2025)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/zusammenhaenge-pdf-0310100.pdf).]
+
+
+???
+
+* Niveau vs. Veränderung
+
+* Bezug zum Video Krise am Anfang - zwei Jahre in Folge gab es historisch nach WK2 nur einmal - damals war D der "Kranke Mann Europas"
+
+* Aktuell sieht es so aus, als würde auch 2025 negatives Wachstum bringen
+
+* Zyklisch - Verweis Kapitel 13
 
 
 
@@ -355,8 +372,8 @@ class: left
 
 .panelset[
 .panel[.panel-name[Aktuell]
-```{r, echo=FALSE,fig.align='center',out.width='70%'}
-knitr::include_graphics('../images/unit01/Entstehung_2023_(Destatis_S11).png')
+```{r, echo=FALSE,fig.align='center',out.width='80%'}
+knitr::include_graphics('../images/unit01/Entstehung_2024_(Destatis_S11).png')
 ```
 .quellePan[Quelle: [Destatis (2024)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/zusammenhaenge-pdf-0310100.pdf).]
 ]
@@ -384,14 +401,15 @@ class: left
 
 .panelset[
 .panel[.panel-name[Aktuell]
-```{r, include=FALSE}
-source(xfun::from_root("R/VGR_Verwendung.R"))
-```
-```{r, echo=FALSE,fig.align='center',out.width='90%'}
-p
+
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics(xfun::from_root("images","unit01","bruttoinlandsprodukt_verwendungsstruktur_2024.svg"))
 ```
 
-.quellePanURL[Quelle: Eigene Darstellung. Datenbasis: [Destatis (2024)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/inlandsprodukt-erste-ergebnisse-pdf-2180110.pdf?__blob=publicationFile).]
+.quellePanURL[Quelle: [Destatis (2025).](https://service.destatis.de/DE/vgr-monitor-deutschland/bip.html)]
 
 ]
 .panel[.panel-name[Historisch]
@@ -405,6 +423,17 @@ knitr::include_graphics('../images/unit01/bpb_langeReihe_Nachfragekomponenten_(R
 ]
 
 
+???
+
+```{r, include=FALSE}
+source(xfun::from_root("R/VGR_Verwendung.R"))
+```
+```{r, echo=FALSE,fig.align='center',out.width='90%'}
+p
+```
+.quellePanURL[Quelle: Eigene Darstellung. Datenbasis: [Destatis (2025)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/inlandsprodukt-erste-ergebnisse-pdf-2180110.pdf?__blob=publicationFile).]
+
+
 
 ---
 name: Verteilung
@@ -412,9 +441,9 @@ class: left
 
 # Verteilungsrechnung (Primäreinkommensentwicklung)
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_graphics('../images/unit01/Primaereinkommen_seit1991_(Destatis_2024).png')
+knitr::include_graphics('../images/unit01/Primaereinkommen_seit1991_(Destatis_2025).png')
 ```
-.quelle[Quelle: [Destatis (2024)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/zusammenhaenge-pdf-0310100.pdf?__blob=publicationFile).]
+.quelle[Quelle: [Destatis (2025)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/zusammenhaenge-pdf-0310100.pdf?__blob=publicationFile).]
 
 ---
 name: GDPvsDispInc
@@ -553,13 +582,20 @@ Hinweise zur Statistik:
 name: Umwelt
 class: left
 
-# Noch ein Hockeystick: Umweltbelastung
+# Weitere Hockeysticks: Umweltbelastung
 
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-01-06-a.svg",height = "550px")
+knitr::include_graphics(xfun::from_root("images","unit01","Co2stick_COREv1_ch1.png"))
 ```
 
+???
 
+
+
+
+```{r, eval=FALSE,echo=FALSE,out.width = "100%"}
+knitr::include_url("https://books.core-econ.org/the-economy/microeconomics/01-prosperity-inequality-03-climate-change.html#figure-1-2a", height = "550px")
+```
 
 
 
@@ -736,6 +772,7 @@ class: left
 
 # Einkommen und subjektive Lebenszufriedenheit
 
+
 .panelset[
 .panel[.panel-name[Daten]
 <iframe src="https://ourworldindata.org/grapher/gdp-vs-happiness" loading="lazy" style="width: 100%; height: 480px; border: 0px none;"></iframe>
@@ -743,12 +780,12 @@ class: left
 
 .panel[.panel-name[Erklärungsmodell]
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-13-flowchart-01.svg',height='480px')
+knitr::include_graphics(xfun::from_root("images/unit01","bip_zufriedenheit_ch13.png"))
 ```
 ]
 ]
 
-
+.quellePanURL[vgl. [Kapitel 13](https://books.core-econ.org/the-economy/v1/book/text/13.html#132-output-growth-and-changes-in-unemployment)]
 
 
 ---
@@ -838,13 +875,11 @@ Beispiele
 
 .panelset[
 .panel[.panel-name[Produktivität]
-```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-01-03.svg",height = "350px")
-```
+<iframe src="https://ourworldindata.org/grapher/the-productivity-of-labour-in-producing-light-lumen-hours-per-hour-of-labour-1800-to-the-present?tab=chart" loading="lazy" style="width: 100%; height: 380px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
 ]
 .panel[.panel-name[Diffusion]
-```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-01-04.svg",height = "350px")
+```{r, echo=FALSE,out.width = "70%", fig.align='center'}
+knitr::include_graphics('../images/unit01/Diffusion_fig1-4.png')
 ```
 ]
 ]
@@ -854,6 +889,20 @@ knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure
 
 * Mithin kann Technologie ökonomisch durch eine Produktionsfunktion abgebildet werden.
 
+
+---
+name: D-aktuell
+class: left
+
+# Entwicklung der Arbeitsproduktivität in D
+
+
+```{r, echo=FALSE,out.width = "100%", fig.align='center'}
+knitr::include_graphics('../images/unit01/Arbeitsproduktivitaet_2024_(Destatis_2025).png')
+```
+
+
+.quelle[Quelle: [Destatis (2025)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/zusammenhaenge-pdf-0310100.pdf?__blob=publicationFile).]
 
 
 
@@ -898,8 +947,8 @@ class: left
 
 * Kreislaufmodell der Volkswirtschaft
 
-```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-01-12.svg",height = "420px")
+```{r, echo=FALSE,out.width = "100%", fig.align='center'}
+knitr::include_graphics('../images/unit01/WKL_fig1-12.png')
 ```
 
 * Ausblick: Modellbildung
@@ -939,8 +988,8 @@ Institutionen sind die formellen (kodifizierten) und informellen Regeln unter de
 
 .panelset[
 .panel[.panel-name[Kapitalismus]
-```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-01-08.svg",height = "350px")
+```{r, echo=FALSE,out.width = "100%", fig.align='center'}
+knitr::include_graphics('../images/unit01/Capitalism_fig1-8.png')
 ```
 ]
 .panel[.panel-name[Institutionen]
@@ -1021,13 +1070,12 @@ class: left
 
 # Kausalität vs. Korrelation
 
-```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-01-11.svg
-",height = "550px")
-```
+<iframe src="https://ourworldindata.org/grapher/divergence-of-gdp-per-capita-among-latecomers-to-the-capitalist-revolution-18002016?tab=chart" loading="lazy" style="width: 100%; height: 550px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
 
 
+???
 
+Not every capitalist country is the kind of economic success story exemplified in Figure 1.1a by Britain, later Japan, and the other countries that caught up. Figure 1.11 tracks the fortunes of a selection of countries across the world during the twentieth century. It shows for example that in Africa the success of Botswana in achieving sustained growth contrasts sharply with Nigeria’s relative failure. Both are rich in natural resources (diamonds in Botswana, oil in Nigeria), but differences in the quality of their institutions—the extent of corruption and misdirection of government funds, for example—may help explain their contrasting trajectories.
 
 ---
 name: Ordnung-Innovation
@@ -1703,17 +1751,17 @@ class: left
 .panelset[
 .panel[.panel-name[1980]
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-01-02-c.svg",height = "420px")
+knitr::include_graphics(xfun::from_root("images","unit01","figure-01-02-c.svg"))
 ```
 ]
 .panel[.panel-name[1990]
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-01-02-d.svg",height = "420px")
+knitr::include_graphics(xfun::from_root("images","unit01","figure-01-02-d.svg"))
 ```
 ]
 .panel[.panel-name[2014]
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-01-02-e.svg",height = "420px")
+knitr::include_graphics(xfun::from_root("images","unit01","figure-01-02-e.svg"))
 ```
 ]
 ]

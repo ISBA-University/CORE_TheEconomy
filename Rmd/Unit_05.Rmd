@@ -62,7 +62,7 @@ library(fontawesome)
 <br>
 <br>
 <br>
-### Sommersemester 2024 
+### Sommersemester 2025 
 <br>
 ### Prof. Dr. Jörg Schoder
 .mycontacts[
