@@ -6,11 +6,11 @@ library(glue)
 # load data ----
 
 ## Dateinamen erzeugen
-date <- date <- '2024-07-22'
+date <- date <- '2025-07-09'
 my_in_file<-glue('bip_verwendung_{date}.rds')
 
 ### Daten importieren
-load(xfun::from_root("data","VGR",my_in_file))
+bip_verwendung <- read_rds(xfun::from_root("data","VGR",my_in_file))
 
 
 # Daten aufbereiten -----
@@ -39,7 +39,7 @@ verw_shares <- bip_tmp %>%
   )
 
 # Dataviz -----
-year_list <- c(1991,2001,2011,2016,2021,2023)
+year_list <- c(1991,2001,2011,2016,2021,2024)
 library(RColorBrewer)
 p <- verw_shares %>%
   filter(Jahr%in%year_list) %>%

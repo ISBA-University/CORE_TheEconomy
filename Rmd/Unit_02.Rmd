@@ -89,7 +89,7 @@ class: left
 # Entwicklung von Wohlstand und Bevölkerung
 
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-01.svg", height = "550px")
+knitr::include_graphics(xfun::from_root("images","unit02","COREde_fig2-1.png"))
 ```
 
 .quelle[Quelle: [CORE - The Economy](https://www.core-econ.org/the-economy/book/text/02.html#subheadline).]
@@ -167,7 +167,7 @@ Eine (ökonomische) Produktionsfunktion beschreibt den Zusammenhang zwischen Fak
 
 <center>
 ```{r Fig:Prodfkt,echo=FALSE, message=FALSE,fig.align="center",out.width="67%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-14-b-a.svg",height = "290px")
+knitr::include_graphics(xfun::from_root("images","unit02","COREde_fig2-14ba.png"))
 ```
 </center>
 .quelle[Bildquelle: [CORE Unit 2](https://www.core-econ.org/the-economy/book/text/02.html#figure-2-14ba).]
@@ -198,7 +198,7 @@ class: left
 # Durchschnittsprodukt
 
 ```{r Fig:AP,echo=FALSE, message=FALSE}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-14-b-e.svg",height = "550px")
+knitr::include_graphics(xfun::from_root("images","unit02","COREde_fig2-14be.png"))
 ```
 
 
@@ -213,7 +213,7 @@ class: left
 .panelset[
 .panel[.panel-name[Aufgabe 2.6]
 ```{r EX-2-6,echo=FALSE, message=FALSE}
-knitr::include_url("https://www.core-econ.org/the-economy/book/text/02.html#exercise-26-the-farmers-production-function", height = "450px")
+knitr::include_url("https://books.core-econ.org/the-economy/v1/book/de/text/02.html#%C3%BCbung-26-die-produktionsfunktion-der-arbeitskr%C3%A4fte-in-der-landwirtschaft", height = "450px")
 ```
 ]
 .panel[.panel-name[Lösungsskizze]
@@ -284,7 +284,7 @@ class: left
 # Gruppenarbeit
 
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/text/02.html#exercise-27-are-people-really-like-other-animals",height = "550px")
+knitr::include_url("https://books.core-econ.org/the-economy/v1/book/de/text/02.html#%C3%BCbung-27-sind-menschen-wirklich-wie-andere-tiere",height = "550px")
 ``` 
 
 ```{r,echo=FALSE}
@@ -324,8 +324,8 @@ class: left
 
 # Malthusianisches Modell
 
-```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-16-e.svg",height = "550px")
+```{r, echo=FALSE,out.width = "90%"}
+knitr::include_graphics(xfun::from_root("images","unit02","COREde_fig2-16e.png"))
 ```
 
 
@@ -341,7 +341,8 @@ class: left
 # Malthus' Vorhersage
 
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-15.svg",height = "550px")
+knitr::include_graphics(xfun::from_root("images","unit02","COREde_fig2-15.png"))
+
 ``` 
 
 
@@ -358,10 +359,7 @@ class: left
 
 # Die Malthusianische Falle und der Hockeystick
 
-```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-18.svg",height = "550px")
-```
-
+<iframe src="https://ourworldindata.org/grapher/the-malthusian-trap?tab=chart" loading="lazy" style="width: 100%; height: 550px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
 
 ???
 
@@ -576,7 +574,7 @@ class: left
 # Modelle und Gleichgewichte
 
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-02.svg",height = "550px")
+knitr::include_graphics(xfun::from_root("images","unit02","COREde_fig2-2.png"))
 ```
 
 ???
@@ -709,7 +707,7 @@ class: left
 .panelset[
 .panel[.panel-name[Aufgabe 2.1]
 ```{r EX-2-1,echo=FALSE, message=FALSE}
-knitr::include_url("https://www.core-econ.org/the-economy/book/text/02.html#economic-models",height="480px")
+knitr::include_url("https://books.core-econ.org/the-economy/v1/book/de/text/02.html#%C3%BCbung-21-ein-modell-entwerfen",height="480px")
 ```
 ]
 .panel[.panel-name[S-Bahn-Karte]
@@ -803,7 +801,7 @@ class: left
 
 
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/text/02.html#exercise-22-using-ceteris-paribus",height = "550px")
+knitr::include_url("https://books.core-econ.org/the-economy/v1/book/de/text/02.html#%C3%BCbung-22-mit-ceteris-paribus",height = "550px")
 ```
 
 ???
@@ -912,12 +910,12 @@ class: left
 .panelset[
 .panel[.panel-name[Produktionspläne]
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-03-f.svg",height = "480px")
+knitr::include_graphics(xfun::from_root("images","unit02","COREde_fig2-3f.png"))
 ```   
 ]
 .panel[.panel-name[Dominanz]
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-04-d.svg",height = "480px")
+knitr::include_graphics(xfun::from_root("images","unit02","COREde_fig2-4d.png"))
 ```   
 ]
 ]
@@ -945,7 +943,7 @@ class: left
 # Kosten und ökonomische Effizienz
 
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-05-g.svg",height = "550px")
+knitr::include_graphics(xfun::from_root("images","unit02","COREde_fig2-5g.png"))
 ```   
 
 
@@ -971,7 +969,7 @@ class: left
 .panelset[
 .panel[.panel-name[Aufgabe]
 ```{r Ex-2-3code,echo=FALSE, message=FALSE, fig.show='hide'}
-knitr::include_url("https://www.core-econ.org/the-economy/book/text/02.html#exercise-23-isocost-lines",height = "450px")
+knitr::include_url("https://books.core-econ.org/the-economy/v1/book/de/text/02.html#%C3%BCbung-23-isokostengeraden",height = "450px")
 ```
 ]
 .panel[.panel-name[Lösungsansatz]
@@ -1060,7 +1058,7 @@ class: left
 # Innovation und Innovationsrente (J. Schumpeter)
 
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-08-c.svg",height = "550px")
+knitr::include_graphics(xfun::from_root("images","unit02","COREde_fig2-8c.png"))
 ```   
 
 ???
@@ -1142,13 +1140,12 @@ class: left
 <iframe width="800" height="450" src="https://www.youtube.com/embed/-vyNOWxprt4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ]
 .panel[.panel-name[Daten]
-```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-11.svg",height = "450px")
-```
+<iframe src="https://ourworldindata.org/grapher/wages-relative-to-the-cost-of-capital?tab=line" loading="lazy" style="width: 100%; height: 450px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
 ]
 .panel[.panel-name[Modell]
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-12-c.svg",height = "450px")
+knitr::include_graphics(xfun::from_root("images","unit02","COREde_fig2-12c.png"))
+
 ```
 ]
 ]  
@@ -1171,7 +1168,7 @@ class: left
 # Technologischer Fortschritt im Malthusianischen Modell
 
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-02-17-e.svg",height = "550px")
+knitr::include_graphics(xfun::from_root("images","unit02","COREde_fig2-17e.png"))
 ```
 
 ---
