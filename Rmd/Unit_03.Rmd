@@ -627,7 +627,7 @@ class: left
 # Feasible Set und Opportunitätskosten
 
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/text/03.html#figure-3-9i",height = "550px")
+knitr::include_graphics(xfun::from_root("images","unit03","COREde_fig3-9i.png"))
 ```
 
 
@@ -651,12 +651,12 @@ class: left
 .panelset[
 .panel[.panel-name[abnehmendes Grenzprodukt]
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-03-10-a-g.svg",height = "480px")
+knitr::include_graphics(xfun::from_root("images","unit03","COREde_fig3-10a-g.png"))
 ```
 ]
 .panel[.panel-name[konstantes Grenzprodukt]
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-03-15-d.svg",height = "480px")
+knitr::include_graphics(xfun::from_root("images","unit03","COREde_fig3-15d.png"))
 ```
 ]
 ]
@@ -678,12 +678,12 @@ class: left
 .panelset[
 .panel[.panel-name[EE>0]
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-03-17.svg",height = "480px")
+knitr::include_graphics(xfun::from_root("images","unit03","COREde_fig3-17.png"))
 ```
 ]
 .panel[.panel-name[EE=0]
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-03-18.svg",height = "480px")
+knitr::include_graphics(xfun::from_root("images","unit03","COREde_fig3-18.png"))
 ```
 ]
 .panel[.panel-name[EE<0]
@@ -708,7 +708,7 @@ class: left
 
 
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-03-19-b-f.svg",height = "550px")
+knitr::include_graphics(xfun::from_root("images","unit03","COREde_fig3-19b-f.png"))
 ```
 
 ???
@@ -724,7 +724,7 @@ class: left
 
 
 ```{r, echo=FALSE,out.width = "100%"}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-03-20-e.svg",height = "550px")
+knitr::include_graphics(xfun::from_root("images","unit03","COREde_fig3-20e.png"))
 ```
 
 ???

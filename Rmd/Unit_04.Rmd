@@ -89,8 +89,7 @@ class: left
 
 .pull-left[
 ```{r, echo=FALSE,fig.align='center'}
-knitr::include_graphics("../images/unit04/Smith_(wiwo).jpg")
-
+knitr::include_graphics(xfun::from_root("images","unit04","Smith_(wiwo).jpg"))
 ```
 ]
 
@@ -122,22 +121,22 @@ class: left
 .panelset[
 .panel[.panel-name[Aktion]
 ```{r,echo=FALSE,out.width='100%'}
-knitr::include_graphics('../images/unit04/Penny_Aug2023.png')
+knitr::include_graphics(xfun::from_root("images","unit04","Penny_Aug2023.png"))
 ```
 ]
 .panel[.panel-name[Wahre Kosten]
 ```{r,echo=FALSE,out.width='80%'}
-knitr::include_graphics('../images/unit04/Penny0_Aug2023.png')
+knitr::include_graphics(xfun::from_root("images","unit04","Penny0_Aug2023.png"))
 ```
 ]
 .panel[.panel-name[Beispiel]
 ```{r,echo=FALSE,out.width='100%'}
-knitr::include_graphics('../images/unit04/Penny1_Aug2023.png')
+knitr::include_graphics(xfun::from_root("images","unit04","Penny1_Aug2023.png"))
 ```
 ]
 .panel[.panel-name[Spende]
 ```{r,echo=FALSE,out.width='100%'}
-knitr::include_graphics('../images/unit04/Penny2_Aug2023.png')
+knitr::include_graphics(xfun::from_root("images","unit04","Penny2_Aug2023.png"))
 ```
 ]
 ]
@@ -193,7 +192,7 @@ class: left
 # Einordnung: Klimapolitik in Zahlen
 
 ```{r, echo=FALSE,fig.align='center',out.width='75%'}
-knitr::include_graphics("../images/unit04/Klimaschutz_in_Zahlen_(BMWK_2023).png")
+knitr::include_graphics(xfun::from_root("images","unit04","Klimaschutz_in_Zahlen_(BMWK_2023).png"))
 ```
 
 .quelle[Quelle: [BMWK (2023).](https://www.bmwk.de/Redaktion/DE/Publikationen/Klimaschutz/klimaschutz-in-zahlen.html)]
@@ -228,7 +227,7 @@ class: left
 # Klimaschutz nach dem ökonomischen Prinzip?
 
 ```{r,echo=FALSE,fig.align='center',out.width='50%'}
-knitr::include_graphics('../images/unit04/ch4_trend_gl_(noaa-gov)_20230817.png')
+knitr::include_graphics(xfun::from_root("images","unit04","ch4_trend_gl_(noaa-gov)_20230817.png"))
 ```
 
 "Cutting methane is the strongest lever we have to slow climate change over the next 25 years and complements necessary efforts to reduce carbon dioxide. The benefits to society, economies, and the environment are numerous and far outweigh the cost. We need international cooperation to urgently reduce methane emissions as much as possible this decade."
@@ -523,10 +522,10 @@ class: left
 
 
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url("https://www.deutschlandfunk.de/alltaegliche-aergernisse-muell-und-littering-im-oeffentlichen-raum-100.html",height = "550px")
+knitr::include_url(xfun::from_root("images","unit04","Allmende_(dlf_20220422).png"),height= "530px")
 ```
 
-
+.quelle[Quelle: [Deutschlandfunk (2022).](https://www.deutschlandfunk.de/alltaegliche-aergernisse-muell-und-littering-im-oeffentlichen-raum-100.html)]
 
 
 
@@ -590,7 +589,7 @@ class: left
 Bitte QR-Code scannen und mitspielen! 
 
 ```{r ClassEx1,echo=FALSE, message=FALSE,out.width='90%',fig.align='center'}
-knitr::include_graphics('../images/ClassEx-link.svg')
+knitr::include_graphics(xfun::from_root("images","ClassEx-link.svg"))
 ```
 ]
 
@@ -599,7 +598,7 @@ knitr::include_graphics('../images/ClassEx-link.svg')
 <br>
 <br>
 ```{r, echo=FALSE,fig.align='center',out.width = "100%"}
-knitr::include_graphics("../images/unit04/Overfishing_(Economist_2020).png")
+knitr::include_graphics(xfun::from_root("images","unit04","Overfishing_(Economist_2020).png"))
 ```
 ]
 
@@ -843,7 +842,11 @@ Ein Spiel ist durch folgende Bestandteile charakterisiert:
 ]    
 
 .panel[.panel-name[Beispiel]
-<img src="https://www.core-econ.org/the-economy/book/images/web/figure-04-01.svg" height="450px" width="800px" />
+
+```{r ,echo=FALSE, message=FALSE,out.width='70%',fig.align='center'}
+knitr::include_graphics(xfun::from_root("images","unit04","COREde_fig4-1.png"))
+```
+
 ]
 
 .panel[.panel-name[Normalform]
@@ -1339,12 +1342,8 @@ class: left
 
 # Strategisches Denken und Strategische Entscheidungen
 
-## Beispiel Maxmin-Strategie...
-
-...oder was ist, wenn mein Gegenspieler ein Dummkopf ist?
-
 .pull-left[
-### Bunte vs. Gala: Welche Titelgeschichte?
+## Beispiel "Bunte vs. Gala": Welche Titelgeschichte?
 * Reality Show (RS)
 * Promi-Interview (PI)
 ]
@@ -1388,6 +1387,11 @@ class: left
 ```
 ]
 
+--
+
+## Maxmin-Strategie...
+
+...oder was ist, wenn mein Gegenspieler ein Dummkopf ist?
 
 .blockquote[
 Die optimale Entscheidung eines Spielers hängt von seinen .underline[Erwartungen] über die Entscheidungen anderer Spieler ab.
@@ -1538,7 +1542,7 @@ class: left
 ]
 .panel[.panel-name[Freerider-Problem]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-04-07.svg',height = "480px")
+knitr::include_graphics(xfun::from_root("images","unit04","COREde_fig4-7.png"))
 ```
 ]
 ]
@@ -1775,7 +1779,7 @@ class: left
 .panelset[
 .panel[.panel-name[Altruismus]
 ```{r ,echo=FALSE, message=FALSE,out.width='100%',fig.align='center'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-04-06-c.svg',height='480px')
+knitr::include_graphics(xfun::from_root("images","unit04","COREde_fig4-6c.png"))
 ```
 ]
 .panel[.panel-name[Weitere Formen]
@@ -1863,7 +1867,7 @@ class: left
 ## "Wettbewerb fördert Eigensinn"
 
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-04-14.svg',height = "480px")
+knitr::include_graphics(xfun::from_root("images","unit04","COREde_fig4-14.png"))
 ```
 
 ???
@@ -1880,18 +1884,18 @@ class: left
 
 .panelset[
 .panel[.panel-name[Klimapolitik als Spiel]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-04-17-a.svg',height = "480px")
+```{r, echo=FALSE,fig.align='center',out.width='70%'}
+knitr::include_graphics(xfun::from_root("images","unit04","COREde_fig4-17a.png"))
 ```
 ]
 .panel[.panel-name[PD]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-04-17-b.svg',height = "480px")
+```{r, echo=FALSE,fig.align='center',out.width='70%'}
+knitr::include_graphics(xfun::from_root("images","unit04","COREde_fig4-17b.png"))
 ```
 ]
 .panel[.panel-name[Reziprozität]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-04-17-c.svg',height = "480px")
+```{r, echo=FALSE,fig.align='center',out.width='70%'}
+knitr::include_graphics(xfun::from_root("images","unit04","COREde_fig4-17c.png"))
 ```
 ]
 ]
