@@ -111,139 +111,34 @@ knitr::include_graphics(xfun::from_root("images","unit04","Smith_(wiwo).jpg"))
 Adam Smith war nicht der Erfinder der Metapher von der unsichtbaren Hand; sie war zu seiner Zeit eine durchaus übliche meist religiös konnotierte Redensart. Als im Jahr 1703 das Kriegsschiff Prince George einen gewaltigen Sturm überstand, dem etliche andere Schiffe zum Opfer fielen, schrieb der Kommandant Martin ins Schiffstagebuch: Die unsichtbare Hand der Vorsehung hat uns errettet.[3] Es ist umstritten, ob die Metapher der unsichtbaren Hand von Adam Smith religiös verstanden wurde. Jedenfalls hielt er die Metapher für ein zweckmäßiges Mittel, um seinen Zeitgenossen bestimmte Zusammenhänge zu verdeutlichen.
 
 
-
 ---
-name: Motiv
+name: tragik
 class: left
 
-# Aktuelle Aktion von Penny-Markt
+# Tragik der Allmende: Funktioniert "der Markt" wirklich?
 
-.panelset[
-.panel[.panel-name[Aktion]
-```{r,echo=FALSE,out.width='100%'}
-knitr::include_graphics(xfun::from_root("images","unit04","Penny_Aug2023.png"))
+
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics(xfun::from_root("images","unit04","Plastikabkommen_UNO_(DW_20250805).png"))
 ```
-]
-.panel[.panel-name[Wahre Kosten]
-```{r,echo=FALSE,out.width='80%'}
-knitr::include_graphics(xfun::from_root("images","unit04","Penny0_Aug2023.png"))
-```
-]
-.panel[.panel-name[Beispiel]
-```{r,echo=FALSE,out.width='100%'}
-knitr::include_graphics(xfun::from_root("images","unit04","Penny1_Aug2023.png"))
-```
-]
-.panel[.panel-name[Spende]
-```{r,echo=FALSE,out.width='100%'}
-knitr::include_graphics(xfun::from_root("images","unit04","Penny2_Aug2023.png"))
-```
-]
-]
+
+.quelle[Quelle: [Deutsche Welle (2025).](https://www.dw.com/en/plastic-crisis-reducing-waste-lobbying-single-use-plastic-ban-oil-fossil-fuels-un/a-73525093)]
 
 
 ???
 
-* **Verbieten**? oder unattraktiv machen durch bessere Zugverbindungen?
-
-* Verbote:
-  * Grundproblem: Aktivitäten sind ja auch nützlich. Helikopter für Notarzt
-  * Kosten und Nutzen müssen abgewogen werden
-  * Nutzen kann letztlich nur jeder selbst bewerten
-    * wollen wir eine Bevormundung? oder eine liberale Gesellschaft
-    * Durchsetzbarkeit am Bsp. Corona. 
-    * Liberale Gesellschaft funktioniert nur mit verantwortungsvollen Menschen (sind wir das?)
-    * wir brauchen sicher Regeln - aber keine Regel kann alle Eventualitäten erfassen 
-  * Wir brauchen Regeln und Moral
-
----
-name: Falk
-class: left
-
-# Verhaltensökonomik
-
-
-.pull-left[
-<br>
-Buchtipp:
-<br>
-<br>
-```{r,echo=FALSE,out.height="100%"}
-knitr::include_graphics("https://www.penguinrandomhouse.de/content/edition/supplement/998943_72dpi_xl.jpg")
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url(xfun::from_root("images","unit04","Allmende_(dlf_20220422).png"),height= "530px")
 ```
-]
-.pull-right[
-<br>
-Podcast:
-<br>
-<iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/au/podcast/armin-falk-warum-es-so-schwer-ist-ein-guter-mensch-zu-sein/id1747747787?i=1000665603348"></iframe>
-]
+.quelle[Quelle: [Deutschlandfunk (2022).](https://www.deutschlandfunk.de/alltaegliche-aergernisse-muell-und-littering-im-oeffentlichen-raum-100.html)]
 
 
 
 
 
-
----
-name: Klima
-class: left
-
-
-# Einordnung: Klimapolitik in Zahlen
-
-```{r, echo=FALSE,fig.align='center',out.width='75%'}
-knitr::include_graphics(xfun::from_root("images","unit04","Klimaschutz_in_Zahlen_(BMWK_2023).png"))
-```
-
-.quelle[Quelle: [BMWK (2023).](https://www.bmwk.de/Redaktion/DE/Publikationen/Klimaschutz/klimaschutz-in-zahlen.html)]
-
-
-???
-
-* Nationaler Flugverkehr: 1,4% der Emmissionen im Verkehr (S. 36)
-* Dann Seite 26:
-    * Verkehrssektor 2020 (2019): 146 (163) Mio t $CO_2$-Äquivalente, d.h. 146/739=20% (163/805=20%)
-    * Größte Emissionsquellen: Energiewirtschaft und Industrie (55%)
-    * Gebäudesektor? 
-       * hier: 15%
-       * [website der Bundesregierung](https://www.bundesregierung.de/breg-de/themen/klimaschutz/klimafreundlich-wohnen-1672900): Eigentlich müsste er  das Doppelte betragen. Denn weitere Emissionen entstehen bei der Herstellung von Strom und Fernwärme oder von Baustoffen. Obwohl man die Produkte maßgeblich im Gebäudesektor benötigt, werden die Emissionen der Energiewirtschaft und der Industrie zugerechnet. Das macht deutlich, wie wichtig es für das Klima ist, Gebäude energetisch zu sanieren, alte Heizungen auszutauschen und umweltschonendes Baumaterial einzusetzen.
-
-      * Zahlungsbereitschaft für nachhaltiges Wohnen? [YouGov-Umfrage](https://www.dabonline.de/2021/05/04/nachhaltigkeit-wohnungskaeufer-eigentumswohnung-rechnen-kosten-energieeffizienz-immobilien-daemmung/)
-
-
-
-
-
-
-
-
-
-
-
----
-name: KlimaOekonomie
-class: left
-
-# Klimaschutz nach dem ökonomischen Prinzip?
-
-```{r,echo=FALSE,fig.align='center',out.width='50%'}
-knitr::include_graphics(xfun::from_root("images","unit04","ch4_trend_gl_(noaa-gov)_20230817.png"))
-```
-
-"Cutting methane is the strongest lever we have to slow climate change over the next 25 years and complements necessary efforts to reduce carbon dioxide. The benefits to society, economies, and the environment are numerous and far outweigh the cost. We need international cooperation to urgently reduce methane emissions as much as possible this decade."
-
-.quelle[[Inger Andersen, UNEP Executive Director](https://www.unep.org/news-and-stories/press-release/global-assessment-urgent-steps-must-be-taken-reduce-methane)]
-
-
-???
-
-* Da einsparen, wo es am leichtesten ist.
-* Ist $CO_2$ alles?
-* Methan ist auch ein Hebel. Nur zwölf Jahre in der Atmosphäre ($C0_2$ Hundert(e) Jahre) 
-* Methanreduktion kann also kurzfristge Effekte bringen - Zeit kaufen
-
-* Corona gut fürs Klima? Leider nein. Aktuelle Messungen zeigen, dass Klimagase trotzdem weiter gestiegen sind, Methan sogar so stark wie zuletzt 1983!
-    * Analysis of samples from 2020 also showed a significant jump in the atmospheric burden of methane, which is far less abundant but 28 times more potent than $CO_2$ at trapping heat over a 100-year time frame. NOAA’s preliminary analysis showed the annual increase in atmospheric methane for 2020 was 14.7 parts per billion (ppb), which is the largest annual increase recorded since systematic measurements began in 1983. 
 
 
 
@@ -286,6 +181,8 @@ Tauschgewinne (gains from trade)
   * Nash-Gleichgewicht
 
 
+
+
 ---
 name: Teil1
 class: inverse,center,middle
@@ -297,6 +194,9 @@ class: inverse,center,middle
 .blockquote[Kategorien ökonomischer Güter]
 
 .blockquote[Tragik der Allmende]
+
+
+
 
 
 ---
@@ -317,6 +217,228 @@ Soziale Dilemmata werden in der Regel durch sog. Externalitäten verursacht.
 .blockquote[
 **Externalitäten** (auch: Externe Effekte) liegen vor, wenn mit der Entscheidung/Handlung eines Akteurs ein spürbarer Vor- oder Nachteil für andere Beteiligte verbunden ist, ohne dass diese Konsequenzen vom Entscheider selbst zu tragen sind. 
 ]
+
+
+---
+name: Klima
+class: left
+
+
+# Klimaschutz nach dem ökonomischen Prinzip?
+
+.panelset[
+.panel[.panel-name[Klimaschutz in Zahlen]
+```{r, echo=FALSE,fig.align='center',out.width='75%'}
+knitr::include_graphics(xfun::from_root("images","unit04","Emissionen_Sektoren_(UBA_2022).png"))
+```
+
+.quellePanURL[Quelle: [BMWE (2022, S. 22).](https://www.bmwk.de/Redaktion/DE/Publikationen/Klimaschutz/klimaschutz-in-zahlen.html)]
+]
+.panel[.panel-name[CO2-Äquivalente?]
+"Cutting methane is the strongest lever we have to slow climate change over the next 25 years and complements necessary efforts to reduce carbon dioxide. The benefits to society, economies, and the environment are numerous and far outweigh the cost. We need international cooperation to urgently reduce methane emissions as much as possible this decade."
+
+.quelle[[Inger Andersen, UNEP Executive Director](https://www.unep.org/news-and-stories/press-release/global-assessment-urgent-steps-must-be-taken-reduce-methane)]
+]
+.panel[.panel-name[Emissonshandel]
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "75%"
+knitr::include_graphics(xfun::from_root("images","unit04","Emissionshandel_international_(UBA).png"))
+```
+
+.quellePanURL[Quelle: [umweltbundesamt.de](https://www.umweltbundesamt.de/daten/klima/internationale-marktmechanismen#flexible-mechanismen-des-kyoto-protokolls-2008-2020)]
+]
+
+]
+
+
+
+???
+
+* Nationaler Flugverkehr: 1,4% der Emmissionen im Verkehr (S. 36)
+* Dann Seite 26:
+    * Verkehrssektor 2020 (2019): 146 (163) Mio t $CO_2$-Äquivalente, d.h. 146/739=20% (163/805=20%)
+    * Größte Emissionsquellen: Energiewirtschaft und Industrie (55%)
+    * Gebäudesektor? 
+       * hier: 15%
+       * [website der Bundesregierung](https://www.bundesregierung.de/breg-de/themen/klimaschutz/klimafreundlich-wohnen-1672900): Eigentlich müsste er  das Doppelte betragen. Denn weitere Emissionen entstehen bei der Herstellung von Strom und Fernwärme oder von Baustoffen. Obwohl man die Produkte maßgeblich im Gebäudesektor benötigt, werden die Emissionen der Energiewirtschaft und der Industrie zugerechnet. Das macht deutlich, wie wichtig es für das Klima ist, Gebäude energetisch zu sanieren, alte Heizungen auszutauschen und umweltschonendes Baumaterial einzusetzen.
+
+      * Zahlungsbereitschaft für nachhaltiges Wohnen? [YouGov-Umfrage](https://www.dabonline.de/2021/05/04/nachhaltigkeit-wohnungskaeufer-eigentumswohnung-rechnen-kosten-energieeffizienz-immobilien-daemmung/)
+
+
+
+```{r,echo=FALSE,fig.align='center',out.width='50%'}
+knitr::include_graphics(xfun::from_root("images","unit04","ch4_trend_gl_(noaa-gov)_20230817.png"))
+```
+
+
+* Da einsparen, wo es am leichtesten ist.
+* Ist $CO_2$ alles?
+* Methan ist auch ein Hebel. Nur zwölf Jahre in der Atmosphäre ($C0_2$ Hundert(e) Jahre) 
+* Methanreduktion kann also kurzfristge Effekte bringen - Zeit kaufen
+
+* Corona gut fürs Klima? Leider nein. Aktuelle Messungen zeigen, dass Klimagase trotzdem weiter gestiegen sind, Methan sogar so stark wie zuletzt 1983!
+    * Analysis of samples from 2020 also showed a significant jump in the atmospheric burden of methane, which is far less abundant but 28 times more potent than $CO_2$ at trapping heat over a 100-year time frame. NOAA’s preliminary analysis showed the annual increase in atmospheric methane for 2020 was 14.7 parts per billion (ppb), which is the largest annual increase recorded since systematic measurements began in 1983. 
+
+---
+name: Motiv
+class: left
+
+# Aktion "Wahre Preise" von Penny-Markt 2023
+
+.panelset[
+.panel[.panel-name[Aktion]
+```{r,echo=FALSE,out.width='100%'}
+knitr::include_graphics(xfun::from_root("images","unit04","Penny_Aug2023.png"))
+```
+]
+.panel[.panel-name[Wahre Kosten]
+```{r,echo=FALSE,out.width='80%'}
+knitr::include_graphics(xfun::from_root("images","unit04","Penny0_Aug2023.png"))
+```
+]
+.panel[.panel-name[Beispiel]
+```{r,echo=FALSE,out.width='100%'}
+knitr::include_graphics(xfun::from_root("images","unit04","Penny1_Aug2023.png"))
+```
+]
+.panel[.panel-name[Spende]
+```{r,echo=FALSE,out.width='100%'}
+knitr::include_graphics(xfun::from_root("images","unit04","Penny2_Aug2023.png"))
+```
+]
+]
+
+
+???
+
+* **Verbieten**? oder unattraktiv machen durch bessere Zugverbindungen?
+
+* Verbote:
+  * Grundproblem: Aktivitäten sind ja auch nützlich. Helikopter für Notarzt
+  * Kosten und Nutzen müssen abgewogen werden
+  * Nutzen kann letztlich nur jeder selbst bewerten
+    * wollen wir eine Bevormundung? oder eine liberale Gesellschaft
+    * Durchsetzbarkeit am Bsp. Corona. 
+    * Liberale Gesellschaft funktioniert nur mit verantwortungsvollen Menschen (sind wir das?)
+    * wir brauchen sicher Regeln - aber keine Regel kann alle Eventualitäten erfassen 
+  * Wir brauchen Regeln und Moral
+
+
+---
+class: left
+
+# Wahre Kosten und Einkaufsverhalten?
+
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "75%"
+knitr::include_graphics(xfun::from_root("images","unit04","Penny_Ergebnisse_(tagesschau_2024).png"))
+```
+
+.quelle[Quelle[tagesschau.de (23.01.2024)](https://www.tagesschau.de/wirtschaft/verbraucher/penny-wahre-kosten-studie-100.html).]
+
+
+
+---
+name: Tragik
+class: left
+
+# Tragik der Allmende
+
+.pull-left[
+Bitte QR-Code scannen und mitspielen! 
+
+```{r ClassEx1,echo=FALSE, message=FALSE,out.width='90%',fig.align='center'}
+knitr::include_graphics(xfun::from_root("images","ClassEx-link.svg"))
+```
+]
+
+.pull-right[
+<br>
+<br>
+<br>
+```{r, echo=FALSE,fig.align='center',out.width = "100%"}
+knitr::include_graphics(xfun::from_root("images","unit04","Overfishing_(Economist_2020).png"))
+```
+]
+
+.quelle[[Economist (22.10.2020).](https://www.economist.com/leaders/2020/10/22/illicit-fishing-devastates-the-seas-and-abuses-crews)]
+
+
+
+---
+name: Falk
+class: left
+
+# Verhaltensökonomik
+
+
+.pull-left[
+<br>
+Buchtipp:
+<br>
+<br>
+```{r,echo=FALSE,out.height="100%"}
+knitr::include_graphics("https://www.penguinrandomhouse.de/content/edition/supplement/998943_72dpi_xl.jpg")
+```
+]
+.pull-right[
+<br>
+Podcast:
+<br>
+<iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/au/podcast/armin-falk-warum-es-so-schwer-ist-ein-guter-mensch-zu-sein/id1747747787?i=1000665603348"></iframe>
+]
+
+
+---
+name: Gueterklassifikation
+class: left
+
+# Kategorien ökonomischer Güter und Externalitäten
+
+
+<table id="multiLevelTable">
+        <caption>Klassifikation wirtschaftlicher Güter</caption>
+        <thead>
+            <tr>
+                <th colspan="2" rowspan="2">  </th>
+                <th colspan="2">Außschließbarkeit von Nicht-Zahlenden</th>
+            </tr>
+            <tr>
+                <th>... möglich</th>
+                <th>... nicht möglich/erwünscht</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="2">Rivalität im Konsum</th>
+                <th>ja</th>
+                <td>(rein) Privates Gut</td>
+                <td>quasi-öffentliches Gut (Allmendegut)</td>
+            </tr>
+            <tr>
+                <th>nein</th>
+                <td>quasi-privates Gut (Klubgut)</td>
+                <td>(rein) öffentliches Gut</td>
+            </tr>
+      </tbody>
+    </table>
+  
+.quelle[Eigene Darstellung.]
+
+
+
+???
+
+* Freie Güter $\neq$ öffentliche Güter (vgl. Knappheit)
+* Beispiele für rein private Güter: Kleidung, Wohnung, Mautstraße mit Stau.
+* Beispiele für rein öffentliche Güter: Landesverteidigung, öffentl. Straßen ohne Stau, Grundlagenforschung, Rechtswesen.
+* Beispiele für Klubgüter (auch Mautgüter):  Fitnessclub, pay-TV, Mautstraße ohne Stau etc. (bis zur Kapazitätsgrenze).
+* Beispiele Allmendegüter: Allmende, Hochseefischerei, Umweltgüter.
+
 
 
 
@@ -359,11 +481,15 @@ Wie kann Politik derartige Dilemma-Situationen auflösen? Ist Altruismus (bspw. 
 
 
 
+
+
+
+
 ---
 name: Allokation 
 class: left
 
-# Preise und Allokation: Private vs. Soziale Kosten
+# Klimaschutz im Modell der Rationalen Wahlhandlungen
 
 ## Anreize zum "Verzicht" für Konsumenten
 
@@ -436,7 +562,7 @@ class: left
 name: Allokation 
 class: left
 
-# Preise und Allokation: Private vs. Soziale Kosten
+# Klimaschutz im Modell der Rationalen Wahlhandlungen
 
 ## Anreize zur Innovation für Produzenten (Bsp. Stahlproduktion)
 
@@ -514,95 +640,10 @@ class: left
 * Mithin wird von jedem einzelnen zu wenig Klimaschutz verfolgt
 
 
----
-name: tragik
-class: left
-
-# Tragik der Allmende
-
-
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url(xfun::from_root("images","unit04","Allmende_(dlf_20220422).png"),height= "530px")
-```
-
-.quelle[Quelle: [Deutschlandfunk (2022).](https://www.deutschlandfunk.de/alltaegliche-aergernisse-muell-und-littering-im-oeffentlichen-raum-100.html)]
 
 
 
 
----
-name: Gueterklassifikation
-class: left
-
-# Kategorien ökonomischer Güter und Externalitäten
-
-
-<table id="multiLevelTable">
-        <caption>Klassifikation wirtschaftlicher Güter</caption>
-        <thead>
-            <tr>
-                <th colspan="2" rowspan="2">  </th>
-                <th colspan="2">Außschließbarkeit von Nicht-Zahlenden</th>
-            </tr>
-            <tr>
-                <th>... möglich</th>
-                <th>... nicht möglich/erwünscht</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th rowspan="2">Rivalität im Konsum</th>
-                <th>ja</th>
-                <td>(rein) Privates Gut</td>
-                <td>quasi-öffentliches Gut (Allmendegut)</td>
-            </tr>
-            <tr>
-                <th>nein</th>
-                <td>quasi-privates Gut (Klubgut)</td>
-                <td>(rein) öffentliches Gut</td>
-            </tr>
-      </tbody>
-    </table>
-  
-.quelle[Eigene Darstellung.]
-
-
-
-???
-
-* Freie Güter $\neq$ öffentliche Güter (vgl. Knappheit)
-* Beispiele für rein private Güter: Kleidung, Wohnung, Mautstraße mit Stau.
-* Beispiele für rein öffentliche Güter: Landesverteidigung, öffentl. Straßen ohne Stau, Grundlagenforschung, Rechtswesen.
-* Beispiele für Klubgüter (auch Mautgüter):  Fitnessclub, pay-TV, Mautstraße ohne Stau etc. (bis zur Kapazitätsgrenze).
-* Beispiele Allmendegüter: Allmende, Hochseefischerei, Umweltgüter.
-
-
-
-
----
-name: Tragik
-class: left
-
-# Tragik der Allmende
-
-.pull-left[
-Bitte QR-Code scannen und mitspielen! 
-
-```{r ClassEx1,echo=FALSE, message=FALSE,out.width='90%',fig.align='center'}
-knitr::include_graphics(xfun::from_root("images","ClassEx-link.svg"))
-```
-]
-
-.pull-right[
-<br>
-<br>
-<br>
-```{r, echo=FALSE,fig.align='center',out.width = "100%"}
-knitr::include_graphics(xfun::from_root("images","unit04","Overfishing_(Economist_2020).png"))
-```
-]
-
-.quelle[[Economist (22.10.2020).](https://www.economist.com/leaders/2020/10/22/illicit-fishing-devastates-the-seas-and-abuses-crews)]
 
 
 ---
