@@ -304,8 +304,11 @@ class: left
 
 
 # Nachfrage (Empirie)
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-03.svg',height='550px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics(xfun::from_root("images","unit07","CORE_fig7-3.png"))
 ```
 
 
@@ -578,13 +581,19 @@ class: left
 
 .panelset[
 .panel[.panel-name[AC]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-07-06-g.svg",height="470px")
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_url(xfun::from_root("images","unit07","CORE_fig7-6g.png"),height = "480px")
 ```
 ]
 .panel[.panel-name[MC]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-07-07-h.svg",height="470px")
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_url(xfun::from_root("images","unit07","CORE_fig7-7h.png"),height = "480px")
 ```
 ]
 ]
@@ -789,13 +798,19 @@ class: left
 
 .panelset[
 .panel[.panel-name[...konstanten MC]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-04-f.svg',height='470px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics(xfun::from_root("images","unit07","CORE_fig7-4a.png"))
 ```
 ]
 .panel[.panel-name[...steigenden MC]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-10-a.svg',height='470px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics(xfun::from_root("images","unit07","CORE_fig7-10a.png"))
 ```
 ]
 ]
@@ -825,13 +840,19 @@ class: left
 
 .panelset[
 .panel[.panel-name[Angebotsentscheidung]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-10-f.svg',height='470px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "80%"
+knitr::include_graphics(xfun::from_root("images","unit07","CORE_fig7-10f.png"))
 ```
 ]
 .panel[.panel-name[Optimum]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-11.svg',height='470px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "80%"
+knitr::include_graphics(xfun::from_root("images","unit07","CORE_fig7-11.png"))
 ```
 ]
 ]
@@ -896,10 +917,12 @@ $$MR=MC$$
 
 .panel[.panel-name[Grafisch]
 
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-12-b-i.svg',height='470px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_url(xfun::from_root("images","unit07","CORE_fig7-12b-i.png"),height = "480px")
 ```
-
 ]
 ]
 
@@ -922,18 +945,27 @@ class: left
 .panelset[
 .panel[.panel-name[Konkurrenzmarkt]
 
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-14-c.svg',height='470px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "80%"
+knitr::include_graphics(xfun::from_root("images","unit07","CORE_fig7-14c.png"))
 ```
 ]
 .panel[.panel-name[Monopol]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-14-e.svg',height='470px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "80%"
+knitr::include_graphics(xfun::from_root("images","unit07","CORE_fig7-14e.png"))
 ```
 ]
 .panel[.panel-name[Preisdiskriminierung]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-14-e.svg',height='470px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "80%"
+knitr::include_graphics(xfun::from_root("images","unit07","CORE_fig7-14e.png"))
 ```
 
 ]
@@ -974,18 +1006,27 @@ class: left
 
 .panelset[
 .panel[.panel-name[Refresher]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-15-e.svg',height='470px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "80%"
+knitr::include_graphics(xfun::from_root("images","unit07","CORE_fig7-15e.png"))
 ```
 ]
 .panel[.panel-name[elastische NE]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-16.svg',height='470px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "80%"
+knitr::include_graphics(xfun::from_root("images","unit07","CORE_fig7-16.png"))
 ```
 ]
 .panel[.panel-name[unelastische NE]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-07-17.svg',height='470px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "80%"
+knitr::include_graphics(xfun::from_root("images","unit07","CORE_fig7-17.png"))
 ```
 ]
 ]
