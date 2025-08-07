@@ -86,7 +86,7 @@ class: left
 
 # Arbitrage und die Bedeutung von Transaktionskosten
 
-```{r, echo=FALSE,fig.align='center',out.width='80%'}
+```{r, echo=FALSE,fig.align='center',out.width='70%'}
 knitr::include_graphics(xfun::from_root("images","unit06","Profite_LNG_(BerlinerZeitung).png"))
 ```
 
@@ -438,8 +438,11 @@ class: left
 # Unternehmensstruktur und Entscheidungen
 
 
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-06-01-b.svg',height='550px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics(xfun::from_root("images","unit06","CORE_fig6-1b.png"))
 ```
 
 
@@ -624,8 +627,11 @@ class: left
 # Grenzen des Monitorings
 
 
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-06-01-c.svg',height='550px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics(xfun::from_root("images","unit06","CORE_fig6-1c.png"))
 ```
 
 ???
@@ -802,13 +808,20 @@ class: left
 ]
 .panel[.panel-name[Anstellungs-Rente]
 
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-06-02-g.svg',height='480px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "80%"
+knitr::include_graphics(xfun::from_root("images","unit06","CORE_fig6-2g.png"))
 ```
+
 ]
 .panel[.panel-name[Anreizeffekte]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-06-03.svg',height='480px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "80%"
+knitr::include_graphics(xfun::from_root("images","unit06","CORE_fig6-3.png"))
 ```
 ]
 ]
@@ -921,8 +934,11 @@ class: left
 
 # Arbeitnehmer: Beste Antwort
 
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-06-04-g.svg',height='500px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics(xfun::from_root("images","unit06","CORE_fig6-4g.png"))
 ```
 
 Steigung der Besten-Antwort-Kurve entspricht der MRT
@@ -949,13 +965,19 @@ class: left
 
 .panelset[
 .panel[.panel-name[Isokostenlinie]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-06-05-e.svg',height='480px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "80%"
+knitr::include_graphics(xfun::from_root("images","unit06","CORE_fig6-5e.png"))
 ```
 ]
 .panel[.panel-name[Beste Antwort]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-06-06-f.svg',height='480px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "80%"
+knitr::include_graphics(xfun::from_root("images","unit06","CORE_fig6-6f.png"))
 ```
 ]
 .panel[.panel-name[Effizienzlohn]
@@ -1002,8 +1024,11 @@ class: left
 # Effizienzlöhne implizieren Unfreiwillige Arbeitslosigkeit
 
 
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-06-07-d.svg',height='420px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics(xfun::from_root("images","unit06","CORE_fig6-7d.png"))
 ```
 
 .blockquote[
