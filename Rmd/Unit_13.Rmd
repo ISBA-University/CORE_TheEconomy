@@ -1610,8 +1610,6 @@ knitr::include_graphics(xfun::from_root("images","unit13","CORE_fig15-box-a.png"
 ```
 .quellePanURL[[CORE - The Economy (Unit 15)](https://www.core-econ.org/the-economy/book/text/15.html#153-inflation-the-business-cycle-and-the-phillips-curve).]
 ]
-
-
 ]
 
 
