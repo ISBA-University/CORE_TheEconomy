@@ -300,7 +300,8 @@ knitr::include_url(xfun::from_root("images","unit07","NE_agg.png"),height="430px
 .panel[.panel-name[Beispiel]
 
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-04.svg',height='480px')
+knitr::include_url(xfun::from_root("images","unit08","CORE_fig8-4.png"),height="430px")
+
 ```
 ]
 ]
@@ -333,14 +334,20 @@ class: left
 
 .panelset[
 .panel[.panel-name[Individuell]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-06-d.svg',height='480px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_url(xfun::from_root("images","unit08","CORE_fig8-6d.png"),height = "480px")
 ```
 ]
 .panel[.panel-name[Marktangebot]
 
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-07-d.svg',height='480px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_url(xfun::from_root("images","unit08","CORE_fig8-7d.png"),height = "480px")
 ```
 ]
 .panel[.panel-name[Empirie (1)]
@@ -438,8 +445,11 @@ class: left
 `r fa("circle-right")` Wohlfahrtsmaximierung ("unsichtbare Hand")
 ]
 .panel[.panel-name[Marshall-Diagramm]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-08.svg',height='480px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_url(xfun::from_root("images","unit08","CORE_fig8-8.png"),height = "480px")
 ```
 ]
 ]
@@ -531,8 +541,11 @@ class: left
 
 # Wohlfahrt im perfekten Wettbewerbsmarkt
 
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-09-a-d.svg',height='550px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_url(xfun::from_root("images","unit08","CORE_fig8-9a-d.png"),height = "550px")
 ```
 
 ???
@@ -637,19 +650,28 @@ class: left
 
 .panelset[
 .panel[.panel-name[Quinoa-Produktion]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-10-a.svg',height='480px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_url(xfun::from_root("images","unit08","CORE_fig8-10a.png"),height = "480px")
 ```
 
 ]
 .panel[.panel-name[Quinoa-Nachfrage]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-10-c.svg',height='480px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_url(xfun::from_root("images","unit08","CORE_fig8-10c.png"),height = "480px")
 ```
 ]
 .panel[.panel-name[Modell]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-11-d.svg',height='480px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_url(xfun::from_root("images","unit08","CORE_fig8-11d.png"),height = "480px")
 ```
 ]
 ]
@@ -662,14 +684,20 @@ class: left
 
 .panelset[
 .panel[.panel-name[Produktivitätssteigerung]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-12-e.svg',height='480px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_url(xfun::from_root("images","unit08","CORE_fig8-12e.png"),height = "480px")
 ```
 
 ]
 .panel[.panel-name[Markteintritte]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-13.svg',height='480px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_url(xfun::from_root("images","unit08","CORE_fig8-13.png"),height = "480px")
 ```
 ]
 .panel[.panel-name[Beispiel]
@@ -697,13 +725,19 @@ class: left
 
 .panelset[
 .panel[.panel-name[Wertsteuer]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-14-d.svg',height='480px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_url(xfun::from_root("images","unit08","CORE_fig8-14d.png"),height = "480px")
 ```
 ]
 .panel[.panel-name[Mengensteuer]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-16-c.svg',height='480px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_url(xfun::from_root("images","unit08","CORE_fig8-16c.png"),height = "480px")
 ```
 ]
 ]
@@ -725,14 +759,19 @@ class: left
 
 .panelset[
 .panel[.panel-name[Wertsteuer]
-
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-15-d.svg',height='480px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_url(xfun::from_root("images","unit08","CORE_fig8-15d.png"),height = "480px")
 ```
 ]
 .panel[.panel-name[Mengensteuer]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-08-17.svg',height='480px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_url(xfun::from_root("images","unit08","CORE_fig8-17.png"),height = "480px")
 ```
 ]
 ]
@@ -742,8 +781,36 @@ knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure
 Lenkungswirkung vs. Steueraufkommen
 
 
+---
+name: tariffs
+class: left
 
+# Gruppenaufgabe: Trump und die Zölle
 
+.pull-left[
+Bildet Gruppen von 3-5 Personen und bearbeitet die folgenden Aufgaben:
+
+1. Entwickelt eine Analyse der US-Zollpolitik für Importe aus der EU im Marshall-Diagramm. Welche Wohlfahrtswirkungen sind für Europäer und US-Amerikaner auf Basis des Modells zu erwarten?
+
+2. Wovon hängt die Lastverteilung im Fall der Zölle ab? Recherchiert Beispiele aus der Zeit seit der Ankündigung der Zölle im April 2025, um empirisch erste Indizien für die Lastverteilung zu erhalten.
+
+]
+.pull-right[
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics(xfun::from_root("images","unit08","Zoelle_(tagesschau_20250807).png"))
+```
+Quelle: [tagesschau.de](https://www.tagesschau.de/wirtschaft/weltwirtschaft/zoelle-usa-trump-faq-102.html)
+]
+```{r,echo=FALSE}
+countdown::countdown(
+minutes = 15,
+seconds = 0,
+warn_when = 30
+)
+```
 
 ---
 name: FazitAusblick
