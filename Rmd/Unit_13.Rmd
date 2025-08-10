@@ -380,13 +380,12 @@ class: inverse, center, middle
 name: BIPaktuell
 class: left
 
-# Bruttoinlandsprodukt 2023
+# Bruttoinlandsprodukt 2024
 
 ```{r, echo=FALSE,fig.align='center',out.width='55%'}
-knitr::include_graphics(xfun::from_root("images","unit13","BIP_2023.PNG"))
+knitr::include_graphics(xfun::from_root("images","unit01","BIP_2024.PNG"))
 ```
-.quelle[Quelle: [Destatis (2023)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/zusammenhaenge-pdf-0310100.pdf).]
-
+.quelle[Quelle: [Destatis (2025)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/zusammenhaenge-pdf-0310100.pdf).]
 
 
 
@@ -723,12 +722,10 @@ class: left
 
 # Wachstumsraten seit 1970
 
-```{r, echo=FALSE,fig.align='center'}
-knitr::include_graphics(xfun::from_root("images","unit13","Wachstumsraten_(destatis_2024_S10).png"))
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_graphics(xfun::from_root("images","unit13","Wachstumsraten_(destatis_2025_S10).PNG"))
 ```
-
-
-.quelle[[Statistisches Bundesamt (2022, S. 10)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/zusammenhaenge-pdf-0310100.pdf?__blob=publicationFile)]
+.quelle[Quelle: [Destatis (2025)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/zusammenhaenge-pdf-0310100.pdf).]
 
 
 ???
@@ -1047,9 +1044,14 @@ knitr::include_graphics(xfun::from_root("images","unit13","Wachstumsbeitraege_Na
 knitr::include_graphics(xfun::from_root("images","unit13","Wachstumsbeitraege_Nachfragekomponenten_(destatis_2024_S12)_small.png"))
 ```
 ]
+.panel[.panel-name[2024]
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_graphics(xfun::from_root("images","unit13","Wachstumsbeitraege_Nachfragekomponenten_(destatis_2025_S12).png"))
+```
+]
 ]
 
-.quelle[[Statistisches Bundesamt (2021/2022/2023, S. 12)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/zusammenhaenge-pdf-0310100.pdf?__blob=publicationFile)]
+.quelle[[Statistisches Bundesamt (2021ff, S. 12)](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/zusammenhaenge-pdf-0310100.pdf?__blob=publicationFile)]
 
 
 ???
@@ -1074,18 +1076,27 @@ class: left
 
 .panelset[
 .panel[.panel-name[RCT-Modell]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-10-04-a.svg",height="480px")
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "70%"
+knitr::include_graphics(xfun::from_root("images","unit13","CORE_fig10-4a.png"))
 ```
 ]
 .panel[.panel-name[Lebenszyklusprofil]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-13-10-c.svg",height="480px")
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "80%"
+knitr::include_graphics(xfun::from_root("images","unit13","CORE_fig13-10c.png"))
 ```
 ]
 .panel[.panel-name[Schock]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-13-12-f.svg",height="480px")
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "70%"
+knitr::include_graphics(xfun::from_root("images","unit13","CORE_fig13-12f.png"))
 ```
 ]
 ]
@@ -1181,13 +1192,19 @@ class: left
 
 .panelset[
 .panel[.panel-name[Kreditbeschränkungen]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-13-11-c.svg",height="480px")
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "70%"
+knitr::include_graphics(xfun::from_root("images","unit13","CORE_fig13-11c.png"))
 ```
 ]
 .panel[.panel-name[Disziplin]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-13-13-c.svg",height="480px")
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "70%"
+knitr::include_graphics(xfun::from_root("images","unit13","CORE_fig13-13c.png"))
 ```
 ]
 ]
@@ -1244,13 +1261,19 @@ class: left
 
 .panelset[
 .panel[.panel-name[Abwärtsspirale]
-```{r, echo=FALSE,out.width='100%'}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-13-15.svg", height="480px")
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "80%"
+knitr::include_graphics(xfun::from_root("images","unit13","CORE_fig13-15.png"))
 ```
 ]
 .panel[.panel-name[Aufwärtsspirale]
-```{r, echo=FALSE,out.width='100%'}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-13-16.svg", height="480px")
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "80%"
+knitr::include_graphics(xfun::from_root("images","unit13","CORE_fig13-16.png"))
 ```
 ]
 ]
@@ -1277,9 +1300,12 @@ class: left
 # Investitionen als Koordinationsspiel
 
 
-```{r, echo=FALSE,out.width='100%'}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-13-17.svg", height="550px")
-``` 
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "80%"
+knitr::include_graphics(xfun::from_root("images","unit13","CORE_fig13-17.png"))
+```
 
 
 ???
@@ -1403,8 +1429,11 @@ class: left
 
 .panelset[
 .panel[.panel-name[ILO (Unit 9)]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-09-02.svg",height="480px")
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "80%"
+knitr::include_graphics(xfun::from_root("images","unit13","CORE_fig9-2.png"))
 ```
 ]
 .panel[.panel-name[D (2019)]
@@ -1503,13 +1532,19 @@ class: left
 
 .panelset[
 .panel[.panel-name[Entwicklung]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-13-03-d.svg",height="480px")
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_url(xfun::from_root("images","unit13","CORE_fig13-3d.png"),height="480px")
 ```
 ]
 .panel[.panel-name[Okun's Gesetz]
-```{r, echo=FALSE,fig.align='center'}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-13-05.svg",height="480px")
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_url(xfun::from_root("images","unit13","CORE_fig13-5.png"),height="480px")
 ```
 ]
 ]
@@ -1549,10 +1584,13 @@ knitr::include_url(xfun::from_root("images","unit13","phillips_mod_(Issing_S229)
 .quellePanURL[Quelle: Issing (2011, S. 227).]
 ]
 .panel[.panel-name[Modell]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-15-04-a.svg",height="480px")
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "80%"
+knitr::include_graphics(xfun::from_root("images","unit13","CORE_fig15-4a.png"))
 ```
-.quellePanURL[[CORE - The Economy (Unit 15)](https://www.core-econ.org/the-economy/book/text/15.html#153-inflation-the-business-cycle-and-the-phillips-curve).]
+.quellePanURL[ [CORE - The Economy (Unit 15)](https://www.core-econ.org/the-economy/book/text/15.html#153-inflation-the-business-cycle-and-the-phillips-curve).]
 ]
 .panel[.panel-name[Modifikation]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
@@ -1564,13 +1602,16 @@ knitr::include_url(xfun::from_root("images","unit13","phillips_mod_(Issing_S229)
 <iframe src="https://ourworldindata.org/grapher/phillips-curves-in-the-us" loading="lazy" style="width: 100%; height: 480px; border: 0px none;"></iframe>
 ]
 .panel[.panel-name[Zusammenfassung]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url("https://www.core-econ.org/the-economy/book/images/web/figure-15-box-a.svg",height="480px")
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "80%"
+knitr::include_graphics(xfun::from_root("images","unit13","CORE_fig15-box-a.png"))
 ```
 .quellePanURL[[CORE - The Economy (Unit 15)](https://www.core-econ.org/the-economy/book/text/15.html#153-inflation-the-business-cycle-and-the-phillips-curve).]
 ]
 
-]
+
 ]
 
 
