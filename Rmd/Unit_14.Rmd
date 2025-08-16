@@ -89,9 +89,14 @@ class: left
 
 .panelset[
 .panel[.panel-name[Aktuell]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url("https://www.sueddeutsche.de/wirtschaft/eu-konjunktur-hilfsprogramme-inflation-1.5655907",height = "470px")
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "55%"
+knitr::include_graphics(xfun::from_root("images","unit14","Inflation_(SZ_2022).png"))
 ```
+<br>
+.quellePanURL[Quelle: [Süddeutsche Zeitung (13.02.2022).](https://www.sueddeutsche.de/wirtschaft/eu-konjunktur-hilfsprogramme-inflation-1.5655907)]
 ]
 .panel[.panel-name[StabG (1967)]
 
@@ -409,8 +414,11 @@ class: left
 # Exkurs: Autonomer Konsum und Erwartungen
 
 
-```{r ,echo=FALSE, message=FALSE,fig.align='center',outwidth='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-14-03.svg',height='550px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics(xfun::from_root("images","unit14","CORE_fig14-3.png"))
 ```
 
 .quelle[Quelle: [The Economy](https://www.core-econ.org/the-economy/book/text/14.html#142-the-multiplier-model)]
@@ -625,8 +633,11 @@ class: left
 
 .panelset[
 .panel[.panel-name[Investition]
-```{r ,echo=FALSE, message=FALSE,fig.align='center',outwidth='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-14-mcq-02.svg',height = '400px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "85%"
+knitr::include_graphics(xfun::from_root("images","unit14","CORE_fig14-mcq-02.png"))
 ```
 
 .small[
@@ -635,8 +646,11 @@ knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure
 
 ]
 .panel[.panel-name[Disinvestition]
-```{r ,echo=FALSE, message=FALSE,fig.align='center',outwidth='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-14-05-i.svg',height = '400px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "85%"
+knitr::include_graphics(xfun::from_root("images","unit14","CORE_fig14-5i.png"))
 ```
 
 .small[
@@ -669,8 +683,11 @@ class: left
 
 # Wirtschaftsgeschichte: Große Depression
 
-```{r ,echo=FALSE, message=FALSE,fig.align='center',outwidth='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-14-06-d.svg',height = '550px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics(xfun::from_root("images","unit14","CORE_fig14-6d.png"))
 ```
 
 .quelle[Quelle: [The Economy](https://www.core-econ.org/the-economy/book/text/14.html#143-household-target-wealth-collateral-and-consumption-spending)]
@@ -818,8 +835,11 @@ class: left
 
 # Investitionen und Opportunitätskosten
 
-```{r,echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-14-09-e.svg',height = '550px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_url(xfun::from_root("images","unit14","CORE_fig14-9e.png"),height = '550px')
 ```
 
 
@@ -842,8 +862,11 @@ class: left
 
 # Aggregierte Investitionsnachfrage
 
-```{r,echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-14-10-c-c.svg',height = '500px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "90%"
+knitr::include_graphics(xfun::from_root("images","unit14","CORE_fig14-10c-c.png"))
 ```
 
 .pull-left[
@@ -967,8 +990,11 @@ class: left
 
 # Fiskalpolitik
 
-```{r,echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-14-11-a-c.svg',height = '550px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics(xfun::from_root("images","unit14","CORE_fig14-11a-c.png"))
 ```
 
 .quelle[Quelle: [The Economy](https://www.core-econ.org/the-economy/book/text/14.html#146-fiscal-policy-how-governments-can-dampen-and-amplify-fluctuations)]
@@ -1014,8 +1040,11 @@ class: left
 
 # Hintergrund: Austeritätspolitik
 
-```{r,echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-14-11-b-c.svg',height = '550px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics(xfun::from_root("images","unit14","CORE_fig14-11b-c.png"))
 ```
 
 .quelle[Quelle: [The Economy](https://www.core-econ.org/the-economy/book/text/14.html#146-fiscal-policy-how-governments-can-dampen-and-amplify-fluctuations)]
@@ -1154,8 +1183,11 @@ class: left
 
 # Vor- und Nachteile des Außenhandels
 
-```{r,echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://www.core-econ.org/the-economy/book/images/web/figure-14-16.svg',height = '550px')
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics(xfun::from_root("images","unit14","CORE_fig14-16.png"))
 ```
 
 
