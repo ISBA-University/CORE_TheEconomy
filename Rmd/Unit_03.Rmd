@@ -1092,6 +1092,46 @@ class: inverse, center, middle
 
 # Exkurs in die Verhaltensökonomik
 
+
+---
+class: left
+
+# Wie rational entscheiden Menschen *wirklich* (empirisch)?
+
+.pull-left[
+```{r direct-qrcode, echo=FALSE, fig.width=3, fig.height=3, fig.align='center'}
+library(qrcode)
+my_url <- "https://classex.uni-passau.de/bin/index.php?&institution=1170&course=3156&inactive=0&lang=0#"
+# 1. QR-Code im Arbeitsspeicher generieren
+qr <- qr_code(my_url)
+
+# 2. Direkt in das Dokument zeichnen
+plot(qr)
+```
+
+Wähle in den Dropdown-Menüs: 
+
+* ISBA Freiburg
+* Grundlagen VWL
+* Teilnehmerinnen und Teilnehmer
+]
+.pull-right[
+```{r, echo=FALSE,out.width = "100%",fig.align='center'}
+knitr::include_graphics('../images/unit03/kahneman_9780374533557.png')
+```
+.quelle[Bildquelle: [us.macmillan.com](https://us.macmillan.com/books/9780374533557/thinkingfastandslow/)]
+]
+
+???
+
+* Heuristiken und Bias
+  * Linda-Problem  
+  * Schätz-Aufgabe
+  * Selbsteinschätzung
+
+* am Ende ggf. Nudge (Retirement Plan)
+
+
 ---
 class: left
 
@@ -1130,7 +1170,6 @@ mehrere Alternativen zur Verfügung stehen, wobei eine klar dominierte Alternati
 * Decoys are „asymmetrically dominated“: they are completely inferior to one option (the target) but only partially inferior to the other (the competitor). For this reason, the decoy effect is sometimes
 called the „asymmetric dominance effect."
 * Kommt eine dritte Entscheidungsmöglichkeit ins Spiel, die asymmetrisch von den anderen beiden Optionen platziert wird, greifen die Kunden automatisch zu dem Produkt, bei dem Sie den Preis für angemessener halten
-
 
 
 ---
